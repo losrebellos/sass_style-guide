@@ -1,0 +1,123 @@
+
+p, span, q, cite {
+
+	@include text-null;
+	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
+
+	border: none;
+	// background-color: green;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0;
+	// margin-left: auto;
+	// margin-right: auto;
+	padding: 0;
+	text-indent: $_BASE_MARGIN;
+
+
+	&:first-of-type {
+
+		text-indent: 0;
+
+	}
+
+
+	&:last-child {
+
+		margin-bottom: 0;
+
+	}
+
+}
+
+
+span {
+
+	font-style: inherit;
+	font-weight: inherit;
+
+}
+
+
+cite {
+
+	font-style: italic;
+	opacity: 0.75;
+
+}
+
+
+q {
+
+	font-style: italic;
+	opacity: 0.75;
+
+
+	&:before {
+
+	    content: open-quote;
+
+	}
+
+	&:after {
+
+	    content: close-quote;
+
+	}
+
+}
+
+
+blockquote {
+
+	@include text-rhythm(1, 1, 0.5 0 1 0);
+
+	// background-color: red;
+	font-size: 1em;				// so it won't be oversized
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	position: relative;
+	text-align: justify;
+	width: 75%;
+
+
+	&.with-quotes {
+
+		&:before {
+
+			content: open-quote;
+			display: block;
+			font-size: 5 * $_BASE_FONT_SIZE;
+			left: -0.5em;
+			line-height: 1em;
+			position: absolute;
+			top: -0.15em;
+
+		}
+
+
+		&:after {
+
+			bottom: 0.3em;
+			content: close-quote;
+			display: block;
+			font-size: 5 * $_BASE_FONT_SIZE;
+			line-height: 1em;
+			right: -0.5em;
+			position: absolute;
+
+		}
+
+	}
+
+
+	> * {
+
+		margin-bottom: 0;
+		margin-top: 0;
+
+	}
+
+}

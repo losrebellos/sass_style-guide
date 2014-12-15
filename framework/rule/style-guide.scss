@@ -1,0 +1,100 @@
+
+.style-guide-container {
+
+	min-height: 100%;
+	overflow: hidden;
+	position: relative;
+
+}
+
+
+.style-guide-title {
+
+	@include rhythm(3, null 3, 1.5 0 1 0);
+
+	border-top: 2px solid black;
+
+}
+
+
+.style-guide-desc {
+
+	> li {
+
+		> * {
+
+			@include text-rhythm(1, 1);
+
+		}
+
+
+		&:first-of-type {
+
+			> * {
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+/* ICONS */
+
+.style-guide-icons {
+
+	li {
+
+		> * {
+
+			@include inline-block;
+
+			margin: 0;
+
+		}
+
+	}
+
+}
+
+
+
+/* COLORS */
+
+.style-guide-colors {
+
+	> li {
+
+		@include clearfix;
+
+	}
+
+
+	.style-guide-desc {
+
+		float: left;
+		margin-left: 1em;
+
+	}
+
+}
+
+
+.style-guide-color-preview {
+
+	@include rhythm(1, 5 5, 0 0 1.5 0);
+
+	background-color: red;
+	float: left;
+
+
+	&.color-text-1 {
+
+		// background-color: $_COLOR;
+
+	}
+
+}

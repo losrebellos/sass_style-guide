@@ -1,0 +1,22 @@
+
+@mixin not-clickable {
+
+	@include user-select(none);
+
+	cursor: default;
+	outline: none;
+
+	&:hover {
+
+		cursor: default;
+
+	}
+
+}
+
+
+.not-clickable {
+
+	@include not-clickable;
+
+}

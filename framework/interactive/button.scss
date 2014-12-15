@@ -1,0 +1,37 @@
+
+button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
+
+	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
+	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
+	@include user-select(none);
+	
+	background-color: $_BACKGROUND_COLOR;
+	border: $_BORDER_COLOR;
+	color: $_TEXT_COLOR;
+	font-style: normal;
+	font-weight: normal;
+	opacity: $_OPACITY;
+    outline: none;
+	padding: 0 $_BASE_PADDING;
+	
+
+	&:not([disabled]) {
+
+		&:hover, &.selected {
+
+			background-color: $_BACKGROUND_COLOR_HOVER;
+			color: $_HOVER_COLOR;
+
+		}
+
+	}
+
+
+	&:disabled {
+
+		cursor: default;
+		opacity: $_OPACITY_DISABLED;
+
+	}
+
+}

@@ -1,0 +1,63 @@
+
+h1, h2, h3, h4, h5, h6 {
+
+	@include text-null;
+
+	border: none;
+	// background-color: green;
+	font-style: normal;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+
+
+}
+
+
+h1 {
+
+	// background-color: red;
+
+	@include text-rhythm(5, 4, 1.5 0 1 0);
+
+}
+
+h2 {
+
+	// background-color: gray;
+
+	@include text-rhythm(4, 3.5, 1.5 0 1 0);
+
+}
+
+h3 {
+
+	// background-color: violet;
+
+	@include text-rhythm(3, 3, 1.5 0 1 0);
+
+}
+
+h4 {
+
+	// background-color: blue;
+
+	@include text-rhythm(2.5, 3, 1.5 0 1 0);
+
+}
+
+h5 {
+
+	// background-color: orange;
+
+	@include text-rhythm(2, 3, 1.5 0 1 0);
+
+}
+
+h6 {
+
+	// background-color: pink;
+
+	@include text-rhythm(1.8, 2, 1.5 0 1 0);
+
+}

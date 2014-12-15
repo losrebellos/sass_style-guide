@@ -1,0 +1,75 @@
+
+// link states order:
+// http://meyerweb.com/eric/thoughts/2007/06/04/ordering-the-link-states/
+
+a {
+
+	@include inline-block;
+	@include text-null;
+	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
+	// @include transition(color $_HOVER_DURATION);
+
+	// background-color: green;
+	border: none;
+	color: grey;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0;
+    outline: none;
+	padding: 0;
+	text-decoration: underline;
+
+
+	&:link, &:visited, &:hover, &:active, &:focus {
+
+    	outline: none;
+
+	}
+
+
+	// unvisited link
+	// same as default color
+	&:link {
+
+		color: grey;
+		
+	}
+
+	// visited link
+	// only color property is available on Chrome
+	// for security reasons (history sniffing)
+	&:visited {
+
+		color: purple;
+		text-decoration: line-through;
+
+	}
+
+	// hover
+	// focus (tab)
+	// selected (when clicking on it)
+	&:hover, &:focus, &:active {
+
+		color: black;
+		text-decoration: none;
+
+
+		> img, > svg {
+
+			opacity: $_OPACITY_DISABLED;
+
+		}
+
+	}
+
+
+	> img, > svg {
+
+		@include transition(opacity $_HOVER_DURATION);
+
+		opacity: 1;
+
+	}
+
+}

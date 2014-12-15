@@ -1,0 +1,47 @@
+
+.rhythm {
+
+	@include position(absolute, -1px 0 0 0);
+	@include user-select(none);
+
+	background-image: -webkit-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+	background-image: -moz-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+	background-image: -o-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
+	background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+	background-repeat: repeat-y;
+	background-size: 100% $_BASE_LINE_HEIGHT;
+	font-size: $_BASE_FONT_SIZE;
+
+
+	&:before {
+
+		@include position(absolute, $_BASE_LINE_HEIGHT / 2 0 0 0);
+		@include user-select(none);
+
+		background-image: -webkit-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
+		background-image: -moz-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
+		background-image: -o-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
+		background-image: linear-gradient(to bottom, red 0, rgba(255,255,255,0) 1px);
+		background-repeat: repeat-y;
+		background-size: 100% $_BASE_LINE_HEIGHT;
+		content: "";
+		font-size: 1em;
+		opacity: 0.5;
+
+	}
+
+
+	&.hide {
+
+		display: none;
+
+
+		&:before, &:after {
+			
+			display: none;
+
+		}
+
+	}
+
+}

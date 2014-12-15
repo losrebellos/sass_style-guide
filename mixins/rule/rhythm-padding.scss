@@ -1,0 +1,36 @@
+
+// $coeff is use in connection with rhythm
+
+@mixin padding-rhythm($padding: null null null null, $coeff: null) {
+
+	$padding: unpack($padding);
+	$paddingTop: nth($padding, 1);
+	$paddingRight: nth($padding, 2);
+	$paddingBottom: nth($padding, 3);
+	$paddingLeft: nth($padding, 4);
+
+	@if($paddingTop and type-of($paddingTop) == number) {
+
+		padding-top: $paddingTop * $coeff;
+
+	}
+
+	@if($paddingRight and type-of($paddingRight) == number) {
+
+		padding-right: $paddingRight * $coeff;
+
+	}
+
+	@if($paddingBottom and type-of($paddingBottom) == number) {
+
+		padding-bottom: $paddingBottom * $coeff;
+
+	}
+
+	@if($paddingLeft and type-of($paddingLeft) == number) {
+
+		padding-left: $paddingLeft * $coeff;
+
+	}
+
+}

@@ -1,0 +1,112 @@
+
+ul {
+
+	font-size: 1em;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    vertical-align: bottom;
+
+
+    > li {
+
+		font-size: 1em;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+		position: relative;
+
+    }
+
+
+	&.with-disc {
+
+		> li {
+
+			// background-color: green;
+			padding: 0 0 0 2em * $_BASE_SIZE;
+
+
+			&:before {
+
+				@include text-rhythm(2, 2, 0 0 0 0);
+				@include position(absolute, 0 0);
+
+				content: "●";
+
+			}
+
+		}
+
+	}
+
+
+	&.with-number {
+
+		> li {
+
+			// background-color: green;
+			padding: 0 0 0 2em * $_BASE_SIZE;
+
+
+			&:before {
+
+				@include rhythm($_LIST_COPY, $_BASE_SIZE 2, 0 0 0 0);
+				@include position(absolute, 0 0);
+
+				opacity: $_OPACITY_DISABLED;
+				text-align: center;
+
+			}
+
+
+			@mixin numberListElement($num) {
+
+				&:nth-child(#{$num}):before {
+
+					content: $num + quote("");
+
+				}
+
+			}
+
+			@include numberListElement(1);
+			@include numberListElement(2);
+			@include numberListElement(3);
+			@include numberListElement(4);
+			@include numberListElement(5);
+			@include numberListElement(6);
+			@include numberListElement(7);
+			@include numberListElement(8);
+			@include numberListElement(9);
+			@include numberListElement(10);
+
+		}
+
+	}
+
+
+	&.horizontal {
+
+		@include clearfix;
+
+		
+		> li {
+
+			@include inline-block;
+
+			float: left;
+			margin: 0 $_BASE_MARGIN $_BASE_LINE_HEIGHT 0;
+
+
+			&:last-of-type {
+
+				margin-right: 0;
+
+			}
+
+		}
+
+	}
+
+}

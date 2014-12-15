@@ -1,0 +1,27 @@
+
+// >= IE 8.0
+
+@mixin vertically-centered-content {
+
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	> :first-child {
+
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+
+	}
+
+}
+
+
+// utils
+
+.vertically-centered-content {
+
+	@include vertically-centered-content;
+
+}

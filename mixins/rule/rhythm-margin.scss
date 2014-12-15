@@ -1,0 +1,36 @@
+
+// $coeff is use in connection with rhythm
+
+@mixin margin-rhythm($margin: null null null null, $coeff: null) {
+
+	$margin: unpack($margin);
+	$marginTop: nth($margin, 1);
+	$marginRight: nth($margin, 2);
+	$marginBottom: nth($margin, 3);
+	$marginLeft: nth($margin, 4);
+
+	@if($marginTop and type-of($marginTop) == number) {
+
+		margin-top: $marginTop * $coeff;
+
+	}
+
+	@if($marginRight and type-of($marginRight) == number) {
+
+		margin-right: $marginRight * $coeff;
+
+	}
+
+	@if($marginBottom and type-of($marginBottom) == number) {
+
+		margin-bottom: $marginBottom * $coeff;
+
+	}
+
+	@if($marginLeft and type-of($marginLeft) == number) {
+
+		margin-left: $marginLeft * $coeff;
+
+	}
+
+}

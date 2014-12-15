@@ -1,0 +1,30 @@
+
+[class^="icon-"], [class*=" icon-"] {
+
+	@include inline-block;
+	@include text-null;
+	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
+
+	background-color: transparent;
+	padding: 0 $_BASE_PADDING / 2;
+	text-decoration: none;
+
+}
+
+
+h1, h2, h3, h4, h5, h6,
+blockquote,
+p, span, q, cite,
+label, button, .button, a {
+
+	> [class^="icon-"], [class*=" icon-"] {
+
+		@include text-rhythm-reset;
+
+		line-height: inherit;
+		margin: 0 $_BASE_MARGIN / 2 0 0;
+		vertical-align: middle;
+
+	}
+
+}

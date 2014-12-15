@@ -1,0 +1,44 @@
+
+.grid {
+
+	@include position(absolute, 0 0 0 0);
+	@include user-select(none);
+
+	margin: 0 auto;
+	max-width: 1em * $_BASE_GRID_WIDTH;
+
+
+	> .column {
+
+		border-left: 1px solid cyan;
+		min-height: 100%;
+		position: relative;
+
+
+		&:before {
+
+			@include position(absolute, 0 1em * $_COLUMN_GUTTER);
+
+			border-left: 1px solid red;
+			border-right: 1px solid red;
+			content: "";
+
+		}
+
+
+		&:last-of-type {
+
+			border-right: 1px solid cyan;
+
+		}
+
+	}
+
+
+	&.hide {
+
+		display: none;
+
+	}
+
+}

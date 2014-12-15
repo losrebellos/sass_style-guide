@@ -1,0 +1,12 @@
+
+.columns-container {
+
+	@include clearfix;
+
+	margin: 0 auto;
+	max-width: 1em * $_BASE_GRID_WIDTH;
+	min-height: 100%;
+	position: relative;
+	width: 100%;
+
+}

@@ -1,0 +1,6 @@
+
+@mixin column($cols) {
+
+	width: 100% * $cols / $_COLUMN_NUMBER;
+
+}

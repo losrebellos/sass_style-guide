@@ -1,0 +1,32 @@
+
+// >= IE 8.0
+
+@mixin media-width($minWidth, $maxWidth) {
+
+	@media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
+
+		@content;
+
+	}
+
+}
+
+@mixin media-max-width($width) {
+
+	@media only screen and (max-width: $width) {
+
+		@content;
+
+	}
+
+}
+
+@mixin media-min-width($width) {
+
+	@media only screen and (min-width: $width) {
+
+		@content;
+
+	}
+
+}

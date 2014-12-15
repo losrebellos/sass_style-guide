@@ -1,0 +1,159 @@
+
+input {
+
+	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
+	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity 0.5s);
+    @include user-select(none);
+
+
+    &:focus {
+
+        outline: none;
+
+    }
+    
+
+    &::-moz-focus-inner {
+
+        border: none;
+
+    }
+
+
+	&[type="email"], &[type="image"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="url"] {
+
+		background-color: $_BACKGROUND_COLOR;
+		border: $_BORDER_COLOR;
+		color: $_TEXT_COLOR;
+		opacity: $_OPACITY;
+		padding: 0 $_BASE_PADDING;
+		width: 100%;
+
+
+		&:disabled {
+
+			cursor: default;
+			opacity: $_OPACITY_DISABLED;
+
+		}
+
+	}
+
+	&[type="search"] {
+
+		// bug in Chrome
+		// need to be redefined
+		@include box-sizing(border-box);
+
+		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
+
+		    -webkit-appearance: none;
+
+		}
+
+	}
+
+
+	// checkbox & radio should always be inside a label tag
+
+    &[type="checkbox"], &[type="radio"] {
+
+        @include appearance(none);
+        @include user-select(none);
+
+		background-color: $_BACKGROUND_COLOR;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+		font-size: $_BASE_FONT_SIZE;
+		height: 1em / $_BASE_SIZE;
+		margin: 0 $_BASE_PADDING / 2 0 0;
+		opacity: $_OPACITY;
+		padding: 0;
+		vertical-align: middle;
+		width: 1em / $_BASE_SIZE;
+
+
+        &:checked {
+
+			background-color: $_BACKGROUND_COLOR_HOVER;
+
+        }
+
+
+		&:disabled {
+
+			cursor: default;
+			// no opacity has it leaves in a label
+
+		}
+
+	
+		&:not([disabled]) {
+
+			&:hover {
+
+				background-color: $_BACKGROUND_COLOR_HOVER;
+				color: $_HOVER_COLOR;
+
+			}
+
+		}
+
+    }
+
+    &[type="radio"] {
+
+    	// radio buttons are rounds
+        border-radius: 1em;
+
+    }
+
+}
+
+
+textarea {
+
+	$textareaMult: 2;
+	$textareaLines: 2;
+
+	@include box-sizing(border-box);
+	@include text-null;
+	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0);
+    @include user-select(none);
+
+	font-style: normal;
+	font-weight: normal;
+
+	// min-height: 1em * $textareaLines * $_BASE_LINE_HEIGHT / ($textareaMult * $_BASE_FONT_SIZE);
+	// magic multiplier:	3.38em
+	// min-height: 6.76em;	//	2 x 3.38em
+	min-height: 4 * $_BASE_LINE_HEIGHT;
+
+	padding: $_BASE_PADDING / 2 $_BASE_PADDING;
+	resize: none;
+	width: 100%;
+    
+
+    &:focus {
+
+        outline: none;
+
+    }
+
+
+	&:disabled {
+
+		cursor: default;
+		opacity: $_OPACITY_DISABLED;
+
+	}
+
+
+    &::-moz-focus-inner {
+
+        border: none;
+
+    }
+
+}

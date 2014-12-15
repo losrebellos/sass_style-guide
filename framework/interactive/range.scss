@@ -1,0 +1,191 @@
+
+$_RANGE_THUMB_SIZE: 1em;
+$_RANGE_TRACK_HEIGHT: $_RANGE_THUMB_SIZE / 2;
+$_RANGE_TRACK_RADIUS: $_RANGE_TRACK_HEIGHT / 2;
+$_RANGE_THUMB_RADIUS: 50%;
+
+
+input[type="range"] {
+
+    @include appearance(none);
+    @include user-select(none);
+
+    background-color: yellow;
+    border: none;
+    cursor: pointer;
+	font-size: $_BASE_FONT_SIZE;
+	height: $_BASE_FONT_SIZE / 2;
+	margin: 0 $_BASE_PADDING / 2 0 0;
+	opacity: $_OPACITY;
+	padding: 0;
+	vertical-align: middle;
+	width: auto;
+
+
+	&:focus {
+
+		&::-moz-range-track, &::-webkit-slider-runnable-track {
+
+		    background: $_BACKGROUND_COLOR;
+
+		}
+
+		&::-ms-fill-upper {
+
+		    background: $_BACKGROUND_COLOR;
+		    
+		}
+
+		&::-ms-fill-lower {
+
+	    	background: $_BACKGROUND_COLOR_HOVER;
+		}
+
+	}
+
+
+	&:disabled {
+
+		// no opacity has it leaves in a label
+		cursor: default;
+
+	}
+
+
+	&:not([disabled]) {
+
+		&:hover {
+
+			&::-webkit-slider-thumb {
+
+			    background: $_COLOR_INTERACTIVE_2;
+
+			}
+
+			&::-moz-range-thumb {
+
+			    background: $_COLOR_INTERACTIVE_2;
+
+			}
+
+			&::-ms-thumb {
+
+			    background: $_COLOR_INTERACTIVE_2;
+
+			}
+
+		}
+
+	}
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// Webkit
+	/////////////////////////////////////////////////////////////////////////////////////
+
+	&::-webkit-slider-runnable-track {
+
+	    background: $_BACKGROUND_COLOR;
+	    border: none;
+	    border-radius: $_RANGE_TRACK_RADIUS;
+	    height: $_RANGE_TRACK_HEIGHT;
+	    width: auto;
+
+	}
+
+	&::-webkit-slider-thumb {
+
+		@include transition(background $_HOVER_DURATION);
+
+	    -webkit-appearance: none;
+	    background: $_COLOR_INTERACTIVE_1;
+	    border: none;
+	    border-radius: $_RANGE_THUMB_RADIUS;
+	    height: $_RANGE_THUMB_SIZE;
+	    margin-top: -$_RANGE_TRACK_HEIGHT / 2;
+	    width: $_RANGE_THUMB_SIZE;
+
+	}
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// Mozilla
+	/////////////////////////////////////////////////////////////////////////////////////
+
+	&::-moz-range-track {
+
+	    background: $_BACKGROUND_COLOR;
+	    border: none;
+	    border-radius: $_RANGE_TRACK_RADIUS;
+	    height: $_RANGE_TRACK_HEIGHT;
+	    width: auto;
+
+	}
+
+	&::-moz-range-thumb {
+
+		@include transition(background $_HOVER_DURATION);
+
+	    background: $_COLOR_INTERACTIVE_1;
+	    border: none;
+	    border-radius: $_RANGE_THUMB_RADIUS;
+	    height: $_RANGE_THUMB_SIZE;
+	    width: $_RANGE_THUMB_SIZE;
+
+	}
+
+	/* hide the outline behind the border */
+	&:-moz-focusring{
+
+	    outline: 1px solid white;
+	    outline-offset: -1px;
+
+	}
+
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// Windows
+	/////////////////////////////////////////////////////////////////////////////////////
+
+	&::-ms-track {
+	    
+	    /* remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	    background: transparent;
+	    
+	    /* leave room for the larger thumb to overflow with a transparent border */
+	    border-color: transparent;
+	    border-width: 6px 0;
+
+	    /* remove default tick marks */
+	    color: transparent;
+
+	    height: $_RANGE_TRACK_HEIGHT;
+	    width: auto;
+	}
+
+	&::-ms-fill-lower {
+
+	    background: $_BACKGROUND_COLOR_HOVER;
+	    border-radius: $_RANGE_TRACK_RADIUS;
+
+	}
+	&::-ms-fill-upper {
+
+	    background: $_BACKGROUND_COLOR;
+	    border-radius: $_RANGE_TRACK_RADIUS;
+
+	}
+
+	&::-ms-thumb {
+
+		@include transition(background $_HOVER_DURATION);
+
+	    background: $_COLOR_INTERACTIVE_1;
+	    border: none;
+	    border-radius: $_RANGE_THUMB_RADIUS;
+	    height: $_RANGE_THUMB_SIZE;
+	    width: $_RANGE_THUMB_SIZE;
+
+	}
+
+}

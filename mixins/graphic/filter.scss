@@ -1,0 +1,15 @@
+
+@mixin filter($filter, $prefixes) {
+
+	@if $prefixes {
+
+		@include prefixer(filter, $filter, $prefixes);
+
+	}
+    @else {
+
+		@include prefixer(filter, $filter, webkit moz ms o spec);
+
+    }
+
+}

@@ -1,0 +1,32 @@
+
+label {
+	
+	@include text-rhythm($_INTERACTIVE_COPY, 2, 0 0 1 0);
+    @include user-select(none);
+
+	border: none;
+	// background-color: green;
+	cursor: pointer;
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	margin-right: $_BASE_MARGIN;
+	padding: 0;
+
+
+
+	&:last-of-type {
+
+		margin-right: 0;
+
+	}
+
+
+	&.disabled {
+
+		cursor: default;
+		opacity: $_OPACITY_DISABLED;
+
+	}
+
+}
