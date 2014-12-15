@@ -6,6 +6,13 @@
 	float: left;
     padding: 1em * $_COLUMN_GUTTER;
 
+
+    &.clear-both {
+
+    	clear: both;
+
+    }
+
 }
 
 

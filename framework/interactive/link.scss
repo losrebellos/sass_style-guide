@@ -16,16 +16,8 @@ a {
 	font-style: normal;
 	font-weight: normal;
 	margin: 0;
-    outline: none;
 	padding: 0;
 	text-decoration: underline;
-
-
-	&:link, &:visited, &:hover, &:active, &:focus {
-
-    	outline: none;
-
-	}
 
 
 	// unvisited link

@@ -42,6 +42,57 @@
 
 
 
+/* COLUMNS */
+
+.style-guide-columns {
+
+	@include clearfix;
+
+	clear: both;
+	float: left;
+	width: 100%;
+
+
+	> .column {
+
+		background-color: rgba(255, 0, 0, 0.2);
+		min-height: 9em;
+		position: relative;
+
+
+		&:before {
+
+			@include position(absolute, 1em * $_COLUMN_GUTTER);
+
+			background-color: rgba(255, 0, 0, 0.2);
+			content: "";
+
+		}
+
+
+		> p {
+
+			@include inline-block;
+			@include text-rhythm(1.7, 2, 0 0 0 0.5);
+
+			color: white;
+			font-weight: bold;
+
+		}
+
+
+		&.lighter {
+
+			background-color: rgba(255, 0, 0, 0.15);
+
+		}
+
+	}
+
+}
+
+
+
 /* ICONS */
 
 .style-guide-icons {
