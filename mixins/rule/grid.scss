@@ -1,6 +1,6 @@
 
-@mixin column($cols) {
+@mixin column($cols, $columnNum: $_COLUMN_NUMBER) {
 
-	width: 100% * $cols / $_COLUMN_NUMBER;
+	width: 100% * $cols / $columnNum;
 
 }
