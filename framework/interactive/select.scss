@@ -50,6 +50,22 @@ $containerSelectSize: 1;
 		opacity: $_OPACITY_DISABLED;
 
 	}
+
+
+	> select {
+
+		margin: 0;
+		width: 0.25em * $_BASE_MAX_WIDTH;
+
+
+		&:disabled {
+
+			cursor: default;
+			opacity: 1;
+
+		}
+
+	}
 	
 }
 
@@ -88,6 +104,7 @@ select {
 	&:disabled {
 
 		cursor: default;
+		opacity: $_OPACITY_DISABLED;
 
 	}
 
