@@ -5,4 +5,8 @@ $_COLUMN_NUMBER: 12;
 
 // should be a multiple of $_BASE_LINE_HEIGHT in constants/texts.scss
 // to keep the rhythm going
-$_COLUMN_GUTTER: 1.5;
+@if($_COLUMN_GUTTER == null) {
+
+	$_COLUMN_GUTTER: 1.5;
+
+}
