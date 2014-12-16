@@ -11,33 +11,11 @@ $containerSelectSize: 1;
 	position: relative;
 
 
-	&:before {
-
-		@include position(absolute, 0 $_BASE_PADDING null null);
-		@include rhythm($_INTERACTIVE_COPY, $containerSelectSize $containerSelectSize, $containerSelectSize / 2 null null null);
-
-		background-image: url(../images/icon-select.png);
-		background-position: left center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		content: "";
-		z-index: 0;
-
-	}
-
-
 	&:not(.disabled) {
 
 		&:hover, &.selected {
 
 			background-color: $_BACKGROUND_COLOR_HOVER;
-
-
-			&:before {
-
-				background-position: right center;
-
-			}
 
 		}
 
