@@ -6,6 +6,7 @@
 
 	margin: 0 auto;
 	max-width: 1em * $_BASE_GRID_WIDTH;
+	z-index: 1000000;
 
 
 	> .column {
