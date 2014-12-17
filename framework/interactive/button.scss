@@ -35,3 +35,10 @@ button, .button, input[type="button"], input[type="submit"], input[type="reset"]
 	}
 
 }
+
+
+button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
+
+	line-height: inherit;
+
+}

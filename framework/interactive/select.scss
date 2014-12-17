@@ -61,6 +61,7 @@ select {
 	cursor: pointer;
 	font-style: normal;
 	font-weight: normal;
+	line-height: inherit;
 	opacity: $_OPACITY;
     outline: none;
 	padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize) 0 $_BASE_PADDING;
