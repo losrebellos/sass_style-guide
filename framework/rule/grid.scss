@@ -16,14 +16,19 @@
 		position: relative;
 
 
-		&:before {
+		// only if gutter is > 0
+		@if $_COLUMN_GUTTER > 0 {
 
-			@include position(absolute, 0 1em * $_COLUMN_GUTTER);
+			&:before {
 
-			border-left: 1px solid red;
-			border-right: 1px solid red;
-			content: "";
+				@include position(absolute, 0 1em * $_COLUMN_GUTTER);
 
+				border-left: 1px solid red;
+				border-right: 1px solid red;
+				content: "";
+
+			}
+			
 		}
 
 
