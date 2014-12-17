@@ -5,7 +5,8 @@
 	@include user-select(none);
 
 	margin: 0 auto;
-	max-width: 1em * $_BASE_GRID_WIDTH;
+	max-width: $_BASE_GRID_WIDTH;
+	z-index: 1000000;
 
 
 	> .column {
@@ -15,14 +16,19 @@
 		position: relative;
 
 
-		&:before {
+		// only if gutter is > 0
+		@if $_COLUMN_GUTTER > 0 {
 
-			@include position(absolute, 0 1em * $_COLUMN_GUTTER);
+			&:before {
 
-			border-left: 1px solid red;
-			border-right: 1px solid red;
-			content: "";
+				@include position(absolute, 0 1em * $_COLUMN_GUTTER);
 
+				border-left: 1px solid red;
+				border-right: 1px solid red;
+				content: "";
+
+			}
+			
 		}
 
 

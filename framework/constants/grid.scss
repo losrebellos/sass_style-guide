@@ -1,12 +1,8 @@
 
-$_BASE_GRID_WIDTH: 120;
+$_BASE_GRID_WIDTH: 120em !default;
 
-$_COLUMN_NUMBER: 12;
+$_COLUMN_NUMBER: 12 !default;
 
 // should be a multiple of $_BASE_LINE_HEIGHT in constants/texts.scss
 // to keep the rhythm going
-@if($_COLUMN_GUTTER == null) {
-
-	$_COLUMN_GUTTER: 1.5;
-
-}
+$_COLUMN_GUTTER: 1.5 !default;

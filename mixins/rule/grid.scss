@@ -4,3 +4,38 @@
 	width: 100% * $cols / $columnNum;
 
 }
+
+
+@mixin generate-columns($columnsNum) {
+
+	@for $i from 1 through $columnsNum {
+
+		$special: '';
+
+		@if $i == $columnsNum / 2 {
+
+			$special: '.column-half-' + $columnsNum;
+
+		}
+
+		@if $i == $columnsNum / 3 {
+
+			$special: '.column-third-' + $columnsNum;
+
+		}
+
+		@if $i == $columnsNum / 4 {
+
+			$special: '.column-quarter-' + $columnsNum;
+
+		}
+
+	    .column-#{$i}, #{$special} {
+
+			@include column($i);
+
+	    }
+
+	}
+	
+}

@@ -20,6 +20,8 @@
 }
 
 
+/* MARGIN */
+
 .center {
 
 	margin-left: auto;
@@ -28,6 +30,8 @@
 
 }
 
+
+/* ALIGN */
 
 .align-left {
 
@@ -50,6 +54,8 @@
 }
 
 
+/* DECORATION */
+
 .underline {
 
 	text-decoration: underline;
@@ -59,21 +65,6 @@
 
 .breakthrough {
 
-	position: relative;
-
-
-	&:after {
-
-		background-color: black;
-		content: ' ';
-		height: 0.1em;
-		left: -5%;
-		margin: -0.05em 0 0 0;
-		opacity: 0.7;
-		position: absolute;
-		top: 50%;
-		width: 110%;
-
-	}
+	text-decoration: line-through;
 
 }

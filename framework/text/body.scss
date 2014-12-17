@@ -15,7 +15,7 @@ p, span, q, cite {
 	text-indent: $_BASE_MARGIN;
 
 
-	&:first-of-type {
+	&:first-child {
 
 		text-indent: 0;
 
