@@ -15,7 +15,7 @@ p, span, q, cite {
 	text-indent: $_BASE_MARGIN;
 
 
-	&:first-child {
+	&:first-child, &:first-of-type {
 
 		text-indent: 0;
 
@@ -25,6 +25,13 @@ p, span, q, cite {
 	&:last-child {
 
 		margin-bottom: 0;
+
+	}
+
+
+	> * {
+
+		text-indent: 0;
 
 	}
 
