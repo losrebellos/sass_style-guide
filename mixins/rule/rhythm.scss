@@ -1,4 +1,11 @@
 
+@function getRhythm($fs, $size) {
+
+	@return 1em * ($size * $_BASE_SIZE * $_BASE_LINE_HEIGHT) / ($fs * $_BASE_FONT_SIZE);
+
+}
+
+
 @mixin rhythm($mult, $sizes: null null, $margin: null null null null, $padding: null null null null) {
 
 	$fs: $mult * $_BASE_FONT_SIZE;
