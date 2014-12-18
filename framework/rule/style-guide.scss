@@ -62,7 +62,7 @@
 
 		&:before {
 
-			@include position(absolute, 1em * $_COLUMN_GUTTER);
+			@include position(absolute, $_COLUMN_GUTTER);
 
 			background-color: rgba(255, 0, 0, 0.2);
 			content: "";

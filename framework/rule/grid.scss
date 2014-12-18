@@ -5,27 +5,38 @@
 	@include user-select(none);
 	@include text-rhythm-reset;
 
-	border-right: 1px solid cyan;
+	opacity: 0.5;
 	z-index: 1000000;
 
 
 	> .column {
 
-		@include column(0.5, $_COLUMN_NUMBER);
+		@include column(1, $_COLUMN_NUMBER);
 
 		border-left: 1px solid cyan;
-		border-right: 1px solid red;
-		margin-right: getColumnDefaultWidth($_COLUMN_NUMBER) / 2;
 		min-height: 100%;
 		position: relative;
+
+
+		&:before {
+
+			border-right: 1px solid red;
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 50%;
+
+		}
 
 
 		// only if gutter is > 0
 		@if $_COLUMN_GUTTER > 0 {
 
-			&:before {
+			&:after {
 
-				@include position(absolute, 0 1em * $_COLUMN_GUTTER);
+				@include position(absolute, 0 $_COLUMN_GUTTER);
 
 				border-left: 1px solid green;
 				border-right: 1px solid green;
@@ -33,6 +44,13 @@
 
 			}
 			
+		}
+
+
+		&:last-of-type {
+
+			border-right: 1px solid cyan;
+
 		}
 
 	}
