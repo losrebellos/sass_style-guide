@@ -13,33 +13,61 @@
 }
 
 
-@mixin generate-columns($columnsNum) {
+@mixin generate-columns($columnsNum: $_COLUMN_NUMBER) {
 
 	@for $i from 1 through $columnsNum {
 
-		$special: '';
+		$original: '.column-' + $i + '-' + $columnsNum;
+
+		@if $columnsNum == $_COLUMN_NUMBER {
+
+			$original: '.column-' + $i;
+
+		}
+
+
+		$special1: '';
+		$special2: '';
 
 		@if $i == $columnsNum / 2 {
 
-			$special: '.column-half-' + $columnsNum;
+			$special1: '.column-half-' + $columnsNum;
+
+			@if $columnsNum == $_COLUMN_NUMBER {
+
+				$special2: '.column-half';
+
+			}
 
 		}
 
 		@if $i == $columnsNum / 3 {
 
-			$special: '.column-third-' + $columnsNum;
+			$special1: '.column-third-' + $columnsNum;
+
+			@if $columnsNum == $_COLUMN_NUMBER {
+
+				$special2: '.column-third';
+
+			}
 
 		}
 
 		@if $i == $columnsNum / 4 {
 
-			$special: '.column-quarter-' + $columnsNum;
+			$special1: '.column-quarter-' + $columnsNum;
+
+			@if $columnsNum == $_COLUMN_NUMBER {
+
+				$special2: '.column-quarter';
+
+			}
 
 		}
 
-	    .column-#{$i}, #{$special} {
+	    #{$original}, #{$special1}, #{$special2} {
 
-			@include column($i);
+			@include column($i, $columnsNum);
 
 	    }
 
