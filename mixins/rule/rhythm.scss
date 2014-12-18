@@ -52,6 +52,9 @@
 
 @mixin text-rhythm-reset {
 
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
 	font-size: 1em;
 	line-height: normal;
 	margin: 0;
