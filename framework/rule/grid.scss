@@ -3,15 +3,19 @@
 
 	@include position(absolute, 0 0 0 0);
 	@include user-select(none);
+	@include text-rhythm-reset;
 
-	margin: 0 auto;
-	max-width: $_BASE_GRID_WIDTH;
+	border-right: 1px solid cyan;
 	z-index: 1000000;
 
 
 	> .column {
 
+		@include column(0.5, $_COLUMN_NUMBER);
+
 		border-left: 1px solid cyan;
+		border-right: 1px solid red;
+		margin-right: getColumnDefaultWidth($_COLUMN_NUMBER) / 2;
 		min-height: 100%;
 		position: relative;
 
@@ -23,19 +27,12 @@
 
 				@include position(absolute, 0 1em * $_COLUMN_GUTTER);
 
-				border-left: 1px solid red;
-				border-right: 1px solid red;
+				border-left: 1px solid green;
+				border-right: 1px solid green;
 				content: "";
 
 			}
 			
-		}
-
-
-		&:last-of-type {
-
-			border-right: 1px solid cyan;
-
 		}
 
 	}

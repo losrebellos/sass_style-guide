@@ -1,7 +1,14 @@
 
+@function getColumnDefaultWidth($columnNum: $_COLUMN_NUMBER) {
+
+	@return 100% / $columnNum;
+
+}
+
+
 @mixin column($cols, $columnNum: $_COLUMN_NUMBER) {
 
-	width: 100% * $cols / $columnNum;
+	width: $cols * getColumnDefaultWidth($columnNum);
 
 }
 
