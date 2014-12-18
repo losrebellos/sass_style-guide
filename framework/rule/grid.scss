@@ -5,6 +5,8 @@
 	@include user-select(none);
 	@include text-rhythm-reset;
 
+	margin: 0 auto;
+	max-width: $_BASE_GRID_WIDTH;
 	opacity: 0.5;
 	z-index: 1000000;
 
