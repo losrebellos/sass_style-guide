@@ -5,10 +5,16 @@
 
 }
 
+@function getColumnWidth($cols, $columnNum: $_COLUMN_NUMBER) {
+
+	@return 100% * $cols / $columnNum;
+
+}
+
 
 @mixin column($cols, $columnNum: $_COLUMN_NUMBER) {
 
-	width: $cols * getColumnDefaultWidth($columnNum);
+	width: getColumnWidth($cols, $columnNum);
 
 }
 
