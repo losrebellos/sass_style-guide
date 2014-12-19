@@ -33,6 +33,7 @@ ul {
 				@include position(absolute, 0 0);
 
 				content: "●";
+				z-index: -1;
 
 			}
 
@@ -56,6 +57,7 @@ ul {
 
 				opacity: $_OPACITY_DISABLED;
 				text-align: center;
+				z-index: -1;
 
 			}
 
