@@ -4,16 +4,9 @@
 *, *:before, *:after {
     
     @include box-sizing(border-box);
+    @include remove-outline;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    outline: none;
-
-
-    &:link, &:visited, &:hover, &:active, &:focus {
-
-        outline: none;
-
-    }
 
 }
 

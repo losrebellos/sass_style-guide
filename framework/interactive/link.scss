@@ -5,6 +5,7 @@
 a {
 
 	@include inline-block;
+    @include remove-outline;
 	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 	// @include transition(color $_HOVER_DURATION);
