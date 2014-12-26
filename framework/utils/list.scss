@@ -14,7 +14,7 @@ ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-		position: relative;
+		// position: relative;
 
     }
 
@@ -25,6 +25,7 @@ ul {
 
 			// background-color: green;
 			padding: 0 0 0 2em * $_BASE_SIZE;
+			position: relative;
 
 
 			&:before {
@@ -48,6 +49,7 @@ ul {
 
 			// background-color: green;
 			padding: 0 0 0 2em * $_BASE_SIZE;
+			position: relative;
 
 
 			&:before {

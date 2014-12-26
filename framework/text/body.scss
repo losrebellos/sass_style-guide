@@ -12,6 +12,19 @@ p, span, q, cite {
 	// margin-left: auto;
 	// margin-right: auto;
 	padding: 0;
+
+
+	&:last-child {
+
+		margin-bottom: 0;
+
+	}
+
+}
+
+
+p {
+
 	text-indent: $_BASE_MARGIN;
 
 
@@ -22,19 +35,12 @@ p, span, q, cite {
 	}
 
 
-	&:last-child {
-
-		margin-bottom: 0;
-
-	}
-
-
 	> * {
 
 		text-indent: 0;
 
 	}
-
+	
 }
 
 
