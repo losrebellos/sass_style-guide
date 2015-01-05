@@ -44,7 +44,12 @@
 	$k: 1em * $_BASE_SIZE * $_BASE_LINE_HEIGHT / $fs;
 
 	font-size: $fs;
-	line-height: $lines * $k;
+
+	@if(type-of($lines) == number) {
+
+		line-height: $lines * $k;
+
+	}
 
 	$margin: unpack($margin);
 	@include margin-rhythm(nth($margin, 1) nth($margin, 2) nth($margin, 3) nth($margin, 4), $k);
