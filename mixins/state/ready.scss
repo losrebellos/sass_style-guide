@@ -1,0 +1,10 @@
+
+@mixin ready {
+
+	.ready & {
+
+		@content;
+
+	}
+
+}
