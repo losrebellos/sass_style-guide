@@ -1,5 +1,5 @@
 
-p, span, q, cite {
+p, a, q, cite {
 
 	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
@@ -41,6 +41,13 @@ p {
 
 	}
 	
+}
+
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+
+	text-indent: 0;
+
 }
 
 
