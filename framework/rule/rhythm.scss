@@ -5,10 +5,10 @@
 	@include user-select(none);
 	@include text-rhythm-reset;
 
-	background-image: -webkit-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
-	background-image: -moz-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
-	background-image: -o-linear-gradient(top, cyan 0, rgba(255,255,255,0) 1px);
-	background-image: linear-gradient(to bottom, cyan 0, rgba(255,255,255,0) 1px);
+	background-image: -webkit-linear-gradient(top, $_GRID_COLOR_1 0, rgba(255,255,255,0) 1px);
+	background-image: -moz-linear-gradient(top, $_GRID_COLOR_1 0, rgba(255,255,255,0) 1px);
+	background-image: -o-linear-gradient(top, $_GRID_COLOR_1 0, rgba(255,255,255,0) 1px);
+	background-image: linear-gradient(to bottom, $_GRID_COLOR_1 0, rgba(255,255,255,0) 1px);
 	background-repeat: repeat-y;
 	background-size: 100% $_BASE_LINE_HEIGHT;
 	opacity: 0.5;
@@ -21,10 +21,10 @@
 		@include user-select(none);
 		@include text-rhythm-reset;
 
-		background-image: -webkit-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
-		background-image: -moz-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
-		background-image: -o-linear-gradient(top, red 0, rgba(255,255,255,0) 1px);
-		background-image: linear-gradient(to bottom, red 0, rgba(255,255,255,0) 1px);
+		background-image: -webkit-linear-gradient(top, $_GRID_COLOR_2 0, rgba(255,255,255,0) 1px);
+		background-image: -moz-linear-gradient(top, $_GRID_COLOR_2 0, rgba(255,255,255,0) 1px);
+		background-image: -o-linear-gradient(top, $_GRID_COLOR_2 0, rgba(255,255,255,0) 1px);
+		background-image: linear-gradient(to bottom, $_GRID_COLOR_2 0, rgba(255,255,255,0) 1px);
 		background-repeat: repeat-y;
 		background-size: 100% $_BASE_LINE_HEIGHT;
 		content: "";

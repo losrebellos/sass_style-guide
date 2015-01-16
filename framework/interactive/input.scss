@@ -3,7 +3,6 @@ input {
 
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity 0.5s);
-    @include user-select(none);
 
     line-height: inherit;
 

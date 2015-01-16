@@ -15,14 +15,14 @@
 
 		@include column(1, $_COLUMN_NUMBER);
 
-		border-left: 1px solid cyan;
+		border-left: 1px solid $_GRID_COLOR_1;
 		min-height: 100%;
 		position: relative;
 
 
 		&:before {
 
-			border-right: 1px solid red;
+			border-right: 1px solid $_GRID_COLOR_2;
 			content: "";
 			height: 100%;
 			left: 0;
@@ -51,7 +51,7 @@
 
 		&:last-of-type {
 
-			border-right: 1px solid cyan;
+			border-right: 1px solid $_GRID_COLOR_1;
 
 		}
 
