@@ -8,17 +8,6 @@ ul {
     vertical-align: bottom;
 
 
-    > li {
-
-		font-size: 1em;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-		// position: relative;
-
-    }
-
-
 	&.with-disc {
 
 		> li {
@@ -112,5 +101,16 @@ ul {
 		}
 
 	}
+
+
+    > li {
+
+		font-size: 1em;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+		// position: relative;
+
+    }
 
 }
