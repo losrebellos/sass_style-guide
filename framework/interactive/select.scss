@@ -1,7 +1,7 @@
 
 $containerSelectSize: 1;
 
-.form-select {
+.form-select, .form-drop-down {
 
 	@include inline-block;
 	@include rhythm($containerSelectSize, null null, 0 0 1 0, 0 0 0 0);

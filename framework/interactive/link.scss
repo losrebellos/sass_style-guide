@@ -57,6 +57,22 @@ a {
 	}
 
 
+	&.disabled {
+
+		cursor: default;
+		opacity: $_OPACITY_DISABLED;
+		text-decoration: line-through;
+
+
+		> img, > svg {
+
+			opacity: 1;
+
+		}
+
+	}
+
+
 	> img, > svg {
 
 		@include transition(opacity $_HOVER_DURATION);
