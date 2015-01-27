@@ -1,7 +1,6 @@
 
 p, a, q, cite {
 
-	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
 	border: none;
@@ -24,6 +23,8 @@ p, a, q, cite {
 
 
 p {
+
+	@include text-null;
 
 	text-indent: $_BASE_MARGIN;
 
@@ -61,6 +62,8 @@ span {
 
 cite {
 
+	@include text-null;
+
 	font-style: italic;
 	opacity: 0.75;
 
@@ -68,6 +71,8 @@ cite {
 
 
 q {
+
+	@include text-null;
 
 	font-style: italic;
 	opacity: 0.75;

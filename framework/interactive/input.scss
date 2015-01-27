@@ -119,6 +119,8 @@ input {
 	
 		&:not([disabled]) {
 
+			// do not use &:focus
+			// as it conflicts with the transitions
 			&:hover {
 
 				background-color: $_BACKGROUND_COLOR_HOVER;
