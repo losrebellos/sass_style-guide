@@ -13,16 +13,20 @@ ul {
 		> li {
 
 			// background-color: green;
-			padding: 0 0 0 2em * $_BASE_SIZE;
+			padding: 0 0 0 1.5em * $_BASE_SIZE;
 			position: relative;
 
 
 			&:before {
 
-				@include text-rhythm(2, 2, 0 0 0 0);
-				@include position(absolute, 0 0);
+				@include text-rhythm($_LIST_COPY_DISC, 2, 0 0 0 0);
+				@include user-select(none);
 
+				// background-color: red;
 				content: "●";
+				left: 0;
+				position: absolute;
+				top: 0;
 				z-index: -1;
 
 			}
@@ -43,11 +47,15 @@ ul {
 
 			&:before {
 
-				@include rhythm($_LIST_COPY, $_BASE_SIZE 2, 0 0 0 0);
-				@include position(absolute, 0 0);
+				@include rhythm($_LIST_COPY_NUMBER, $_BASE_SIZE 2, 0 0 0 0);
+				@include user-select(none);
 
-				opacity: $_OPACITY_DISABLED;
+				// background-color: red;
+				left: 0;
+				line-height: 2.5em;
+				position: absolute;
 				text-align: center;
+				top: 0;
 				z-index: -1;
 
 			}
@@ -57,7 +65,7 @@ ul {
 
 				&:nth-child(#{$num}):before {
 
-					content: $num + quote("");
+					content: $num + quote(".");
 
 				}
 
