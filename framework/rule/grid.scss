@@ -18,10 +18,12 @@
 		@include column(1, $_COLUMN_NUMBER);
 
 		border-left: 1px solid $_GRID_COLOR_1;
+		border-right: 1px solid transparent;
 		min-height: 100%;
 		position: relative;
 
 
+		// middle
 		&:before {
 
 			border-right: 1px solid $_GRID_COLOR_2;
@@ -35,6 +37,7 @@
 		}
 
 
+		// inner
 		// only if gutter is > 0
 		@if $_COLUMN_GUTTER > 0 {
 
@@ -50,15 +53,12 @@
 			
 		}
 
-	}
 
+		&:last-of-type {
 
-	&:after {
+			border-right: 1px solid cyan;
 
-		@include position(absolute, 0 0);
-	
-		border-right: 1px solid $_GRID_COLOR_1;
-		content: "";
+		}
 
 	}
 
