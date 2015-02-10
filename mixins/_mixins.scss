@@ -1,9 +1,11 @@
 
+@import 'graphic/animation-fade';
+@import 'graphic/animation-flicker';
 @import 'graphic/background';
-@import 'graphic/fade';
 @import 'graphic/filter';
 @import 'graphic/gradient';
 @import 'graphic/media-queries';
+@import 'graphic/text-shadow';
 @import 'graphic/vertically-centered';
 
 @import 'interactive/not-clickable';
