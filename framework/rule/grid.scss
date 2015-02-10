@@ -43,17 +43,21 @@
 				border-left: 1px solid green;
 				border-right: 1px solid green;
 				content: "";
+				margin-left: -1px;
 
 			}
 			
 		}
 
+	}
 
-		&:last-of-type {
 
-			border-right: 1px solid $_GRID_COLOR_1;
+	&:after {
 
-		}
+		@include position(absolute, 0 0);
+	
+		border-right: 1px solid $_GRID_COLOR_1;
+		content: "";
 
 	}
 
