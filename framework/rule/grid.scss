@@ -8,6 +8,8 @@
 	margin: 0 auto;
 	max-width: $_BASE_GRID_WIDTH;
 	opacity: 0.5;
+	pointer-events: none;
+	width: 100%;
 	z-index: 1000000;
 
 
@@ -38,12 +40,11 @@
 
 			&:after {
 
-				@include position(absolute, 0 $_COLUMN_GUTTER);
+				@include position(absolute, 0 $_COLUMN_GUTTER 0 $_COLUMN_GUTTER);
 
-				border-left: 1px solid green;
-				border-right: 1px solid green;
+				border-left: 1px solid $_GRID_COLOR_3;
+				border-right: 1px solid $_GRID_COLOR_3;
 				content: "";
-				margin-left: -1px;
 
 			}
 			
