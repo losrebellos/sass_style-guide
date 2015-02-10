@@ -1,0 +1,7 @@
+
+@mixin text-shadow($hShadow, $vShadow, $blurRadius, $tsColor) {
+
+	filter: dropshadow(color = $tsColor, offx = $hShadow, offy = $vShadow);
+	text-shadow: $hShadow $vShadow $blurRadius $tsColor;
+
+}
