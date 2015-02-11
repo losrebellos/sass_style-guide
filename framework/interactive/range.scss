@@ -15,7 +15,7 @@ input[type="range"] {
     cursor: pointer;
 	font-size: $_BASE_FONT_SIZE;
 	height: $_BASE_FONT_SIZE / 2;
-	margin: 0 $_BASE_PADDING / 2 0 0;
+	margin: $_BASE_PADDING / 2 0;
 	opacity: $_OPACITY;
 	padding: 0;
 	vertical-align: middle;
@@ -187,5 +187,12 @@ input[type="range"] {
 	    width: $_RANGE_THUMB_SIZE;
 
 	}
+
+}
+
+
+input[type="number"] {
+
+	width: auto;
 
 }
