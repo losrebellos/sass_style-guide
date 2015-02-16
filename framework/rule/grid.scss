@@ -13,12 +13,20 @@
 	z-index: 1000000;
 
 
+	&:before {
+
+		@include position(absolute, 0 0 0 0);
+
+		border-right: 1px solid cyan;
+		content: "";
+
+	}
+
+
 	> .column {
 
 		@include column(1, $_COLUMN_NUMBER);
 
-		border-left: 1px solid $_GRID_COLOR_1;
-		border-right: 1px solid transparent;
 		min-height: 100%;
 		position: relative;
 
@@ -26,6 +34,7 @@
 		// middle
 		&:before {
 
+			border-left: 1px solid $_GRID_COLOR_1;
 			border-right: 1px solid $_GRID_COLOR_2;
 			content: "";
 			height: 100%;
@@ -49,15 +58,14 @@
 				border-right: 1px solid $_GRID_COLOR_3;
 				content: "";
 
+				// FIX
+				// weird 1 px offset
+				// due to box-sizing?
+				right: calc(1em - 1px);
+				//
+
 			}
 			
-		}
-
-
-		&:last-of-type {
-
-			border-right: 1px solid cyan;
-
 		}
 
 	}
