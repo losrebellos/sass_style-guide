@@ -1,4 +1,16 @@
 
+// webkit on iOS
+// is adding rounded corners
+
+input, textarea {
+
+	@include border-radius(0);
+
+	-webkit-appearance: none;
+
+}
+
+
 input {
 
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);

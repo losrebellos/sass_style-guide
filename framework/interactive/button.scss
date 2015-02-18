@@ -1,4 +1,16 @@
 
+// webkit on iOS
+// is adding rounded corners
+
+button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
+
+	@include border-radius(0);
+
+	-webkit-appearance: none;
+
+}
+
+
 button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
 
     @include remove-outline;
