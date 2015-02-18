@@ -1,0 +1,10 @@
+
+@mixin scroll-to-top {
+
+	.scroll-to-top & {
+
+		@content;
+
+	}
+
+}
