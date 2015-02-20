@@ -61,7 +61,7 @@
 				// FIX
 				// weird 1 px offset
 				// due to box-sizing?
-				right: calc(1em - 1px);
+				right: calc($_COLUMN_GUTTER - 1px);
 				//
 
 			}
