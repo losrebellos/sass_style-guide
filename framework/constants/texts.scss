@@ -1,21 +1,24 @@
 
 /* base size */
 
-// 62.5% for body so 1em = 10px
-$_BASE_SIZE: 1;
+// 62.5% for body
+$_DEFAULT_BODY_FONT_SIZE: 62.5 / 100 !default;
+
+// so 1em = 10px
+$_BASE_SIZE: 1 !default;
 
 
 
 /* text only */
 
 // 10px is the rhythm
-$_BASE_FONT_SIZE: $_BASE_SIZE * 1em;
+$_BASE_FONT_SIZE: $_BASE_SIZE * 1em !default;
 
 // 150% of font-size
-$_BASE_LINE_HEIGHT: 1.5em;
+$_BASE_LINE_HEIGHT: 1.5em !default;
 
 // max width for readibility
-$_BASE_MAX_WIDTH: 45;
+$_BASE_MAX_WIDTH: 45 !default;
 
 // margin & padding
 $_BASE_MARGIN: $_BASE_SIZE * $_BASE_LINE_HEIGHT / $golden;

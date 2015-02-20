@@ -4,7 +4,7 @@
 	@include column($_COLUMN_NUMBER);
 
 	float: left;
-    padding: $_COLUMN_GUTTER;
+    padding: $_BASE_LINE_HEIGHT / 2 $_COLUMN_GUTTER;
 
 
     &.clear-both {
