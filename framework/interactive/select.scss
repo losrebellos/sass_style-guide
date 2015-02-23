@@ -33,7 +33,6 @@ $containerSelectSize: 1;
 	> select {
 
 		margin: 0;
-		width: 0.25em * $_BASE_MAX_WIDTH;
 
 
 		&:disabled {
@@ -64,7 +63,9 @@ select {
 	line-height: inherit;
 	opacity: $_OPACITY;
     outline: none;
-	padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize) 0 $_BASE_PADDING;
+	// padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize) 0 $_BASE_PADDING;
+	// padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize);
+	padding: 0 $_BASE_PADDING;
 	position: relative;
 	z-index: 1;
 	
