@@ -1,6 +1,43 @@
 
 // >= IE 8.0
 
+// width and height
+
+@mixin media($minWidth, $maxWidth, $minHeight, $maxHeight) {
+
+	@media only screen and (min-width: $minWidth) and (max-width: $maxWidth) and (min-height: $minHeight) and (max-height: $maxHeight) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin media-max($width, $height) {
+
+	@media only screen and (max-width: $width) and (max-height: $height) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin media-min($width, $height) {
+
+	@media only screen and (min-width: $width) and (min-height: $height) {
+
+		@content;
+
+	}
+
+}
+
+
+// width
+
 @mixin media-width($minWidth, $maxWidth) {
 
 	@media only screen and (min-width: $minWidth) and (max-width: $maxWidth) {
@@ -10,6 +47,7 @@
 	}
 
 }
+
 
 @mixin media-max-width($width) {
 
@@ -21,9 +59,45 @@
 
 }
 
+
 @mixin media-min-width($width) {
 
 	@media only screen and (min-width: $width) {
+
+		@content;
+
+	}
+
+}
+
+
+// height
+
+@mixin media-height($minHeight, $maxHeight) {
+
+	@media only screen and (min-height: $minHeight) and (max-height: $maxHeight) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin media-max-height($height) {
+
+	@media only screen and (max-height: $height) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin media-min-height($height) {
+
+	@media only screen and (min-height: $height) {
 
 		@content;
 
