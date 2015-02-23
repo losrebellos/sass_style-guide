@@ -56,11 +56,12 @@
 				border-left: 1px solid $_GRID_COLOR_3;
 				border-right: 1px solid $_GRID_COLOR_3;
 				content: "";
+				display: block;
 
 				// FIX
 				// weird 1 px offset
 				// due to box-sizing?
-				right: calc($_COLUMN_GUTTER - 1px);
+				right: calc(#{$_COLUMN_GUTTER} - 1px);
 				//
 
 			}
