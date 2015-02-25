@@ -75,6 +75,16 @@
 
 // max
 
+@mixin media-width-4 {
+
+	@include media-min-width($_BREAKPOINT_H_4) {
+
+		@content;
+
+	}
+
+}
+
 @mixin media-width-5 {
 
 	@include media-min-width($_BREAKPOINT_H_5) {
@@ -162,6 +172,16 @@
 
 
 // max
+
+@mixin media-height-4 {
+
+	@include media-min-height($_BREAKPOINT_V_4) {
+
+		@content;
+
+	}
+
+}
 
 @mixin media-height-5 {
 
