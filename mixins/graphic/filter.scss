@@ -1,5 +1,5 @@
 
-@mixin filter($filter, $prefixes) {
+@mixin filter($filter, $prefixes: webkit moz ms o spec) {
 
 	@if $prefixes {
 
@@ -8,8 +8,21 @@
 	}
     @else {
 
-		@include prefixer(filter, $filter, webkit moz ms o spec);
+		filter: $filter;
 
     }
+
+}
+
+
+@mixin drop-shadow($x, $y, $blur, $colour) {
+
+	@include filter(drop-shadow($x $x $blur $colour));
+
+    /* for IE 8 & 9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+
+    /* For IE 5.5 - 7 */
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 
 }
