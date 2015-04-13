@@ -37,8 +37,11 @@ $containerSelectSize: 1;
 
 		&:disabled {
 
+			@include user-select(none);
+
 			cursor: default;
 			opacity: 1;
+			pointer-events: none;
 
 		}
 
@@ -83,8 +86,11 @@ select {
 
 	&:disabled {
 
+		@include user-select(none);
+
 		cursor: default;
 		opacity: $_OPACITY_DISABLED;
+		pointer-events: none;
 
 	}
 

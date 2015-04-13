@@ -72,8 +72,11 @@ input {
 
 		&:disabled {
 
+			@include user-select(none);
+
 			cursor: default;
 			opacity: $_OPACITY_DISABLED;
+			pointer-events: none;
 
 		}
 
@@ -123,8 +126,11 @@ input {
 
 		&:disabled {
 
-			cursor: default;
+			@include user-select(none);
+
 			// no opacity has it leaves in a label
+			cursor: default;
+			pointer-events: none;
 
 		}
 
@@ -186,8 +192,11 @@ textarea {
 
 	&:disabled {
 
+		@include user-select(none);
+
 		cursor: default;
 		opacity: $_OPACITY_DISABLED;
+		pointer-events: none;
 
 	}
 

@@ -25,8 +25,11 @@ label {
 
 	&.disabled {
 
+		@include user-select(none);
+
 		cursor: default;
 		opacity: $_OPACITY_DISABLED;
+		pointer-events: none;
 
 	}
 
