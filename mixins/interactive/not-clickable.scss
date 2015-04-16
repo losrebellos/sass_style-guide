@@ -3,8 +3,13 @@
 
 	@include user-select(none);
 
+	-webkit-touch-callout: none;
+	-ms-touch-action: none;
+	touch-action: none;
+
 	cursor: default;
 	outline: none;
+	pointer-events: none;
 
 	&:hover {
 
