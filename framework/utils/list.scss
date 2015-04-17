@@ -19,8 +19,8 @@ ul {
 
 			&:before {
 
+				@include not-clickable;
 				@include text-rhythm($_LIST_COPY_DISC, 2, 0 0 0 0);
-				@include user-select(none);
 
 				// background-color: red;
 				content: "●";
@@ -47,8 +47,8 @@ ul {
 
 			&:before {
 
+				@include not-clickable;
 				@include rhythm($_LIST_COPY_NUMBER, $_BASE_SIZE 2, 0 0 0 0);
-				@include user-select(none);
 
 				// background-color: red;
 				left: 0;

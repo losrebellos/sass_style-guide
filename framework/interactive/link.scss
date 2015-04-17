@@ -59,7 +59,8 @@ a {
 
 	&.disabled {
 
-		cursor: default;
+		@include not-clickable;
+		
 		opacity: $_OPACITY_DISABLED;
 		text-decoration: line-through;
 

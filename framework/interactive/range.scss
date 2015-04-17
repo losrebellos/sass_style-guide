@@ -46,11 +46,9 @@ input[type="range"] {
 
 	&:disabled {
 
-		@include user-select(none);
-
-		// no opacity has it leaves in a label
-		cursor: default;
-		pointer-events: none;
+		@include not-clickable;
+		
+		opacity: $_OPACITY_DISABLED;
 
 	}
 

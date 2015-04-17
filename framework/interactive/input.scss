@@ -72,11 +72,9 @@ input {
 
 		&:disabled {
 
-			@include user-select(none);
+			@include not-clickable;
 
-			cursor: default;
 			opacity: $_OPACITY_DISABLED;
-			pointer-events: none;
 
 		}
 
@@ -126,11 +124,10 @@ input {
 
 		&:disabled {
 
-			@include user-select(none);
+			@include not-clickable;
 
-			// no opacity has it leaves in a label
-			cursor: default;
-			pointer-events: none;
+			// no opacity change
+			// it lives in the parent label
 
 		}
 
@@ -192,11 +189,9 @@ textarea {
 
 	&:disabled {
 
-		@include user-select(none);
+		@include not-clickable;
 
-		cursor: default;
 		opacity: $_OPACITY_DISABLED;
-		pointer-events: none;
 
 	}
 
