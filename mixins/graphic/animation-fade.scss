@@ -4,7 +4,6 @@
     0% {
 
         opacity: 0;
-        pointer-events: auto;
         visibility: hidden;
 
     }
@@ -30,7 +29,6 @@
     0% {
 
         opacity: 1;
-        pointer-events: none;
         visibility: visible;
 
     }
@@ -44,9 +42,32 @@
 
     100% {
 
+        display: none;
         opacity: 0;
         visibility: hidden;
 
     }
+
+}
+
+
+@mixin animation-fade-out($duration: $_PANEL_DURATION, $display: none) {
+
+    @include animation(fade-out $duration);
+
+    display: $display;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+
+@mixin animation-fade-in($duration: $_PANEL_DURATION, $display: block) {
+
+    @include animation(fade-in $duration);
+
+    display: $display;
+    opacity: 1;
+    visibility: visible;
 
 }
