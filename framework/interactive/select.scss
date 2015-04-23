@@ -53,7 +53,8 @@ select {
 	@include rhythm($_INTERACTIVE_COPY, null 2 * $containerSelectSize);
 	@include user-select(none);
 
-	background-color: transparent;
+	// background-color: transparent;
+	background-color: $_BACKGROUND_COLOR;
 	border: none;
 	border-radius: 0;
 	color: $_TEXT_COLOR;
