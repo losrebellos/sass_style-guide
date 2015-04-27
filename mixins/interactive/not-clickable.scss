@@ -11,7 +11,8 @@
 	outline: none;
 	pointer-events: none;
 
-	&:hover {
+
+	&:hover, &:focus {
 
 		cursor: default;
 
@@ -23,5 +24,33 @@
 .not-clickable {
 
 	@include not-clickable;
+
+}
+
+
+@mixin clickable {
+
+	@include user-select(auto);
+
+	-webkit-touch-callout: auto;
+	-ms-touch-action: auto;
+	touch-action: auto;
+
+	cursor: auto;
+	pointer-events: auto;
+
+
+	&:hover, &:focus {
+
+		cursor: auto;
+
+	}
+
+}
+
+
+.clickable {
+
+	@include clickable;
 
 }
