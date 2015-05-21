@@ -16,21 +16,21 @@ input {
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity 0.5s);
 
-    line-height: inherit;
+	line-height: inherit;
 
 
-    &:focus {
+	&:focus {
 
-        outline: none;
+		outline: none;
 
-    }
-    
+	}
+	
 
-    &::-moz-focus-inner {
+	&::-moz-focus-inner {
 
-        border: none;
+		border: none;
 
-    }
+	}
 
 
 	&[type="email"], &[type="image"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="url"] {
@@ -88,7 +88,7 @@ input {
 
 		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
 
-		    -webkit-appearance: none;
+			-webkit-appearance: none;
 
 		}
 
@@ -97,15 +97,15 @@ input {
 
 	// checkbox & radio should always be inside a label tag
 
-    &[type="checkbox"], &[type="radio"] {
+	&[type="checkbox"], &[type="radio"] {
 
-        @include appearance(none);
-        @include user-select(none);
+		@include appearance(none);
+		@include user-select(none);
 
 		background-color: $_BACKGROUND_COLOR;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
+		border: none;
+		cursor: pointer;
+		display: inline-block;
 		font-size: $_BASE_FONT_SIZE;
 		height: 1em / $_BASE_SIZE;
 		margin: 0 $_BASE_PADDING / 2 0 0;
@@ -115,11 +115,11 @@ input {
 		width: 1em / $_BASE_SIZE;
 
 
-        &:checked {
+		&:checked {
 
 			background-color: $_BACKGROUND_COLOR_HOVER;
 
-        }
+		}
 
 
 		&:disabled {
@@ -145,16 +145,17 @@ input {
 
 		}
 
-    }
+	}
 
-    &[type="radio"] {
+	&[type="radio"] {
 
-    	// radio buttons are rounds
-        border-radius: 1em;
+		// radio buttons are rounds
+		border-radius: 1em;
 
-    }
+	}
 
 }
+
 
 
 textarea {
@@ -165,7 +166,6 @@ textarea {
 	@include box-sizing(border-box);
 	@include text-null;
 	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0);
-    @include user-select(none);
 
 	font-style: normal;
 	font-weight: normal;
@@ -178,13 +178,13 @@ textarea {
 	padding: $_BASE_PADDING / 2 $_BASE_PADDING;
 	resize: none;
 	width: 100%;
-    
+	
 
-    &:focus {
+	&:focus {
 
-        outline: none;
+		outline: none;
 
-    }
+	}
 
 
 	&:disabled {
@@ -196,10 +196,10 @@ textarea {
 	}
 
 
-    &::-moz-focus-inner {
+	&::-moz-focus-inner {
 
-        border: none;
+		border: none;
 
-    }
+	}
 
 }
