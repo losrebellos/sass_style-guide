@@ -20,10 +20,15 @@ p, a, q, cite {
 	}
 
 
-	&:empty {
+	&:not(&[class^="icon-"]),
+	&:not(&[class*=" icon-"]) {
 
-		display: none;
+		&:empty {
 
+			display: none;
+
+		}
+		
 	}
 
 }
