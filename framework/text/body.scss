@@ -19,6 +19,13 @@ p, a, q, cite {
 
 	}
 
+
+	&:empty {
+
+		display: none;
+
+	}
+
 }
 
 
