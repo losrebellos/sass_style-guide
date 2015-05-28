@@ -35,7 +35,9 @@
 	> .column {
 
 		background-color: rgba(255, 0, 0, 0.2);
-		min-height: 6 * $_BASE_LINE_HEIGHT;
+		min-height: (6 * $_BASE_LINE_HEIGHT);
+		padding-bottom: ($_BASE_LINE_HEIGHT / 2);
+		padding-top: ($_BASE_LINE_HEIGHT / 2);
 		position: relative;
 
 
