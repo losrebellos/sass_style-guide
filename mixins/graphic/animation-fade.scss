@@ -1,73 +1,73 @@
 
 @include keyframes(fade-in) {
 
-    0% {
+	0% {
 
-        opacity: 0;
-        visibility: hidden;
+		opacity: 0;
+		visibility: hidden;
 
-    }
+	}
 
-    1% {
+	1% {
 
-        opacity: 0;
-        visibility: visible;
+		opacity: 0;
+		visibility: visible;
 
-    }
+	}
 
-    100% {
+	100% {
 
-        opacity: 1;
-        visibility: visible;
+		opacity: 1;
+		visibility: visible;
 
-    }
+	}
 
 }
 
 @include keyframes(fade-out) {
 
-    0% {
+	0% {
 
-        opacity: 1;
-        visibility: visible;
+		opacity: 1;
+		visibility: visible;
 
-    }
+	}
 
-    99% {
+	99% {
 
-        opacity: 0;
-        visibility: visible;
+		opacity: 0;
+		visibility: visible;
 
-    }
+	}
 
-    100% {
+	100% {
 
-        display: none;
-        opacity: 0;
-        visibility: hidden;
+		display: none;
+		opacity: 0;
+		visibility: hidden;
 
-    }
+	}
 
 }
 
 
 @mixin animation-fade-out($duration: $_PANEL_DURATION, $display: none) {
 
-    @include animation(fade-out $duration);
+	@include animation(fade-out $duration);
 
-    display: $display;
-    opacity: 0;
-    visibility: hidden;
+	display: $display;
+	opacity: 0;
+	visibility: hidden;
 
 }
 
 
 @mixin animation-fade-in($duration: $_PANEL_DURATION, $display: block) {
 
-    @include animation(fade-in $duration);
+	@include animation(fade-in $duration);
 
-    display: $display;
-    opacity: 1;
-    visibility: visible;
+	display: $display;
+	opacity: 1;
+	visibility: visible;
 
 }
