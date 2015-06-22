@@ -96,9 +96,9 @@ input[type="range"] {
 
 	&::-webkit-slider-thumb {
 
+		@include appearance(none);
 		@include transition(background $_HOVER_DURATION);
 
-	    -webkit-appearance: none;
 	    background: $_COLOR_INTERACTIVE_1;
 	    border: none;
 	    border-radius: $_RANGE_THUMB_RADIUS;

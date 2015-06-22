@@ -4,9 +4,8 @@
 
 button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
 
+	@include appearance(none);
 	@include border-radius(0);
-
-	-webkit-appearance: none;
 
 }
 
