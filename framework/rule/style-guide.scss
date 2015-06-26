@@ -21,6 +21,23 @@
 
 
 
+/* CONTAINER */
+
+// .style-guide-columns-container {
+
+// 	@include clearfix;
+
+
+// 	> li {
+
+// 		float: left;
+
+// 	}
+
+// }
+
+
+
 /* COLUMNS */
 
 .style-guide-columns {
@@ -78,13 +95,52 @@
 
 .style-guide-icons {
 
+	@include clearfix;
+
+
 	li {
+
+		float: left;
+		text-align: center;
+		width: 100%;
+
+
+		// 2 columns
+		@include media-width($_BREAKPOINT_65, $_BREAKPOINT_110) {
+
+			text-align: left;
+			width: 50%;
+
+		}
+
+
+		// 3 columns
+		@include media-min-width($_BREAKPOINT_110) {
+
+			text-align: left;
+			width: (100% / 3);
+
+		}
+
 
 		> * {
 
 			@include inline-block;
 
 			margin: 0;
+			padding: 0;
+			vertical-align: middle;
+
+
+			&:after {
+
+				content: attr(class) " ";
+				font-family: $helvetica;
+				font-size: 0.5em;
+				line-height: 1;
+				vertical-align: middle;
+
+			}
 
 		}
 

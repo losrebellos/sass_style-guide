@@ -1,0 +1,41 @@
+
+.toggle {
+
+	> label {
+
+		.toggle-checked {
+
+			display: none;
+
+		}
+
+	}
+
+
+	> input {
+
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+
+
+		&:checked + label {
+
+			.toggle-unchecked {
+
+				display: none;
+
+			}
+
+
+			.toggle-checked {
+
+				display: block;
+
+			}
+
+		}
+
+	}
+
+}

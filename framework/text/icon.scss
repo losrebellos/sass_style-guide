@@ -17,7 +17,7 @@ blockquote,
 p, span, q, cite,
 label, button, .button, a {
 
-	> [class^="icon-"], [class*=" icon-"] {
+	> [class^="icon-"], > [class*=" icon-"] {
 
 		@include text-rhythm-reset;
 
