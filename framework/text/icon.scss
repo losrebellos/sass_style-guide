@@ -13,8 +13,7 @@
 
 
 h1, h2, h3, h4, h5, h6,
-blockquote,
-p, span, q, cite,
+blockquote, p, span, q, cite,
 label, button, .button, a {
 
 	> [class^="icon-"], > [class*=" icon-"] {
@@ -47,13 +46,7 @@ label, button, .button, a {
 	& + p,
 	& + span,
 	& + q,
-	& + cite,
-
-	// interactive
-	& + label,
-	& + button,
-	& + .button,
-	& + a {
+	& + cite {
 
 		margin-right: 1em;
 
@@ -64,9 +57,7 @@ label, button, .button, a {
 
 // icon is after element
 h1, h2, h3, h4, h5, h6,
-blockquote,
-p, span, q, cite,
-label, button, .button, a {
+blockquote, p, span, q, cite {
 
 	+ [class^="icon-"], + [class*=" icon-"] {
 
