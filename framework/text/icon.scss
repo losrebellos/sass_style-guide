@@ -22,8 +22,55 @@ label, button, .button, a {
 		@include text-rhythm-reset;
 
 		line-height: inherit;
-		margin: 0 $_BASE_MARGIN / 2 0 0;
+		// margin: 0 $_BASE_MARGIN / 2 0 0;
+		margin: 0;
 		vertical-align: middle;
+
+	}
+
+}
+
+
+// icon is before element
+[class^="icon-"], [class*=" icon-"] {
+
+	// title
+	& + h1,
+	& + h2,
+	& + h3,
+	& + h4,
+	& + h5,
+	& + h6,
+
+	// body
+	& + blockquote,
+	& + p,
+	& + span,
+	& + q,
+	& + cite,
+
+	// interactive
+	& + label,
+	& + button,
+	& + .button,
+	& + a {
+
+		margin-right: 1em;
+
+	}
+
+}
+
+
+// icon is after element
+h1, h2, h3, h4, h5, h6,
+blockquote,
+p, span, q, cite,
+label, button, .button, a {
+
+	+ [class^="icon-"], + [class*=" icon-"] {
+
+		margin-left: 1em;
 
 	}
 
