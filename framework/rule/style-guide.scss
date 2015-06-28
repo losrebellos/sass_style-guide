@@ -134,10 +134,11 @@
 
 			&:after {
 
+				@include text-rhythm-reset;
+
 				content: attr(class) " ";
 				font-family: $helvetica;
-				font-size: 0.5em;
-				line-height: 1;
+				margin-left: $_BASE_MARGIN;
 				vertical-align: middle;
 
 			}
