@@ -39,13 +39,14 @@ p {
 	@include text-null;
 
 	text-indent: $_BASE_MARGIN;
+	text-indent: $_BASE_LINE_HEIGHT;
 
 
-	&:first-child, &:first-of-type {
+	// &:first-child, &:first-of-type {
 
-		text-indent: 0;
+	// 	text-indent: 0;
 
-	}
+	// }
 
 
 	> * {
@@ -57,11 +58,11 @@ p {
 }
 
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+// h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 
-	text-indent: 0;
+// 	text-indent: 0;
 
-}
+// }
 
 
 span {
