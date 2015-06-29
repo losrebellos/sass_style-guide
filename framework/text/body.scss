@@ -8,8 +8,6 @@ p, a, q, cite {
 	font-style: normal;
 	font-weight: normal;
 	margin: 0;
-	// margin-left: auto;
-	// margin-right: auto;
 	padding: 0;
 
 
@@ -42,11 +40,11 @@ p {
 	text-indent: $_BASE_LINE_HEIGHT;
 
 
-	// &:first-child, &:first-of-type {
+	&:only-child, &:only-of-type {
 
-	// 	text-indent: 0;
+		text-indent: 0;
 
-	// }
+	}
 
 
 	> * {
@@ -56,13 +54,6 @@ p {
 	}
 	
 }
-
-
-// h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
-
-// 	text-indent: 0;
-
-// }
 
 
 span {
