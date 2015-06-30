@@ -122,28 +122,28 @@
 
 		}
 
+	}
 
-		> * {
-
-			@include inline-block;
-
-			margin: 0;
-			padding: 0;
-			vertical-align: middle;
+}
 
 
-			&:after {
+.style-guide-icon {
 
-				@include text-rhythm-reset;
+	@include inline-block;
 
-				content: attr(class) " ";
-				font-family: $helvetica;
-				margin-left: $_BASE_MARGIN;
-				vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
 
-			}
 
-		}
+	&:after {
+
+		@include text-rhythm-reset;
+
+		content: attr(class) " ";
+		font-family: $helvetica;
+		margin-left: $_BASE_MARGIN;
+		vertical-align: middle;
 
 	}
 
