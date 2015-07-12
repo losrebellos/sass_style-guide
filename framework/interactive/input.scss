@@ -154,7 +154,9 @@ textarea {
 	// min-height: 1em * $textareaLines * $_BASE_LINE_HEIGHT / ($textareaMult * $_BASE_FONT_SIZE);
 	// magic multiplier:	3.38em
 	// min-height: 6.76em;	//	2 x 3.38em
-	min-height: 4 * $_BASE_LINE_HEIGHT;
+	// min-height: 4 * $_BASE_LINE_HEIGHT;
+	min-height: getRhythm($_INTERACTIVE_COPY, 8);
+	//
 
 	padding: $_BASE_PADDING / 2 $_BASE_PADDING;
 	resize: none;

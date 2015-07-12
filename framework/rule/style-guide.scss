@@ -101,8 +101,16 @@
 	li {
 
 		float: left;
+		margin-top: 1em;
 		text-align: center;
 		width: 100%;
+
+
+		&:first-child {
+
+			margin-top: 0;
+
+		}
 
 
 		// 2 columns
@@ -110,6 +118,13 @@
 
 			text-align: left;
 			width: 50%;
+
+
+			&:nth-child(2) {
+
+				margin-top: 0;
+
+			}
 
 		}
 
@@ -119,6 +134,13 @@
 
 			text-align: left;
 			width: (100% / 3);
+
+
+			&:nth-child(2), &:nth-child(3) {
+
+				margin-top: 0;
+
+			}
 
 		}
 
