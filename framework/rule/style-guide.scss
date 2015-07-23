@@ -98,6 +98,25 @@
 	@include clearfix;
 
 
+	&.with-legend {
+
+		[class^="icon-"]:after, [class*=" icon-"]:after {
+
+			@include text-rhythm-reset;
+
+			content: attr(class) " ";
+			margin-left: ($_BASE_MARGIN / 2);
+			speak: none;
+			text-decoration: none;
+			text-rendering: auto;
+			// text-rendering: optimizeLegibility;
+			text-transform: none;
+
+		}
+
+	}
+
+
 	li {
 
 		float: left;
@@ -113,11 +132,11 @@
 		}
 
 
-		// 2 columns
-		@include media-width($_BREAKPOINT_65, $_BREAKPOINT_110) {
+		// >= 2 columns
+		@include media-min-width($_BREAKPOINT_65) {
 
 			text-align: left;
-			width: 50%;
+			width: auto;
 
 
 			&:nth-child(2) {
@@ -129,14 +148,21 @@
 		}
 
 
+		// 2 columns
+		@include media-width($_BREAKPOINT_65, $_BREAKPOINT_110) {
+
+			min-width: 50%;
+
+		}
+
+
 		// 3 columns
 		@include media-min-width($_BREAKPOINT_110) {
 
-			text-align: left;
-			width: (100% / 3);
+			min-width: (100% / 3);
 
 
-			&:nth-child(2), &:nth-child(3) {
+			&:nth-child(3) {
 
 				margin-top: 0;
 
@@ -166,6 +192,18 @@
 		font-family: $helvetica;
 		margin-left: $_BASE_MARGIN;
 		vertical-align: middle;
+
+	}
+
+
+	.with-legend & {
+
+		// [class^="icon-"]:after, [class*=" icon-"]:after {
+
+		// 	// content: attr(class);
+		// 	content: 'Youhou';
+
+		// }
 
 	}
 
