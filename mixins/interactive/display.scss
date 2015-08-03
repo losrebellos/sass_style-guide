@@ -40,3 +40,23 @@
 	display: none;
 
 }
+
+
+/* FADE */
+
+@mixin fade-in-object {
+
+	@include clickable;
+
+	opacity: 1;
+
+}
+
+
+@mixin fade-out-object {
+
+	@include not-clickable;
+
+	opacity: 0;
+
+}

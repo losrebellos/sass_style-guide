@@ -1,0 +1,21 @@
+
+@mixin app-is-touch {
+
+	.touch &, .is-touch & {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin app-is-not-touch {
+
+	.not-touch &, .is-not-touch & {
+
+		@content;
+
+	}
+
+}
