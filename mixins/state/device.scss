@@ -1,0 +1,69 @@
+
+// touch
+
+@mixin app-is-touch {
+
+	.touch &, .is-touch & {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin app-is-not-touch {
+
+	.not-touch &, .is-not-touch & {
+
+		@content;
+
+	}
+
+}
+
+
+// retina
+
+@mixin app-is-retina {
+
+	.is-retina & {
+
+		@content;
+
+	}
+
+}
+
+@mixin app-is-not-retina {
+
+	.is-not-retina & {
+
+		@content;
+
+	}
+
+}
+
+
+// iOS
+
+@mixin app-is-ios {
+
+	.is-ios & {
+
+		@content;
+
+	}
+
+}
+
+@mixin app-is-not-ios {
+
+	.is-not-ios & {
+
+		@content;
+
+	}
+
+}
