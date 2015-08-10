@@ -71,11 +71,11 @@
 
 		}
 
-	    #{$original}, #{$special1}, #{$special2} {
+		#{$original}, #{$special1}, #{$special2} {
 
 			@include column($i, $columnsNum);
 
-	    }
+		}
 
 	}
 	
