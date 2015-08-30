@@ -7,6 +7,10 @@ input, textarea {
 	@include appearance(none);
 	@include border-radius(0);
 
+	// FIX for Firefox
+	@include box-shadow(none);
+	//
+
 }
 
 
