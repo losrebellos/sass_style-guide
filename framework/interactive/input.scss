@@ -20,13 +20,6 @@ input {
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity 0.5s);
 
 	line-height: inherit;
-
-
-	&:focus {
-
-		outline: none;
-
-	}
 	
 
 	&::-moz-focus-inner {
@@ -37,6 +30,8 @@ input {
 
 
 	&[type="email"], &[type="image"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="url"] {
+
+		@include remove-outline;
 
 		background-color: $_BACKGROUND_COLOR;
 		// border: $_BORDER_COLOR;
@@ -69,6 +64,8 @@ input {
 		// bug in Chrome
 		// need to be redefined
 		@include box-sizing(border-box);
+		@include remove-outline;
+
 
 		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
 
@@ -83,7 +80,7 @@ input {
 
 	&[type="checkbox"], &[type="radio"] {
 
-		@include appearance(none);
+		// @include reset-outline;
 		@include user-select(none);
 
 		background-color: $_BACKGROUND_COLOR;
@@ -148,6 +145,7 @@ textarea {
 	$textareaLines: 2;
 
 	@include box-sizing(border-box);
+	@include remove-outline;
 	@include text-null;
 	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0);
 

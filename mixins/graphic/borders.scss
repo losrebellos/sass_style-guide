@@ -1,0 +1,19 @@
+
+@mixin has-borders($thickness: 0.2em, $colour: red, $style: solid, $position: relative) {
+
+	position: $position;
+
+
+	&:before {
+
+		border: $thickness $style $colour;
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+	}
+
+}
