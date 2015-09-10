@@ -2,11 +2,11 @@
 /* BOX-SIZING */
 
 *, *:before, *:after {
-    
-    @include box-sizing(border-box);
-    @include remove-outline;
+	
+	@include box-sizing(border-box);
+	@include remove-outline;
 
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -15,25 +15,25 @@
 
 html, body {
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
 
-    font-family: $helvetica;
-    font-weight: normal;
-    height: 100%;
-    margin: 0;
-    min-height: 100%;
-    padding: 0;
-    position: relative;
-    text-rendering: optimizelegibility;
-    width: 100%;
+	font-family: $helvetica;
+	font-weight: normal;
+	height: 100%;
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+	text-rendering: optimizelegibility;
+	width: 100%;
 
 }
 
 body {
 
-    font-size: 100% * $_DEFAULT_BODY_FONT_SIZE;
-    // font-size: 100%;
+	font-size: 100% * $_DEFAULT_BODY_FONT_SIZE;
+	// font-size: 100%;
 
 }
 
@@ -42,20 +42,20 @@ body {
 
 svg {
 
-    @include user-select(none);
+	@include user-select(none);
 
-    max-height: 100%;
-    width: 100%;
+	max-height: 100%;
+	width: 100%;
 
 }
 
 img {
 
-    @include user-select(none);
+	@include user-select(none);
 
-    border: none;
-    vertical-align: bottom;
-    width: 100%;
+	border: none;
+	vertical-align: bottom;
+	width: 100%;
 
 }
 
@@ -64,10 +64,10 @@ img {
 
 hr {
 
-    border: none;
-    background-color: black;
-    height: 1px;
-    width: 100%;
+	border: none;
+	background-color: black;
+	height: 1px;
+	width: 100%;
 
 }
 
@@ -76,6 +76,6 @@ hr {
 
 object, embed {
 
-    outline: none;
+	outline: none;
 
 }
