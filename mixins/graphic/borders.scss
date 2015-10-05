@@ -6,6 +6,8 @@
 
 	&:before {
 
+		@include not-clickable;
+
 		border: $thickness $style $colour;
 		content: "";
 		height: 100%;
