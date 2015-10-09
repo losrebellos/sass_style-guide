@@ -9,12 +9,14 @@
 		@include not-clickable;
 
 		border: $thickness $style $colour;
+		bottom: 0;
 		content: "";
-		height: 100%;
+		// height: 100%;
 		left: 0;
 		position: absolute;
+		right: 0;
 		top: 0;
-		width: 100%;
+		// width: 100%;
 
 	}
 
