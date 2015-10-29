@@ -1,7 +1,10 @@
 
 .toggle {
 
-	> label {
+	@include disabled;
+
+
+	.label {
 
 		.toggle-checked {
 
@@ -12,14 +15,14 @@
 	}
 
 
-	> input {
+	.input-radio {
 
 		display: none;
 		opacity: 0;
 		visibility: hidden;
 
 
-		&:checked + label {
+		&:checked + .label {
 
 			.toggle-unchecked {
 

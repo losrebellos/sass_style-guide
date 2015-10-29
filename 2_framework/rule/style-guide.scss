@@ -91,6 +91,34 @@
 
 
 
+/* LIST */
+
+.style-guide-list {
+
+	@include clearfix;
+
+	width: 100%;
+
+
+	> li {
+
+		float: left;
+		margin-top: $_BASE_LINE_HEIGHT;
+		width: 100%;
+
+
+		&.no-margin-top, &:first-child {
+
+			margin-top: 0;
+
+		}
+
+	}
+
+}
+
+
+
 /* ICONS */
 
 .style-guide-icons {

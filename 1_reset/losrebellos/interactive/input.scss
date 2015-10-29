@@ -1,0 +1,63 @@
+
+input,
+textarea {
+
+	// webkit on iOS
+	// is adding rounded corners
+	@include appearance(none);
+	@include border-radius(0);
+
+	// FIX for Firefox
+	@include box-shadow(none);
+
+	line-height: inherit;
+	
+
+	&::-moz-focus-inner {
+
+		border: none;
+
+	}
+
+}
+
+
+input {
+
+	&[type="search"] {
+
+		// bug in Chrome
+		// need to be redefined
+		@include box-sizing(border-box);
+
+
+		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
+
+			@include appearance(none);
+
+		}
+
+	}
+
+
+	&[type="checkbox"], &[type="radio"] {
+
+		// FIX for iOS
+		// really slowing down everything
+		@include app-is-ios {
+
+			@include transition(none);
+
+
+			&:before, &:after {
+
+				@include transition(none);
+
+			}
+
+		}
+		//
+
+	}
+
+}

@@ -1,0 +1,16 @@
+
+@mixin disabled($opacity: 0.5) {
+
+	&.disabled, &:disabled {
+
+		@include not-clickable;
+
+		opacity: $opacity;
+
+
+		// not mandatory
+		@content;
+
+	}
+
+}

@@ -1,14 +1,21 @@
 
-$containerSelectSize: 1;
+.select-base {
 
-.form-select, .form-drop-down {
-
-	@include inline-block;
-	@include rhythm($containerSelectSize, null null, 0 0 1 0, 0 0 0 0);
+	@include disabled;
 
 	background-color: $_BACKGROUND_COLOR;
 	cursor: pointer;
+	margin: 0;
 	position: relative;
+
+}
+
+
+.form-select, .form-drop-down {
+
+	@extend .select-base;
+
+	@include inline-block;
 
 
 	&:not(.disabled) {
@@ -20,54 +27,25 @@ $containerSelectSize: 1;
 		}
 
 	}
-
-
-	&.disabled {
-
-		@include not-clickable;
-
-		opacity: $_OPACITY_DISABLED;
-
-	}
-
-
-	> select {
-
-		margin: 0;
-
-
-		&:disabled {
-
-			opacity: 1;
-
-		}
-
-	}
 	
 }
 
 
-select {
+.select {
+
+	@extend .select-base;
 
 	@include appearance(none);
-	@include rhythm($_INTERACTIVE_COPY, null 2 * $containerSelectSize);
+	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 0 0, 0 1 0 1);
 	@include user-select(none);
 
-	// background-color: transparent;
-	background-color: $_BACKGROUND_COLOR;
 	border: none;
 	border-radius: 0;
 	color: $_TEXT_COLOR;
-	cursor: pointer;
 	font-style: normal;
 	font-weight: normal;
 	line-height: inherit;
-	opacity: $_OPACITY;
     outline: none;
-	// padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize) 0 $_BASE_PADDING;
-	// padding: 0 (1.5 * $_BASE_PADDING + $containerSelectSize);
-	padding: 0 $_BASE_PADDING;
-	position: relative;
 	z-index: 1;
 	
 	
@@ -78,15 +56,6 @@ select {
 			color: $_HOVER_COLOR;
 
 		}
-
-	}
-
-
-	&:disabled {
-
-		@include not-clickable;
-
-		opacity: $_OPACITY_DISABLED;
 
 	}
 

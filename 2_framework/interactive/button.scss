@@ -1,18 +1,8 @@
 
-// webkit on iOS
-// is adding rounded corners
-
-button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
-
-	@include appearance(none);
-	@include border-radius(0);
-
-}
-
-
-button, .button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
-
-    @include remove-outline;
+.button {
+	
+	@include disabled;
+	@include remove-outline;
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
 	@include user-select(none);
@@ -36,21 +26,5 @@ button, .button, input[type="button"], input[type="submit"], input[type="reset"]
 		}
 
 	}
-
-
-	&:disabled {
-
-		@include not-clickable;
-
-		opacity: $_OPACITY_DISABLED;
-
-	}
-
-}
-
-
-button, input[type="button"], input[type="submit"], input[type="reset"], input[type="file"] {
-
-	line-height: inherit;
 
 }

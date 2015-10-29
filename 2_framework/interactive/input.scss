@@ -1,158 +1,107 @@
 
-// webkit on iOS
-// is adding rounded corners
+$_INPUT_DEFAULT_HEIGHT: 3;
+$_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
-input, textarea {
+.input-base {
 
-	@include appearance(none);
-	@include border-radius(0);
+	@include disabled;
+	@include remove-outline;
+	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 0 0, $_INPUT_DEFAULT_PADDING_V 1 $_INPUT_DEFAULT_PADDING_V 1);
+	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
 
-	// FIX for Firefox
-	@include box-shadow(none);
-	//
+	background-color: $_BACKGROUND_COLOR;
 
 }
 
 
-input {
+.input-text {
 
-	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
-	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity 0.5s);
+	@extend .input-base;
 
-	line-height: inherit;
-	
+	border: 1px solid $_BORDER_COLOR;
+	color: $_TEXT_COLOR;
+	height: getRhythm($_INTERACTIVE_COPY, $_INPUT_DEFAULT_HEIGHT);
+	width: 100%;
 
-	&::-moz-focus-inner {
 
-		border: none;
+	@include input-placeholder {
+
+		font-style: italic;
 
 	}
 
-
-	&[type="email"], &[type="image"], &[type="number"], &[type="password"], &[type="search"], &[type="tel"], &[type="text"], &[type="url"] {
-
-		@include remove-outline;
-
-		background-color: $_BACKGROUND_COLOR;
-		// border: $_BORDER_COLOR;
-		border: 1px solid $_BORDER_COLOR;
-		color: $_TEXT_COLOR;
-		opacity: $_OPACITY;
-		padding: 0 $_BASE_PADDING;
-		width: 100%;
+}
 
 
-		@include input-placeholder {
+.input-checkbox, .input-radio {
 
-			font-style: italic;
+	@extend .input-base;
 
-		}
+	@include user-select(none);
+
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	font-size: $_BASE_FONT_SIZE;
+	height: 1em / $_BASE_SIZE;
+	margin: 0 $_BASE_PADDING / 2 0 0;
+	padding: 0;
+	vertical-align: middle;
+	width: 1em / $_BASE_SIZE;
 
 
-		&:disabled {
+	&:not([disabled]) {
 
-			@include not-clickable;
+		// do not use &:focus
+		// as it conflicts with the transitions
+		&:hover {
 
+			background-color: $_BACKGROUND_COLOR_HOVER;
+			color: $_HOVER_COLOR;
 			opacity: $_OPACITY_DISABLED;
 
 		}
 
 	}
 
-	&[type="search"] {
 
-		// bug in Chrome
-		// need to be redefined
-		@include box-sizing(border-box);
-		@include remove-outline;
+	&:checked {
+
+		background-color: $_BACKGROUND_COLOR_HOVER;
 
 
-		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
+		&:hover {
 
-			@include appearance(none);
+			opacity: 1;
 
 		}
-
-	}
-
-
-	// checkbox & radio should always be inside a label tag
-
-	&[type="checkbox"], &[type="radio"] {
-
-		// @include reset-outline;
-		@include user-select(none);
-
-		background-color: $_BACKGROUND_COLOR;
-		border: none;
-		cursor: pointer;
-		display: inline-block;
-		font-size: $_BASE_FONT_SIZE;
-		height: 1em / $_BASE_SIZE;
-		margin: 0 $_BASE_PADDING / 2 0 0;
-		opacity: $_OPACITY;
-		padding: 0;
-		vertical-align: middle;
-		width: 1em / $_BASE_SIZE;
-
-
-		&:checked {
-
-			background-color: $_BACKGROUND_COLOR_HOVER;
-
-		}
-
-
-		&:disabled {
-
-			@include not-clickable;
-
-			// no opacity change
-			// it lives in the parent label
-
-		}
-
-	
-		&:not([disabled]) {
-
-			// do not use &:focus
-			// as it conflicts with the transitions
-			&:hover {
-
-				background-color: $_BACKGROUND_COLOR_HOVER;
-				color: $_HOVER_COLOR;
-
-			}
-
-		}
-
-	}
-
-	&[type="radio"] {
-
-		// radio buttons are rounds
-		border-radius: 1em;
 
 	}
 
 }
 
 
+.input-radio {
 
-textarea {
+	border-radius: 1em;
 
-	$textareaMult: 2;
-	$textareaLines: 2;
+}
+
+
+
+.textarea {
+
+	@extend .input-base;
 
 	@include box-sizing(border-box);
-	@include remove-outline;
-	@include text-null;
-	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0);
 
 	border: 1px solid $_BORDER_COLOR;
+	color: $_TEXT_COLOR;
 	font-style: normal;
 	font-weight: normal;
 
+	// $textareaMult: 2;
+	// $textareaLines: 2;
 	// min-height: 1em * $textareaLines * $_BASE_LINE_HEIGHT / ($textareaMult * $_BASE_FONT_SIZE);
 	// magic multiplier:	3.38em
 	// min-height: 6.76em;	//	2 x 3.38em
@@ -160,31 +109,7 @@ textarea {
 	min-height: getRhythm($_INTERACTIVE_COPY, 8);
 	//
 
-	padding: $_BASE_PADDING / 2 $_BASE_PADDING;
 	resize: none;
 	width: 100%;
-	
-
-	&:focus {
-
-		outline: none;
-
-	}
-
-
-	&:disabled {
-
-		@include not-clickable;
-
-		opacity: $_OPACITY_DISABLED;
-
-	}
-
-
-	&::-moz-focus-inner {
-
-		border: none;
-
-	}
 
 }
