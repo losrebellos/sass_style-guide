@@ -17,6 +17,10 @@ p, a, q, cite {
 
 	}
 
+}
+
+
+p, q, cite {
 
 	&:not(&[class^="icon-"]),
 	&:not(&[class*=" icon-"]) {
