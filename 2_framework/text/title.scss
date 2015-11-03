@@ -1,74 +1,85 @@
 
-h1, h2, h3, h4, h5, h6 {
+.title, .t,
+.title_h1, .t_h1,
+.title_h2, .t_h2,
+.title_h3, .t_h3,
+.title_h4, .t_h4,
+.title_h5, .t_h5,
+.title_h6, .t_h6 {
 
 	@include text-null;
 
-	border: none;
 	// background-color: green;
 	font-style: normal;
 	font-weight: bold;
-	margin: 0;
 	padding: 0;
 
 
-	&:not(&[class^="icon-"]),
-	&:not(&[class*=" icon-"]) {
+	&:first-child {
 
-		&:empty {
+		margin-top: 0;
 
-			display: none;
+	}
 
-		}
+
+	&:last-child {
+
+		margin-bottom: 0;
 
 	}
 
 }
 
 
-h1 {
-
-	// background-color: red;
+.title_h1, .t_h1 {
 
 	@include text-rhythm(5, 4, 1.5 0 1 0);
 
+	// background-color: red;
+
 }
 
-h2 {
 
-	// background-color: gray;
+.title_h2, .t_h2 {
 
 	@include text-rhythm(4, 3.5, 1.5 0 1 0);
 
+	// background-color: gray;
+
 }
 
-h3 {
 
-	// background-color: violet;
+.title_h3, .t_h3 {
 
 	@include text-rhythm(3, 3, 1.5 0 1 0);
 
+	// background-color: violet;
+
 }
 
-h4 {
 
-	// background-color: blue;
+.title_h4, .t_h4 {
 
 	@include text-rhythm(2.5, 3, 1.5 0 1 0);
 
+	// background-color: blue;
+
 }
 
-h5 {
 
-	// background-color: orange;
+.title_h5, .t_h5 {
 
 	@include text-rhythm(2, 3, 1.5 0 1 0);
 
+	// background-color: orange;
+
 }
 
-h6 {
 
-	// background-color: pink;
+.title_h6, .t_h6 {
 
 	@include text-rhythm(1.8, 2, 1.5 0 1 0);
+
+	// background-color: pink;
 
 }

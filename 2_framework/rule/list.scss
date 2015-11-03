@@ -94,8 +94,7 @@ ul {
 		
 		> li {
 
-			@include inline-block;
-
+			display: inline-block;
 			float: left;
 			margin: 0 $_BASE_MARGIN $_BASE_LINE_HEIGHT 0;
 

@@ -14,7 +14,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 }
 
 
-.input-text {
+.input_text, .i_txt {
 
 	@extend .input-base;
 
@@ -33,7 +33,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 }
 
 
-.input-checkbox, .input-radio {
+.input_checkbox, .i_chckbx, .input_radio, .i_rd {
 
 	@extend .input-base;
 
@@ -81,7 +81,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 }
 
 
-.input-radio {
+.input_radio, .i_rd {
 
 	border-radius: 1em;
 
@@ -89,7 +89,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
 
 
-.textarea {
+.textarea, .txtr {
 
 	@extend .input-base;
 

@@ -12,6 +12,7 @@
 @import 'rule/columns';
 @import 'rule/container';
 @import 'rule/grid';
+@import 'rule/list';
 @import 'rule/rhythm';
 @import 'rule/style-guide';
 
@@ -23,13 +24,6 @@
 @import 'interactive/select';
 @import 'interactive/toggle';
 
-@import 'text/font-family';
 @import 'text/body';
 @import 'text/title';
 @import 'text/icon';
-@import 'text/utils';
-
-@import 'utils/debug';
-@import 'utils/float';
-@import 'utils/list';
-@import 'utils/margin';

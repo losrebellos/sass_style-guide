@@ -21,13 +21,6 @@
 }
 
 
-.not-clickable {
-
-	@include not-clickable;
-
-}
-
-
 @mixin clickable {
 
 	@include user-select(auto);
@@ -45,12 +38,5 @@
 		cursor: auto;
 
 	}
-
-}
-
-
-.clickable {
-
-	@include clickable;
 
 }

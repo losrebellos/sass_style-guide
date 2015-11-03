@@ -1,0 +1,82 @@
+
+/* FONT */
+
+.font-weight_bold, .f-w_b {
+
+	font-weight: bold;
+
+}
+
+
+.font-style_italic, .f-s_i {
+
+	font-style: italic;
+
+}
+
+
+/* TEXT ALIGN */
+
+.text-align_left, .t-a_l {
+
+	text-align: left;
+
+}
+
+
+.text-align_center, .t-a_c {
+
+	text-align: center;
+
+}
+
+
+.text-align_right, .t-a_r {
+
+	text-align: right;
+
+}
+
+
+.text-align_justify, .t-a_j {
+
+	text-align: justify;
+    text-justify: inter-word;
+    
+}
+
+
+/* TEXT TRANSFORM */
+
+.uppercase,
+.text-transform_uppercase, .t-t_u {
+
+	text-transform: uppercase;
+
+}
+
+
+.capitalize,
+.text-transform_capitalize, .t-t_c {
+
+	text-transform: capitalize;
+
+}
+
+
+/* TEXT DECORATION */
+
+.underline,
+.text-decoration_underline, .t-d_u {
+
+	text-decoration: underline;
+
+}
+
+
+.line-through
+.text-decoration_line-through, .t-d_b {
+
+	text-decoration: line-through;
+
+}

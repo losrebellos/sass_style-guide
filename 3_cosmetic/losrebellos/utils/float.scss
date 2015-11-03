@@ -1,19 +1,22 @@
 
-.left {
+.left,
+.float_left, .f_l {
 	
 	float: left;
 
 }
 
 
-.right {
+.right,
+.float_right, .f_r {
 
 	float: right;
 
 }
 
 
-.clear-both {
+.clear-both,
+.clear_both {
 
 	clear: both;
 

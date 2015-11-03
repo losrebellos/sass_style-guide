@@ -8,11 +8,20 @@
 }
 
 
+.style-guide-page-title {
+
+	@extend .title_h1;
+
+}
+
+
 .style-guide-title {
 
-	@include rhythm(3, null 3, 1.5 0 1 0);
+	@extend .title;
 
-	border-top: 2px solid black;
+	@include rhythm(2, null 2.5, 3 0 2 0);
+
+	border-bottom: 1px solid #ccc;
 
 }
 
@@ -70,10 +79,10 @@
 
 		> p {
 
-			@include inline-block;
 			@include text-rhythm(1.7, 2, 0 0 0 0.5);
 
 			color: white;
+			display: inline-block;
 			font-weight: bold;
 
 		}
@@ -205,8 +214,7 @@
 
 .style-guide-icon {
 
-	@include inline-block;
-
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;

@@ -1,5 +1,5 @@
 
-.label {
+.label, .lbl {
 
 	@include disabled;
 	@include text-rhythm($_INTERACTIVE_COPY, 2, 0 1 0 0);

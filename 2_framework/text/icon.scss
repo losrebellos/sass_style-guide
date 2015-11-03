@@ -1,11 +1,11 @@
 
 [class^="icon-"], [class*=" icon-"] {
 
-	@include inline-block;
 	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
 	background-color: transparent;
+	display: inline-block;
 	padding: 0 $_BASE_PADDING / 2;
 	text-decoration: none;
 

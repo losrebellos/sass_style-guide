@@ -1,13 +1,15 @@
 
-p, a, q, cite {
+.body, .bd,
+.body_p, .bd_p,
+.body_cite, .bd_ct,
+.body_q, .bd_q {
 
+	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
-	border: none;
 	// background-color: green;
 	font-style: normal;
 	font-weight: normal;
-	margin: 0;
 	padding: 0;
 
 
@@ -17,41 +19,23 @@ p, a, q, cite {
 
 	}
 
-}
 
-
-p, q, cite {
-
-	&:not(&[class^="icon-"]),
-	&:not(&[class*=" icon-"]) {
-
-		&:empty {
-
-			display: none;
-
-		}
-		
-	}
-
-}
-
-
-p {
-
-	@include text-null;
-
-	text-indent: $_BASE_MARGIN;
-	text-indent: $_BASE_LINE_HEIGHT;
-
-
-	&:only-child, &:only-of-type {
+	> * {
 
 		text-indent: 0;
 
 	}
 
+}
 
-	> * {
+
+.body_p, .bd_p {
+
+	text-indent: $_BASE_MARGIN;
+	// text-indent: $_BASE_LINE_HEIGHT;
+
+
+	&:only-child, &:only-of-type {
 
 		text-indent: 0;
 
@@ -60,15 +44,14 @@ p {
 }
 
 
-span {
+.body_span, .bd_spn {
 
-	font-style: inherit;
-	font-weight: inherit;
+	@include text-rhythm-reset;
 
 }
 
 
-cite {
+.body_cite, .bd_ct {
 
 	@include text-null;
 
@@ -78,7 +61,7 @@ cite {
 }
 
 
-q {
+.body_q, .bd_q {
 
 	@include text-null;
 
@@ -92,6 +75,7 @@ q {
 
 	}
 
+
 	&:after {
 
 	    content: close-quote;
@@ -101,20 +85,33 @@ q {
 }
 
 
-blockquote {
+.blockquote, .blckqt {
 
-	@include text-rhythm(1, 1, 0.5 0 1 0);
+	@include text-rhythm-reset;
 
 	// background-color: red;
-	font-size: 1em;				// so it won't be oversized
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: $_BASE_LINE_HEIGHT;
 	max-width: none;
-	padding: 0;
 	position: relative;
 	text-align: justify;
 	width: 75%;
+
+
+	&:first-child {
+
+		margin-top: 0;
+
+	}
+	
+
+	&:last-child {
+
+		margin-bottom: 0;
+
+	}
 
 
 	&.with-quotes {
@@ -149,8 +146,18 @@ blockquote {
 
 	> * {
 
-		margin-bottom: 0;
-		margin-top: 0;
+		&:first-child {
+
+			margin-top: 0;
+
+		}
+
+
+		&:last-child {
+
+			margin-bottom: 0;
+
+		}
 
 	}
 

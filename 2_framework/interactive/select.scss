@@ -11,11 +11,11 @@
 }
 
 
-.form-select, .form-drop-down {
+.form_select, .f_slct, .form_drop-down, .f_d-dwn {
 
 	@extend .select-base;
 
-	@include inline-block;
+	display: inline-block;
 
 
 	&:not(.disabled) {
@@ -31,7 +31,7 @@
 }
 
 
-.select {
+.select, .slct {
 
 	@extend .select-base;
 
