@@ -1,89 +1,13 @@
 
-// link states order:
-// http://meyerweb.com/eric/thoughts/2007/06/04/ordering-the-link-states/
+a {
 
-.link-base {
-
-	border: none;
-	color: grey;
-	cursor: pointer;
-	margin: 0;
-	padding: 0;
-
-
-	// unvisited link
-	// same as default color
-	&:link {
-
-		color: grey;
-		
-	}
-
-
-	// visited link
-	// only color property is available on Chrome
-	// for security reasons (history sniffing)
-	&:visited {
-
-		color: purple;
-
-	}
-
-
-	// interaction
-	&:hover, &:focus, &:active {
-
-		color: black;
-
-	}
-
-}
-
-
-.link-text {
-
-	@extend .link-base;
-
-    @include remove-outline;
-	@include text-null;
-	@include text-rhythm($_BODY_COPY, 2);
+	@include remove-outline;
 	@include transition(color $_HOVER_DURATION);
-
-	// background-color: green;
-	// display: inline-block;
-	text-decoration: underline;
-
-
-	// visited link
-	// only color property is available on Chrome
-	// for security reasons (history sniffing)
-	&:visited {
-
-		text-decoration: line-through;
-
-	}
-
-
-	&:hover, &:focus, &:active {
-
-		text-decoration: none;
-
-	}
-
-
-	// disabled
-	@include disabled {
-		
-		text-decoration: line-through;
-
-	}
 
 }
 
 
 .link-box {
-
-	@extend .link-base;
 
 	@include text-rhythm-reset;
 
@@ -102,3 +26,21 @@
 
 }
 
+
+.link-box-container {
+
+	height: 0;
+	padding-bottom: (100% * $_GOLDEN_RATIO);
+	position: relative;
+	width: 100%;
+
+
+	.link-box {
+
+		@include position(absolute, -1px -1px -1px -1px);
+
+		width: auto;
+
+	}
+
+}

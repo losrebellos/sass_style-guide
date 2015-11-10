@@ -1,7 +1,6 @@
 
 [class^="icon-"], [class*=" icon-"] {
 
-	@include text-null;
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
 	background-color: transparent;

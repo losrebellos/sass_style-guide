@@ -1,12 +1,23 @@
 
 @mixin disabled($opacity: 0.5) {
+		
+	@include disabled-simple {
+
+		opacity: $opacity;
+
+		// not mandatory
+		@content;
+
+	}
+
+}
+
+
+@mixin disabled-simple {
 
 	&.disabled, &:disabled {
 
 		@include not-clickable;
-
-		opacity: $opacity;
-
 
 		// not mandatory
 		@content;
