@@ -96,7 +96,7 @@ input {
 		width: 1em / $_BASE_SIZE;
 
 
-		&:checked {
+		&.checked, &:checked {
 
 			background-color: $_BACKGROUND_COLOR_HOVER;
 
