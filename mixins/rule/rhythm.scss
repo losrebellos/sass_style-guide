@@ -48,6 +48,7 @@
 	@if(type-of($lines) == number) {
 
 		line-height: $lines * $k;
+		height: auto;
 
 	}
 
