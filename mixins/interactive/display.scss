@@ -5,7 +5,7 @@
 
 	@if($displayValue == null or $displayValue == 'inline-block') {
 	
-		@include inline-block;
+		display: inline-block;
 
 	}
 	@else {

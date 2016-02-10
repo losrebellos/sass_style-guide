@@ -16,8 +16,7 @@
 
 	&.inline-block {
 
-		@include inline-block;
-
+		display: inline-block;
 		float: none;
 		margin-left: auto;
 		margin-right: auto;
