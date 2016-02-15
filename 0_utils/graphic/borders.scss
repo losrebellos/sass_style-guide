@@ -1,0 +1,17 @@
+
+@mixin has-borders($thickness: 0.2em, $style: solid, $colour: red, $parentPosition: relative, $coordinates: 0 0 0 0) {
+
+	position: $parentPosition;
+
+
+	&:before {
+
+		@include not-clickable;
+		@include position(absolute, $coordinates);
+
+		border: $thickness $style $colour;
+		content: "";
+
+	}
+
+}

@@ -37,7 +37,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
 	@extend .input-base;
 
-	@include user-select(none);
+	@include transition(none);
 
 	border: none;
 	cursor: pointer;
@@ -46,6 +46,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 	height: 1em / $_BASE_SIZE;
 	margin: 0 $_BASE_PADDING / 2 0 0;
 	padding: 0;
+	user-select: none;
 	vertical-align: middle;
 	width: 1em / $_BASE_SIZE;
 
@@ -93,9 +94,8 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
 	@extend .input-base;
 
-	@include box-sizing(border-box);
-
 	border: 1px solid $_BORDER_COLOR;
+	box-sizing: border-box;
 	color: $_TEXT_COLOR;
 	font-style: normal;
 	font-weight: normal;

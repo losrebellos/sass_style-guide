@@ -1,0 +1,54 @@
+
+@mixin not-clickable {
+
+	-webkit-touch-callout: none;
+	-ms-touch-action: none;
+	touch-action: none;
+
+	cursor: default;
+	outline: none;
+	pointer-events: none;
+	user-select: none;
+
+
+	&:hover, &:focus {
+
+		cursor: default;
+
+	}
+
+}
+
+
+.not-clickable {
+
+	@include not-clickable;
+
+}
+
+
+@mixin clickable {
+
+	-webkit-touch-callout: auto;
+	-ms-touch-action: auto;
+	touch-action: auto;
+
+	cursor: auto;
+	pointer-events: auto;
+	user-select: auto;
+
+
+	&:hover, &:focus {
+
+		cursor: auto;
+
+	}
+
+}
+
+
+.clickable {
+
+	@include clickable;
+
+}

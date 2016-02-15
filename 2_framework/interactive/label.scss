@@ -3,7 +3,6 @@
 
 	@include disabled;
 	@include text-rhythm($_INTERACTIVE_COPY, 2, 0 1 0 0);
-    @include user-select(none);
 
 	border: none;
 	cursor: pointer;
@@ -11,6 +10,7 @@
 	font-style: normal;
 	font-weight: normal;
 	padding: 0;
+	user-select: none;
 
 
 	&:last-child {

@@ -1,6 +1,0 @@
-
-@mixin box-shadow($params) {
-
-	@include prefixer(box-shadow, $params, webkit moz spec);
-
-}

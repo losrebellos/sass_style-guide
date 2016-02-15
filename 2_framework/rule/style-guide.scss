@@ -26,26 +26,6 @@
 }
 
 
-.style-guide-desc {}
-
-
-
-/* CONTAINER */
-
-// .style-guide-columns-container {
-
-// 	@include clearfix;
-
-
-// 	> li {
-
-// 		float: left;
-
-// 	}
-
-// }
-
-
 
 /* COLUMNS */
 
@@ -240,63 +220,6 @@
 		// 	content: 'Youhou';
 
 		// }
-
-	}
-
-}
-
-
-
-/* COLORS */
-
-.style-guide-colors {
-
-	> li {
-
-		@include clearfix;
-
-	}
-
-
-	.style-guide-desc {
-
-		float: left;
-		margin-left: 1em;
-
-	}
-
-}
-
-
-.style-guide-color-preview {
-
-	@include text-rhythm-reset;
-	@include square(1, 6);
-
-	background-color: red;
-	float: left;
-	margin-bottom: $_BASE_LINE_HEIGHT;
-
-
-	&.with-border {
-
-		// so we keep the rhythm going
-		&:before {
-
-			@include position(absolute, 0 0 0 0);
-
-			border: 1px solid $_BORDER_COLOR;
-			content: "";
-
-		}
-
-	}
-
-
-	// color example
-	&.color-text-1 {
-
-		// background-color: $_COLOR;
 
 	}
 

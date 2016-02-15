@@ -1,0 +1,63 @@
+
+// link states order:
+// http://meyerweb.com/eric/thoughts/2007/06/04/ordering-the-link-states/
+
+a {
+
+	@include remove-outline;
+	
+	background: none;
+	border: none;
+	color: grey;
+	// color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 1em;
+	font-style: inherit;
+	font-variant: inherit;
+	font-weight: inherit;
+	height: auto;
+	line-height: 1;
+	margin: 0;
+	max-width: none;
+	min-height: initial;
+	padding: 0;
+	text-decoration: underline;
+	text-indent: initial;
+
+
+	// unvisited link
+	// same as default color
+	&:link {
+
+		color: grey;
+		
+	}
+
+
+	// visited link
+	// only color property is available on Chrome
+	// for security reasons (history sniffing)
+	&:visited {
+
+		color: purple;
+
+	}
+
+
+	// interaction
+	&:hover, &:focus, &:active {
+
+		color: black;
+
+	}
+
+
+	// disabled
+	@include disabled {
+
+		text-decoration: line-through;
+
+	}
+
+}

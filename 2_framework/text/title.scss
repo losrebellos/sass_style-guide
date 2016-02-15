@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6,
 .title_h5, .t_h5,
 .title_h6, .t_h6 {
 
-	// background-color: green;
+	background-color: green;
 	font-style: normal;
 	font-weight: bold;
 	padding: 0;
@@ -34,7 +34,7 @@ h1, .title_h1, .t_h1 {
 
 	@include text-rhythm(5, 4, 1.5 0 1 0);
 
-	// background-color: red;
+	background-color: red;
 
 }
 
@@ -43,7 +43,7 @@ h2, .title_h2, .t_h2 {
 
 	@include text-rhythm(4, 3.5, 1.5 0 1 0);
 
-	// background-color: gray;
+	background-color: gray;
 
 }
 
@@ -52,7 +52,7 @@ h3, .title_h3, .t_h3 {
 
 	@include text-rhythm(3, 3, 1.5 0 1 0);
 
-	// background-color: violet;
+	background-color: violet;
 
 }
 
@@ -61,7 +61,7 @@ h4, .title_h4, .t_h4 {
 
 	@include text-rhythm(2.5, 3, 1.5 0 1 0);
 
-	// background-color: blue;
+	background-color: blue;
 
 }
 
@@ -70,7 +70,7 @@ h5, .title_h5, .t_h5 {
 
 	@include text-rhythm(2, 3, 1.5 0 1 0);
 
-	// background-color: orange;
+	background-color: orange;
 
 }
 
@@ -79,6 +79,6 @@ h6, .title_h6, .t_h6 {
 
 	@include text-rhythm(1.8, 2, 1.5 0 1 0);
 
-	// background-color: pink;
+	background-color: pink;
 
 }

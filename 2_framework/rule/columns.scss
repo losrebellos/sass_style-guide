@@ -4,14 +4,7 @@
 	@include column($_COLUMN_NUMBER);
 
 	float: left;
-	padding: ($_BASE_LINE_HEIGHT / 2) $_COLUMN_GUTTER;
-
-
-	&.clear-both {
-
-		clear: both;
-
-	}
+	max-width: $_BASE_GRID_WIDTH;
 
 
 	&.inline-block {

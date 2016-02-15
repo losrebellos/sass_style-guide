@@ -5,7 +5,6 @@
 	@include remove-outline;
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
-	@include user-select(none);
 	
 	background-color: $_BACKGROUND_COLOR;
 	border: $_BORDER_COLOR;
@@ -14,6 +13,7 @@
 	font-weight: normal;
 	opacity: $_OPACITY;
 	padding: 0 $_BASE_PADDING;
+	user-select: none;
 	
 
 	&:not([disabled]) {

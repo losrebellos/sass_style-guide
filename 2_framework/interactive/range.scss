@@ -7,9 +7,7 @@ $_RANGE_THUMB_RADIUS: 50%;
 
 input[type="range"] {
 
-    @include appearance(none);
-    @include user-select(none);
-
+	appearance: none;
     background-color: yellow;
     border: none;
     cursor: pointer;
@@ -18,6 +16,7 @@ input[type="range"] {
 	margin: $_BASE_PADDING / 2 0;
 	opacity: $_OPACITY;
 	padding: 0;
+	user-select: none;
 	vertical-align: middle;
 	width: auto;
 
@@ -96,9 +95,9 @@ input[type="range"] {
 
 	&::-webkit-slider-thumb {
 
-		@include appearance(none);
 		@include transition(background $_HOVER_DURATION);
 
+		appearance: none;
 	    background: $_COLOR_INTERACTIVE_1;
 	    border: none;
 	    border-radius: $_RANGE_THUMB_RADIUS;

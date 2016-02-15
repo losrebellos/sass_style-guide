@@ -1,0 +1,12 @@
+
+@mixin drop-shadow($x, $y, $blur, $colour) {
+
+	filter: drop-shadow($x $x $blur $colour);
+
+    /* for IE 8 & 9 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$colour}')";
+
+    /* For IE 5.5 - 7 */
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=#{$x}, OffY=#{$y}, Color='#{$colour}')";
+
+}
