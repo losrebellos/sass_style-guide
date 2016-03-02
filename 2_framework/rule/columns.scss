@@ -7,15 +7,25 @@
 	max-width: $_BASE_GRID_WIDTH;
 
 
-	&.inline-block {
+	&.with-gutters {
 
-		// display: inline-block;
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 100%;
-		text-align: left;
-		width: auto;
+		padding: $_BASE_LINE_HEIGHT $_COLUMN_GUTTER;
+
+	}
+
+
+	&.with-gutter-hor {
+
+		padding-left: $_COLUMN_GUTTER;
+		padding-right: $_COLUMN_GUTTER;
+
+	}
+
+
+	&.with-gutter-ver {
+
+		padding-bottom: $_BASE_LINE_HEIGHT;
+		padding-top: $_BASE_LINE_HEIGHT;
 
 	}
 

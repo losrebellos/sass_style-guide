@@ -1,4 +1,17 @@
 
+// default value to overwrite
+$_MODULAR_SCALE_PRECISION: 100;
+$_MODULAR_SCALE_RATIO: $minor-third !default;
+$_MODULAR_SCALE_BASE_RAW: 1.5 !default;
+$_MODULAR_SCALE_BASE: (1em * $_MODULAR_SCALE_BASE_RAW);
+
+// setup them up with Bourbon
+$modular-scale-ratio: $_MODULAR_SCALE_RATIO;
+$modular-scale-base: $_MODULAR_SCALE_BASE;
+
+
+
+
 $_BODY_COPY: 1.6 !default;
 
 $_INTERACTIVE_COPY: 1.5 !default;

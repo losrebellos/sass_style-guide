@@ -1,16 +1,13 @@
 
-p, cite, q,
-.body, .bd,
-.body_p, .bd_p,
-.body_cite, .bd_ct,
-.body_q, .bd_q {
+p {
 
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
-	// background-color: green;
+	background-color: getRandomColour();
 	font-style: normal;
 	font-weight: normal;
 	padding: 0;
+	text-indent: $_BASE_LINE_HEIGHT;
 
 
 	&:last-child {
@@ -19,45 +16,40 @@ p, cite, q,
 
 	}
 
-}
-
-
-p,
-.body_p, .bd_p {
-
-	text-indent: $_BASE_MARGIN;
-	// text-indent: $_BASE_LINE_HEIGHT;
-
 
 	&:only-child, &:only-of-type {
 
 		text-indent: 0;
 
 	}
-	
+
 }
 
 
-span,
-.body_span, .bd_spn {
+span {
 
 	@include text-rhythm-reset;
 
+	background-color: getRandomColour();
+
 }
 
 
-cite,
-.body_cite, .bd_ct {
+cite {
 
+	@include text-rhythm-reset;
+
+	background-color: getRandomColour();
 	font-style: italic;
-	opacity: 0.75;
 
 }
 
 
-q,
-.body_q, .bd_q {
+q {
 
+	@include text-rhythm-reset;
+
+	background-color: getRandomColour();
 	font-style: italic;
 	opacity: 0.75;
 
@@ -78,10 +70,9 @@ q,
 }
 
 
-blockquote,
-.blockquote, .blckqt {
+blockquote {
 
-	// background-color: red;
+	background-color: getRandomColour();
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -108,46 +99,35 @@ blockquote,
 
 	&.with-quotes {
 
+		&:before, &:after {
+
+			@include not-clickable;
+
+			display: block;
+			font-family: $georgia;
+			font-size: 5 * $_BASE_FONT_SIZE;
+			line-height: 1em;
+			position: absolute;
+
+		}
+
+
 		&:before {
 
 			content: open-quote;
-			display: block;
-			font-size: 5 * $_BASE_FONT_SIZE;
 			left: -0.5em;
-			line-height: 1em;
-			position: absolute;
-			top: -0.15em;
+			// top: -0.1em;
+			top: 0.075em;
 
 		}
 
 
 		&:after {
 
-			bottom: 0.3em;
+			// bottom: -0.6em;
+			bottom: -0.45em;
 			content: close-quote;
-			display: block;
-			font-size: 5 * $_BASE_FONT_SIZE;
-			line-height: 1em;
 			right: -0.5em;
-			position: absolute;
-
-		}
-
-	}
-
-
-	> * {
-
-		&:first-child {
-
-			margin-top: 0;
-
-		}
-
-
-		&:last-child {
-
-			margin-bottom: 0;
 
 		}
 

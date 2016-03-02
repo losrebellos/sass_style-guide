@@ -19,13 +19,26 @@ html, body {
 
 	font-family: $helvetica;
 	font-weight: normal;
-	height: 100%;
 	margin: 0;
 	min-height: 100%;
 	padding: 0;
 	position: relative;
 	text-rendering: optimizelegibility;
 	width: 100%;
+
+}
+
+
+html {
+
+	height: 100%;
+
+}
+
+
+body {
+
+	height: auto;
 
 }
 

@@ -13,14 +13,11 @@
 
 @import 'container/list';
 @import "container/page";
-@import 'container/utils';
 
 
 @import 'rule/columns';
 @import 'rule/container';
 @import 'rule/grid';
-@import 'rule/rhythm';
-@import 'rule/style-guide';
 
 
 @import 'interactive/button';
@@ -32,6 +29,6 @@
 @import 'interactive/toggle';
 
 
+@import 'text/sizes';
 @import 'text/body';
-@import 'text/title';
 @import 'text/icon';

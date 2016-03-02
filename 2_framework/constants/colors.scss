@@ -1,7 +1,9 @@
 
-$_GRID_COLOR_1: cyan;
-$_GRID_COLOR_2: rgba(0, 255, 255, 0.5);
-$_GRID_COLOR_3: green;
+$_GRID_COLOR_1: rgba(0, 255, 0, 0.5);
+$_GRID_COLOR_2: rgba(0, 255, 0, 0.25);
+
+$_RHYTHM_COLOR_1: rgba(0, 255, 0, 0.5);
+$_RHYTHM_COLOR_2: rgba(0, 255, 0, 0.15);
 
 
 $_BACKGROUND_COLOR: #e8e8e8;
@@ -21,7 +23,6 @@ $_COLOR_INTERACTIVE_2: gold;
 
 $_OPACITY: 1;
 
-// $_OPACITY_HOVER: 0.75;
 $_OPACITY_HOVER: 1 / $golden;
 
 $_OPACITY_DISABLED: 0.5;

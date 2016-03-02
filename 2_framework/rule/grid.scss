@@ -1,85 +1,84 @@
 
-.grid {
+.grid_element {
 
 	@include not-clickable;
 	@include position(absolute, 0 0 0 0);
-	@include text-rhythm-reset;
 
-	background-image: linear-gradient(to right, $_GRID_COLOR_1 0, rgba(255, 255, 255, 0) 1px);
-	background-size: (100% / $_COLUMN_NUMBER) 100%;
-	background-repeat: repeat-x;
 	margin: 0 auto;
-	max-width: $_BASE_GRID_WIDTH;
-	opacity: 0.5;
+	overflow: hidden;
 	z-index: 1000000;
-
-
-	&:before {
-
-		background-color: $_GRID_COLOR_1;
-		content: "";
-		height: 100%;
-		opacity: 0.5;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 1px;
-
-	}
-
-
-	> .column {
-
-		@include column(1, $_COLUMN_NUMBER);
-
-		min-height: 100%;
-		position: relative;
-
-
-		// middle
-		&:before {
-
-			border-left: 1px solid $_GRID_COLOR_1;
-			border-right: 1px solid $_GRID_COLOR_2;
-			content: "";
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 50%;
-
-		}
-
-
-		// inner
-		// only if gutter is > 0
-		@if $_COLUMN_GUTTER > 0 {
-
-			&:after {
-
-				@include position(absolute, 0 $_COLUMN_GUTTER 0 $_COLUMN_GUTTER);
-
-				border-left: 1px solid $_GRID_COLOR_3;
-				border-right: 1px solid $_GRID_COLOR_3;
-				content: "";
-				display: block;
-
-				// FIX
-				// weird 1 px offset
-				// due to box-sizing?
-				right: calc(#{$_COLUMN_GUTTER} - 1px);
-				//
-
-			}
-			
-		}
-
-	}
 
 
 	&.hide {
 
 		display: none;
+
+
+		&:before, &:after {
+			
+			display: none;
+
+		}
+
+	}
+
+}
+
+
+
+$_GRID_COLUMN: (100% / $_COLUMN_NUMBER);
+
+.grid_column {
+
+	background-image: repeating-linear-gradient(to right, $_GRID_COLOR_1, $_GRID_COLOR_1 1px, transparent 1px, transparent $_GRID_COLUMN);
+	border-right: 1px solid $_GRID_COLOR_1;
+	max-width: $_BASE_GRID_WIDTH;
+
+
+@if(type-of($_COLUMN_GUTTER) == number and $_COLUMN_GUTTER > 0) {
+
+	// gutter left
+	&:before {
+
+		@include position(absolute, 0 (-$_COLUMN_GUTTER) 0 $_COLUMN_GUTTER);
+
+		background-image: repeating-linear-gradient(to right, $_GRID_COLOR_2, $_GRID_COLOR_2 1px, transparent 1px, transparent $_GRID_COLUMN);
+		content: "";
+
+	}
+
+
+	// gutter right
+	&:after {
+
+		@include position(absolute, 0 $_COLUMN_GUTTER 0 (-$_COLUMN_GUTTER));
+
+		background-image: repeating-linear-gradient(to left, $_GRID_COLOR_2, $_GRID_COLOR_2 1px, transparent 1px, transparent $_GRID_COLUMN);
+		content: "";
+
+	}
+
+}
+
+}
+
+
+
+$_GRID_RHYTHM_STEP: ($_MODULAR_SCALE_BASE / 2);
+
+.grid_rhythm {
+
+	background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_1, $_RHYTHM_COLOR_1 1px, transparent 1px, transparent $_MODULAR_SCALE_BASE);
+	top: -1px;
+
+
+	&:before {
+
+		@include position(absolute, -$_GRID_RHYTHM_STEP 0 0 0);
+		@include text-rhythm-reset;
+
+		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_2, $_RHYTHM_COLOR_2 1px, transparent 1px, transparent $_GRID_RHYTHM_STEP);
+		content: "";
 
 	}
 
