@@ -9,11 +9,11 @@
 	position: relative;
 	width: 100%;
 
-}
 
+	&_full-height {
 
-.page_full-height {
+		min-height: 100%;
 
-	min-height: 100%;
+	}
 
 }

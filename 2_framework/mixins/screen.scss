@@ -1,0 +1,76 @@
+
+@mixin screen-size-small {
+
+	@include media-min($_BREAKPOINT_60, $_BREAKPOINT_50) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-small-to-medium {
+
+	@include media($_BREAKPOINT_60, $_BREAKPOINT_90, $_BREAKPOINT_50, $_BREAKPOINT_50) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-medium {
+
+	@include media-min($_BREAKPOINT_90, $_BREAKPOINT_50) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-medium-to-normal {
+
+	@include media($_BREAKPOINT_90, $_BREAKPOINT_110, $_BREAKPOINT_50, $_BREAKPOINT_70) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-normal {
+
+	@include media-min($_BREAKPOINT_110, $_BREAKPOINT_70) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-normal-to-large {
+
+	@include media($_BREAKPOINT_110, $_BREAKPOINT_130, $_BREAKPOINT_70, $_BREAKPOINT_90) {
+
+		@content;
+
+	}
+
+}
+
+
+@mixin screen-size-large {
+
+	@include media-min($_BREAKPOINT_130, $_BREAKPOINT_90) {
+
+		@content;
+
+	}
+
+}
