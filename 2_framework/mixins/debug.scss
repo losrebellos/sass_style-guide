@@ -1,0 +1,10 @@
+
+@mixin debug {
+	
+	.debug & {
+
+		@content;
+
+	}
+
+}

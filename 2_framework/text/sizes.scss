@@ -12,8 +12,6 @@ h1, h2, h3, h4, h5, h6, p,
 .text_8,
 .text_9,
 .text_10, {
-
-	background-color: getRandomColour();
 	font-style: normal;
 	font-weight: bold;
 	padding: 0;
@@ -34,6 +32,13 @@ h1, h2, h3, h4, h5, h6, p,
 
 
 	margin: 0;
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -61,7 +66,12 @@ $_FONT_SIZE_0: custom-modular-scale(0);
 
 	@include text-rhythm($_FONT_SIZE_10, ceil($_FONT_SIZE_10), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -70,7 +80,12 @@ $_FONT_SIZE_0: custom-modular-scale(0);
 
 	@include text-rhythm($_FONT_SIZE_9, ceil($_FONT_SIZE_9), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -79,7 +94,12 @@ $_FONT_SIZE_0: custom-modular-scale(0);
 
 	@include text-rhythm($_FONT_SIZE_8, ceil($_FONT_SIZE_8), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -88,7 +108,12 @@ $_FONT_SIZE_0: custom-modular-scale(0);
 
 	@include text-rhythm($_FONT_SIZE_7, ceil($_FONT_SIZE_7), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -98,7 +123,12 @@ h1,
 
 	@include text-rhythm($_FONT_SIZE_6, ceil($_FONT_SIZE_6), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -108,7 +138,12 @@ h2,
 
 	@include text-rhythm($_FONT_SIZE_5, ceil($_FONT_SIZE_5), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -118,7 +153,12 @@ h3,
 
 	@include text-rhythm($_FONT_SIZE_4, ceil($_FONT_SIZE_4), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -128,7 +168,12 @@ h4,
 
 	@include text-rhythm($_FONT_SIZE_3, ceil($_FONT_SIZE_3), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -138,7 +183,12 @@ h5,
 
 	@include text-rhythm($_FONT_SIZE_2, ceil($_FONT_SIZE_2), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -148,7 +198,12 @@ h6,
 
 	@include text-rhythm($_FONT_SIZE_1, ceil($_FONT_SIZE_1), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -157,6 +212,11 @@ h6,
 
 	@include text-rhythm($_FONT_SIZE_0, ceil($_FONT_SIZE_0), 1.5 0 1 0);
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }

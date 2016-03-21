@@ -1,4 +1,8 @@
 
+@import 'mixins/debug';
+@import 'mixins/screen';
+
+
 @import 'constants/utils';
 @import 'constants/animations';
 @import 'constants/colors';
@@ -27,9 +31,6 @@
 @import 'interactive/range';
 @import 'interactive/select';
 @import 'interactive/toggle';
-
-
-@import 'mixins/screen';
 
 
 @import 'text/sizes';

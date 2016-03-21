@@ -3,7 +3,6 @@ p {
 
 	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
 
-	background-color: getRandomColour();
 	font-style: normal;
 	font-weight: normal;
 	padding: 0;
@@ -23,6 +22,13 @@ p {
 
 	}
 
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
 }
 
 
@@ -30,7 +36,12 @@ span {
 
 	@include text-rhythm-reset;
 
-	background-color: getRandomColour();
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -39,8 +50,14 @@ cite {
 
 	@include text-rhythm-reset;
 
-	background-color: getRandomColour();
 	font-style: italic;
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
 
 }
 
@@ -49,7 +66,6 @@ q {
 
 	@include text-rhythm-reset;
 
-	background-color: getRandomColour();
 	font-style: italic;
 	opacity: 0.75;
 
@@ -67,12 +83,18 @@ q {
 
 	}
 
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
 }
 
 
 blockquote {
 
-	background-color: getRandomColour();
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -93,6 +115,13 @@ blockquote {
 	&:last-child {
 
 		margin-bottom: 0;
+
+	}
+
+
+	@include debug {
+
+		background-color: getRandomColour();
 
 	}
 
