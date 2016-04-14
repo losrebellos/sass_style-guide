@@ -1,12 +1,20 @@
 
+.full-width {
+
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+
+}
+
+
 .columns-container {
+
+	@extend .full-width;
 
 	@include clearfix;
 
-	margin: 0 auto;
 	max-width: $_BASE_GRID_WIDTH;
 	min-height: 100%;
-	position: relative;
-	width: 100%;
 
 }

@@ -1,0 +1,21 @@
+
+.menu {
+
+	&_submenu {
+
+		@include animation-fade-out;
+
+	}
+
+
+	&_submenu-container:hover {
+
+		.menu_submenu {
+
+			@include animation-fade-in;
+
+		}
+
+	}
+
+}

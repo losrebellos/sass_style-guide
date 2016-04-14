@@ -1,15 +1,34 @@
 
-@function getRandomColour($alpha: null) {
+@function getRandomColour($red: null, $green: null, $blue: null, $alpha: null) {
 
-	$red: (random(256) - 1);
-	$green: (random(256) - 1);
-	$blue: (random(256) - 1);
+	@if not $red {
+
+		$red: (random(256) - 1);
+
+	}
+
+
+	@if not $green {
+
+		$green: (random(256) - 1);
+
+	}
+
+
+	@if not $blue {
+
+		$blue: (random(256) - 1);
+
+	}
+
 
 	@if not $alpha {
 
-		$alpha: (0.5 + random(50) / 100);
+		// 0.25 < alpha < 0.75
+		$alpha: (0.25 + random(50) / 100);
 
 	}
+
 
 	@return rgba($red, $green, $blue, $alpha);
 

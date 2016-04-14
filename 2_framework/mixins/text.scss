@@ -1,0 +1,19 @@
+
+@function custom-modular-scale($step, $precision: $_MODULAR_SCALE_PRECISION) {
+
+	@return ceil($precision * modular-scale($step)) / ($precision * 1em);
+
+}
+
+
+@function custom-modular-scale_line-height($fontSize) {
+
+	// @if $fontSize > 2 {
+
+	// 	@return floor($fontSize / 2) * 2;
+
+	// }
+
+	@return ceil($fontSize);
+
+}

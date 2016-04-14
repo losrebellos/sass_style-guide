@@ -1,9 +1,79 @@
 
-@mixin background-cover($url) {
+@mixin background-cover($url, $position: center) {
 
 	background-image: url($url);
-	background-position: center;
+	background-position: $position;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+}
+
+
+.background_cover, .bg_cover {
+
+	background-size: cover;
+
+}
+
+
+.background_contain, .bg_contain {
+
+	background-size: contain;
+
+}
+
+
+.background_position, .bg_pos {
+
+	background-position: center center;
+
+
+	&.top {
+
+		background-position: top center;
+
+	}
+
+
+	&.top-right {
+
+		background-position: top right;
+
+	}
+
+
+	&.top-left {
+
+		background-position: top left;
+
+	}
+
+
+	&.bottom {
+
+		background-position: bottom center;
+
+	}
+
+
+	&.bottom-right {
+
+		background-position: bottom right;
+
+	}
+
+
+	&.bottom-left {
+
+		background-position: bottom left;
+
+	}
+
+}
+
+
+.background_no-repeat, .bg_no-repeat {
+
+	background-repeat: no-repeat;
 
 }
