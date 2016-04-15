@@ -29,7 +29,7 @@
 	}
 
 
-	&_with-number {
+	&_with-number, &_w-num {
 
 		> li {
 
@@ -80,7 +80,25 @@
 	}
 
 
-	&_horizontal {
+	&_with-margin {
+
+		> li {
+
+			margin-bottom: $_BASE_MARGIN;
+
+
+			&:last-child, &:last-of-type {
+
+				margin-bottom: 0;
+
+			}
+
+		}
+
+	}
+
+
+	&_horizontal, &_hor {
 
 		@include clearfix;
 		
@@ -91,6 +109,24 @@
 
 			display: inline-block;
 			float: left;
+
+		}
+
+
+		&.list_with-margin {
+
+			> li {
+
+				margin: 0 $_BASE_MARGIN 0 0;
+
+
+				&:last-child, &:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
 
 		}
 

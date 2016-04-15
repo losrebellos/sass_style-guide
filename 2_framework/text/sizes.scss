@@ -33,6 +33,15 @@ $_FONT_SIZE_0: custom-modular-scale(0);
 $_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);
 
 
+// can be overridden
+
+$_FONT_SIZE_MIN: $_FONT_SIZE_0;
+$_LINE_HEIGHT_MIN: $_LINE_HEIGHT_0;
+
+$_FONT_SIZE_MAX: $_FONT_SIZE_10;
+$_LINE_HEIGHT_MAX: $_LINE_HEIGHT_10;
+
+
 h1, h2, h3, h4, h5, h6, p,
 .text,
 .text_0,
@@ -47,8 +56,6 @@ h1, h2, h3, h4, h5, h6, p,
 .text_9,
 .text_10 {
 	
-	font-style: normal;
-	font-weight: bold;
 	padding: 0;
 
 
@@ -74,6 +81,14 @@ h1, h2, h3, h4, h5, h6, p,
 		background-color: getRandomColour();
 
 	}
+
+}
+
+
+h1, h2, h3, h4, h5, h6,
+.title {
+
+	font-weight: bold;
 
 }
 

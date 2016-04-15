@@ -8,11 +8,15 @@
 	}
 
 
-	&_submenu-container:hover {
+	&_submenu-container {
 
-		.menu_submenu {
+		&:hover, &:focus, &.selected {
 
-			@include animation-fade-in;
+			.menu_submenu {
+
+				@include animation-fade-in;
+
+			}
 
 		}
 

@@ -22,9 +22,16 @@ button,
 		&:hover, &:focus, &.active {
 
 			background-color: $_BACKGROUND_COLOR_HOVER;
-			color: $_HOVER_COLOR;
+			color: $_TEXT_COLOR_HOVER;
 
 		}
+
+	}
+
+
+	@include debug {
+
+		background-color: getRandomColour();
 
 	}
 
