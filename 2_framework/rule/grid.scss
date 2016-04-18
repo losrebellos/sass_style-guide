@@ -64,20 +64,18 @@ $_GRID_COLUMN: (100% / $_COLUMN_NUMBER);
 
 
 
-$_GRID_RHYTHM_STEP: ($_MODULAR_SCALE_BASE / 2);
-
 .grid_rhythm {
 
-	background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_1, $_RHYTHM_COLOR_1 1px, transparent 1px, transparent $_MODULAR_SCALE_BASE);
+	background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_1, $_RHYTHM_COLOR_1 1px, transparent 1px, transparent $_BASE_LINE_HEIGHT);
 	top: -1px;
 
 
 	&:before {
 
-		@include position(absolute, -$_GRID_RHYTHM_STEP 0 0 0);
+		@include position(absolute, -($_BASE_LINE_HEIGHT / 2) 0 0 0);
 		@include text-rhythm-reset;
 
-		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_2, $_RHYTHM_COLOR_2 1px, transparent 1px, transparent $_GRID_RHYTHM_STEP);
+		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_2, $_RHYTHM_COLOR_2 1px, transparent 1px, transparent $_BASE_LINE_HEIGHT);
 		content: "";
 
 	}
