@@ -1,4 +1,21 @@
 
+/* RESET */
+
+.text-reset {
+
+	@include text-rhythm-reset;
+
+}
+
+
+.text-children-reset {
+
+	@include text-null;
+
+}
+
+
+
 /* FONT */
 
 .font-weight_bold, .f-w_b, .bold {
@@ -13,6 +30,7 @@
 	font-style: italic;
 
 }
+
 
 
 /* TEXT ALIGN */
@@ -46,6 +64,7 @@
 }
 
 
+
 /* TEXT TRANSFORM */
 
 .uppercase,
@@ -62,6 +81,7 @@
 	text-transform: capitalize;
 
 }
+
 
 
 /* TEXT DECORATION */

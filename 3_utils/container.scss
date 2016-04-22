@@ -1,4 +1,50 @@
 
+/* VERTICALLY CENTERED CONTENT */
+
+.vcc {
+
+	@include vertically-centered-content;
+
+}
+
+
+
+/* FLOAT */
+
+.left,
+.float_left, .f_l {
+	
+	float: left;
+
+}
+
+
+.right,
+.float_right, .f_r {
+
+	float: right;
+
+}
+
+
+.clear-both,
+.clear_both {
+
+	clear: both;
+
+}
+
+
+.clearfix, .clear-fix {
+
+	@include clearfix;
+
+}
+
+
+
+/* MARGINS */
+
 .margin-left_auto {
 
 	margin-left: auto;

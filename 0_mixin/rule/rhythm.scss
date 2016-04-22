@@ -84,13 +84,6 @@
 }
 
 
-.text-reset {
-
-	@include text-rhythm-reset;
-
-}
-
-
 @mixin rhythm-reset {
 
 	@include text-rhythm-reset;
@@ -105,12 +98,5 @@
 		@include text-rhythm-reset;
 
 	}
-
-}
-
-
-.text-children-reset {
-
-	@include text-null;
 
 }

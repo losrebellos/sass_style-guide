@@ -20,13 +20,6 @@
 }
 
 
-.not-clickable {
-
-	@include not-clickable;
-
-}
-
-
 @mixin clickable {
 
 	-webkit-touch-callout: auto;
@@ -43,12 +36,5 @@
 		cursor: auto;
 
 	}
-
-}
-
-
-.clickable {
-
-	@include clickable;
 
 }

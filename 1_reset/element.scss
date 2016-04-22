@@ -1,0 +1,50 @@
+
+/* TEXT */
+
+i, strong, em, b, span, blockquote {
+
+	@include text-rhythm-reset;
+
+}
+
+
+
+/* SVG */
+
+svg {
+
+	max-height: 100%;
+	user-select: none;
+	width: 100%;
+
+}
+
+img {
+
+	border: none;
+	user-select: none;
+	vertical-align: bottom;
+	width: 100%;
+
+}
+
+
+/* LINE */
+
+hr {
+
+	border: none;
+	background-color: black;
+	height: 1px;
+	width: 100%;
+
+}
+
+
+/* INTERACTIVE */
+
+object, embed {
+
+	outline: none;
+
+}
