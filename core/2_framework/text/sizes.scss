@@ -1,36 +1,44 @@
 
 $_FONT_SIZE_10: custom-modular-scale(10);
-$_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);
+$_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);	// 4.25 => (10 - 1.5) / 2
 
 $_FONT_SIZE_9: custom-modular-scale(9);
-$_LINE_HEIGHT_9: custom-modular-scale_line-height($_FONT_SIZE_9);
+$_LINE_HEIGHT_9: custom-modular-scale_line-height($_FONT_SIZE_9);	// 3.75 => (9 - 1.5) / 2
 
 $_FONT_SIZE_8: custom-modular-scale(8);
-$_LINE_HEIGHT_8: custom-modular-scale_line-height($_FONT_SIZE_8);
+$_LINE_HEIGHT_8: custom-modular-scale_line-height($_FONT_SIZE_8);	// 3.25 => (8 - 1.5) / 2
 
 $_FONT_SIZE_7: custom-modular-scale(7);
-$_LINE_HEIGHT_7: custom-modular-scale_line-height($_FONT_SIZE_7);
+$_LINE_HEIGHT_7: custom-modular-scale_line-height($_FONT_SIZE_7);	// 2.75 => (7 - 1.5) / 2
 
 $_FONT_SIZE_6: custom-modular-scale(6);
-$_LINE_HEIGHT_6: custom-modular-scale_line-height($_FONT_SIZE_6);
+$_LINE_HEIGHT_6: custom-modular-scale_line-height($_FONT_SIZE_6);	// 2.25 => (6 - 1.5) / 2
+
+
 
 $_FONT_SIZE_5: custom-modular-scale(5);
-$_LINE_HEIGHT_5: custom-modular-scale_line-height($_FONT_SIZE_5);
+$_LINE_HEIGHT_5: custom-modular-scale_line-height($_FONT_SIZE_5);	// 2 => (5 - 1) / 2
 
 $_FONT_SIZE_4: custom-modular-scale(4);
-$_LINE_HEIGHT_4: custom-modular-scale_line-height($_FONT_SIZE_4);
+$_LINE_HEIGHT_4: custom-modular-scale_line-height($_FONT_SIZE_4);	// 1.75 => (4 - 0.5) / 2
 
 $_FONT_SIZE_3: custom-modular-scale(3);
-$_LINE_HEIGHT_3: custom-modular-scale_line-height($_FONT_SIZE_3);
+$_LINE_HEIGHT_3: custom-modular-scale_line-height($_FONT_SIZE_3);	// 1.5 => (3 - 0) / 2
 
 $_FONT_SIZE_2: custom-modular-scale(2);
-$_LINE_HEIGHT_2: custom-modular-scale_line-height($_FONT_SIZE_2);
+$_LINE_HEIGHT_2: custom-modular-scale_line-height($_FONT_SIZE_2);	// 1.25 => (2 + 0.5) / 2
 
 $_FONT_SIZE_1: custom-modular-scale(1);
-$_LINE_HEIGHT_1: custom-modular-scale_line-height($_FONT_SIZE_1);
+$_LINE_HEIGHT_1: custom-modular-scale_line-height($_FONT_SIZE_1);	// 1 => (1 - 0) / 2
 
 $_FONT_SIZE_0: custom-modular-scale(0);
-$_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);
+$_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);	// 0.75 => (0 + 1.5) / 2
+
+$_FONT_SIZE_-1: custom-modular-scale(-1);
+$_LINE_HEIGHT_-1: custom-modular-scale_line-height($_FONT_SIZE_-1);	//  => ( - 1) / 2
+
+$_FONT_SIZE_-2: custom-modular-scale(-2);
+$_LINE_HEIGHT_-2: custom-modular-scale_line-height($_FONT_SIZE_-2);	//  => ( - 1) / 2
 
 
 // can be overridden
@@ -44,6 +52,8 @@ $_LINE_HEIGHT_MAX: $_LINE_HEIGHT_10;
 
 h1, h2, h3, h4, h5, h6, p,
 .text,
+.text_-2,
+.text_-1,
 .text_0,
 .text_1,
 .text_2,
@@ -56,6 +66,7 @@ h1, h2, h3, h4, h5, h6, p,
 .text_9,
 .text_10 {
 	
+	margin: 0;
 	padding: 0;
 
 
@@ -71,9 +82,6 @@ h1, h2, h3, h4, h5, h6, p,
 		margin-bottom: 0;
 
 	}
-
-
-	margin: 0;
 
 
 	@include debug {
@@ -95,7 +103,8 @@ h1, h2, h3, h4, h5, h6,
 
 .text_10 {
 
-	@include text-rhythm($_FONT_SIZE_10, $_LINE_HEIGHT_10, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_10, $_LINE_HEIGHT_10, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_10, 4.25, 1.5 0 1 0);
 
 
 	@include debug {
@@ -109,7 +118,8 @@ h1, h2, h3, h4, h5, h6,
 
 .text_9 {
 
-	@include text-rhythm($_FONT_SIZE_9, $_LINE_HEIGHT_9, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_9, $_LINE_HEIGHT_9, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_9, 3.75, 1.5 0 1 0);
 
 
 	@include debug {
@@ -123,7 +133,8 @@ h1, h2, h3, h4, h5, h6,
 
 .text_8 {
 
-	@include text-rhythm($_FONT_SIZE_8, $_LINE_HEIGHT_8, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_8, $_LINE_HEIGHT_8, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_8, 3.25, 1.5 0 1 0);
 
 
 	@include debug {
@@ -137,7 +148,8 @@ h1, h2, h3, h4, h5, h6,
 
 .text_7 {
 
-	@include text-rhythm($_FONT_SIZE_7, $_LINE_HEIGHT_7, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_7, $_LINE_HEIGHT_7, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_7, 2.75, 1.5 0 1 0);
 
 
 	@include debug {
@@ -152,7 +164,8 @@ h1, h2, h3, h4, h5, h6,
 h1,
 .text_6 {
 
-	@include text-rhythm($_FONT_SIZE_6, $_LINE_HEIGHT_6, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_6, $_LINE_HEIGHT_6, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_6, 2.25, 1.5 0 1 0);
 
 
 	@include debug {
@@ -167,7 +180,8 @@ h1,
 h2,
 .text_5 {
 
-	@include text-rhythm($_FONT_SIZE_5, $_LINE_HEIGHT_5, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_5, $_LINE_HEIGHT_5, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_5, 2, 1.5 0 1 0);
 
 
 	@include debug {
@@ -182,7 +196,8 @@ h2,
 h3,
 .text_4 {
 
-	@include text-rhythm($_FONT_SIZE_4, $_LINE_HEIGHT_4, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_4, $_LINE_HEIGHT_4, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_4, 1.75, 1.5 0 1 0);
 
 
 	@include debug {
@@ -197,7 +212,8 @@ h3,
 h4,
 .text_3 {
 
-	@include text-rhythm($_FONT_SIZE_3, $_LINE_HEIGHT_3, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_3, $_LINE_HEIGHT_3, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_3, 1.5, 1.5 0 1 0);
 
 
 	@include debug {
@@ -212,7 +228,8 @@ h4,
 h5,
 .text_2 {
 
-	@include text-rhythm($_FONT_SIZE_2, $_LINE_HEIGHT_2, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_2, $_LINE_HEIGHT_2, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_2, 1.25, 1.5 0 1 0);
 
 
 	@include debug {
@@ -227,7 +244,8 @@ h5,
 h6,
 .text_1 {
 
-	@include text-rhythm($_FONT_SIZE_1, $_LINE_HEIGHT_1, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_1, $_LINE_HEIGHT_1, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_1, 1, 1.5 0 1 0);
 
 
 	@include debug {
@@ -241,7 +259,36 @@ h6,
 
 .text_0 {
 
-	@include text-rhythm($_FONT_SIZE_0, $_LINE_HEIGHT_0, 1.5 0 1 0);
+	// @include text-rhythm($_FONT_SIZE_0, $_LINE_HEIGHT_0, 1.5 0 1 0);
+	@include text-rhythm($_FONT_SIZE_0, 0.75, 1.5 0 1 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+.text_-1 {
+
+	@include text-rhythm($_FONT_SIZE_-1, $_LINE_HEIGHT_-1, 1.5 0 1 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+.text_-2 {
+
+	@include text-rhythm($_FONT_SIZE_-2, $_LINE_HEIGHT_-2, 1.5 0 1 0);
 
 
 	@include debug {
