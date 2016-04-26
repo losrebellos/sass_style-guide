@@ -2,7 +2,7 @@
 .label, .lbl {
 
 	@include disabled;
-	@include text-rhythm($_INTERACTIVE_COPY, 2, 0 0 1 0);
+	@include rhythm-text($_INTERACTIVE_COPY, 2, 0 0 1 0);
 
 	border: none;
 	cursor: pointer;

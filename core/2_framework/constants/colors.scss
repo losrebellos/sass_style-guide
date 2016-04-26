@@ -1,9 +1,10 @@
 
-$_GRID_COLOR_1: rgba(0, 255, 0, 0.5);
-$_GRID_COLOR_2: rgba(0, 255, 0, 0.25);
+$_GRID_COLOR_1: rgba(0, 255, 0, (2 / 3));
+$_GRID_COLOR_2: rgba(0, 255, 0, (1 / 3));
 
-$_RHYTHM_COLOR_1: rgba(0, 255, 0, 0.5);
-$_RHYTHM_COLOR_2: rgba(0, 255, 0, 0.15);
+$_RHYTHM_COLOR_1: rgba(0, 255, 0, (2 / 3));
+$_RHYTHM_COLOR_2: rgba(0, 255, 0, (1 / 3));
+$_RHYTHM_COLOR_3: rgba(0, 255, 0, 0.15);
 
 
 $_BACKGROUND_COLOR: #e8e8e8;

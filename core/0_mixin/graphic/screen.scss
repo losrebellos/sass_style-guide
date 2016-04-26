@@ -1,7 +1,8 @@
 
 @mixin screen-size-small {
 
-	@include media-min($_BREAKPOINT_60, $_BREAKPOINT_50) {
+	// 600 x 500
+	@include media-min($_BREAKPOINT_600, $_BREAKPOINT_500) {
 
 		@content;
 
@@ -12,7 +13,8 @@
 
 @mixin screen-size-small-to-medium {
 
-	@include media($_BREAKPOINT_60, $_BREAKPOINT_90, $_BREAKPOINT_50, $_BREAKPOINT_50) {
+	// 600 x 900 / 500 x 500
+	@include media($_BREAKPOINT_600, $_BREAKPOINT_900, $_BREAKPOINT_500, $_BREAKPOINT_500) {
 
 		@content;
 
@@ -23,7 +25,8 @@
 
 @mixin screen-size-medium {
 
-	@include media-min($_BREAKPOINT_90, $_BREAKPOINT_50) {
+	// 900 x 500
+	@include media-min($_BREAKPOINT_900, $_BREAKPOINT_500) {
 
 		@content;
 
@@ -34,7 +37,8 @@
 
 @mixin screen-size-medium-to-normal {
 
-	@include media($_BREAKPOINT_90, $_BREAKPOINT_110, $_BREAKPOINT_50, $_BREAKPOINT_70) {
+	// 900 x 1100 / 500 x 700
+	@include media($_BREAKPOINT_900, $_BREAKPOINT_1100, $_BREAKPOINT_500, $_BREAKPOINT_700) {
 
 		@content;
 
@@ -45,7 +49,8 @@
 
 @mixin screen-size-normal {
 
-	@include media-min($_BREAKPOINT_110, $_BREAKPOINT_70) {
+	// 1100 x 700
+	@include media-min($_BREAKPOINT_1100, $_BREAKPOINT_700) {
 
 		@content;
 
@@ -56,7 +61,8 @@
 
 @mixin screen-size-normal-to-large {
 
-	@include media($_BREAKPOINT_110, $_BREAKPOINT_130, $_BREAKPOINT_70, $_BREAKPOINT_90) {
+	// 1100 x 1300 / 700 x 900
+	@include media($_BREAKPOINT_1100, $_BREAKPOINT_1300, $_BREAKPOINT_700, $_BREAKPOINT_900) {
 
 		@content;
 
@@ -67,7 +73,8 @@
 
 @mixin screen-size-large {
 
-	@include media-min($_BREAKPOINT_130, $_BREAKPOINT_90) {
+	// 1300 x 900
+	@include media-min($_BREAKPOINT_1300, $_BREAKPOINT_900) {
 
 		@content;
 

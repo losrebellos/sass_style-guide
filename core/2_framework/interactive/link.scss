@@ -1,7 +1,7 @@
 
 .link {
 
-	@include text-rhythm($_BODY_COPY, 2, 1.5 0 1 0);
+	@include rhythm-text($_BODY_COPY, 2, 1.5 0 1 0);
 	@include transition(color $_HOVER_DURATION);
 
 	padding: 0;
@@ -25,7 +25,7 @@
 
 .link-box {
 
-	@include text-rhythm-reset;
+	@include rhythm-text-reset;
 
 	display: block;
 	text-decoration: none;
@@ -46,7 +46,7 @@
 .link-box-container {
 
 	height: 0;
-	padding-bottom: (100% * $_GOLDEN_RATIO);
+	padding-bottom: (100% * $golden);
 	position: relative;
 	width: 100%;
 

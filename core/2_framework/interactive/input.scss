@@ -6,7 +6,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
 	@include disabled;
 	@include remove-outline;
-	@include text-rhythm($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0, $_INPUT_DEFAULT_PADDING_V 1 $_INPUT_DEFAULT_PADDING_V 1);
+	@include rhythm-text($_INTERACTIVE_COPY, $_INTERACTIVE_COPY, 0 0 1 0, $_INPUT_DEFAULT_PADDING_V 1 $_INPUT_DEFAULT_PADDING_V 1);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
 
 	background-color: $_BACKGROUND_COLOR;
@@ -20,7 +20,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 
 	border: 1px solid $_BORDER_COLOR;
 	color: $_TEXT_COLOR;
-	height: getRhythm($_INTERACTIVE_COPY, $_INPUT_DEFAULT_HEIGHT);
+	height: rhythm-calc($_INTERACTIVE_COPY, $_INPUT_DEFAULT_HEIGHT);
 	width: 100%;
 
 
@@ -43,12 +43,12 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 	cursor: pointer;
 	display: inline-block;
 	font-size: $_BASE_FONT_SIZE;
-	height: 1em / $_BASE_SIZE;
+	height: 1em;
 	margin: 0 $_BASE_PADDING / 2 0 0;
 	padding: 0;
 	user-select: none;
 	vertical-align: middle;
-	width: 1em / $_BASE_SIZE;
+	width: 1em;
 
 
 	&:not([disabled]) {
@@ -106,7 +106,7 @@ $_INPUT_DEFAULT_PADDING_V: ($_INPUT_DEFAULT_HEIGHT - $_INTERACTIVE_COPY) / 2;
 	// magic multiplier:	3.38em
 	// min-height: 6.76em;	//	2 x 3.38em
 	// min-height: 4 * $_BASE_LINE_HEIGHT;
-	min-height: getRhythm($_INTERACTIVE_COPY, 8);
+	min-height: rhythm-calc($_INTERACTIVE_COPY, 8);
 	//
 
 	resize: none;

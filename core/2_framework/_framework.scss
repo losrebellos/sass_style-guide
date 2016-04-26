@@ -1,10 +1,9 @@
 
-@import 'constants/utils';
 @import 'constants/animations';
 @import 'constants/colors';
 @import 'constants/grid';
-@import 'constants/sizes';
-@import 'constants/texts';
+@import 'constants/text';
+@import 'constants/text-sizes';
 @import 'constants/breakpoints';
 
 
@@ -32,4 +31,4 @@
 
 @import 'text/body';
 @import 'text/icon';
-@import 'text/sizes';
+@import 'text/title';

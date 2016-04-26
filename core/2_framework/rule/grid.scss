@@ -73,9 +73,9 @@ $_GRID_COLUMN: (100% / $_COLUMN_NUMBER);
 	&:before {
 
 		@include position(absolute, -($_BASE_LINE_HEIGHT / 2) 0 0 0);
-		@include text-rhythm-reset;
+		@include rhythm-text-reset;
 
-		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_1, $_RHYTHM_COLOR_1 1px, transparent 1px, transparent $_BASE_LINE_HEIGHT);
+		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_2, $_RHYTHM_COLOR_2 1px, transparent 1px, transparent $_BASE_LINE_HEIGHT);
 		content: "";
 
 	}
@@ -84,9 +84,9 @@ $_GRID_COLUMN: (100% / $_COLUMN_NUMBER);
 	&:after {
 
 		@include position(absolute, -($_BASE_LINE_HEIGHT / 4) 0 0 0);
-		@include text-rhythm-reset;
+		@include rhythm-text-reset;
 
-		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_2, $_RHYTHM_COLOR_2 1px, transparent 1px, transparent ($_BASE_LINE_HEIGHT / 2));
+		background-image: repeating-linear-gradient(to bottom, $_RHYTHM_COLOR_3, $_RHYTHM_COLOR_3 1px, transparent 1px, transparent ($_BASE_LINE_HEIGHT / 2));
 		content: "";
 
 	}

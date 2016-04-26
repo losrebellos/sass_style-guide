@@ -1,7 +1,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
 
-	@include text-rhythm($_BODY_COPY, 2, 0 0 1 0);
+	@include rhythm-text($_BODY_COPY, 2, 0 0 1 0);
 
 	display: inline-block;
 	position: relative;
@@ -11,7 +11,7 @@
 
 	&:before {
 
-		@include text-rhythm-reset;
+		@include rhythm-text-reset;
 
 		position: relative;
 		vertical-align: middle;
@@ -27,7 +27,7 @@ label, button, .button, a {
 
 	> [class^="icon-"], > [class*=" icon-"] {
 
-		@include text-rhythm-reset;
+		@include rhythm-text-reset;
 
 	}
 

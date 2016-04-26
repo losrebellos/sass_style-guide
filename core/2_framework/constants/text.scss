@@ -11,27 +11,28 @@ $_GARAMOND: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Time
 
 
 
-/* base size */
+/* body font size */
 
-// 62.5% for body
-$_DEFAULT_BODY_FONT_SIZE: 62.5 / 100 !default;
+// Browsers' most common font size
+// 100% => 1em = 16px
+$_DEFAULT_BODY_FONT_SIZE: 1 !default;
 
-// so 1em = 10px
-$_BASE_SIZE: 1 !default;
+// 62.5% => 1em = 10px
+// $_DEFAULT_BODY_FONT_SIZE: 62.5 / 100 !default;
 
 
 
 /* text only */
 
-// 10px is the rhythm
-$_BASE_FONT_SIZE: $_BASE_SIZE * 1em !default;
+// rhythm
+$_BASE_FONT_SIZE: 1em !default;
 
 // 150% of font-size
-$_BASE_LINE_HEIGHT: 1.5em !default;
+$_BASE_LINE_HEIGHT: (1.5 * $_BASE_FONT_SIZE) !default;
 
 // max width for readibility
 $_BASE_MAX_WIDTH: 45 !default;
 
 // margin & padding
-$_BASE_MARGIN: $_BASE_SIZE * $_BASE_LINE_HEIGHT / $golden;
+$_BASE_MARGIN: $_BASE_LINE_HEIGHT / $golden;
 $_BASE_PADDING: $_BASE_LINE_HEIGHT / $golden;

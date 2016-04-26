@@ -3,14 +3,7 @@
 
 .text-reset {
 
-	@include text-rhythm-reset;
-
-}
-
-
-.text-children-reset {
-
-	@include text-null;
+	@include rhythm-text-reset;
 
 }
 

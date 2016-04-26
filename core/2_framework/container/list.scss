@@ -6,14 +6,14 @@
 		> li {
 
 			// background-color: green;
-			padding: 0 0 0 (1.5em * $_BASE_SIZE);
+			padding: 0 0 0 ($_LIST_COPY_DISC * 1.5em);
 			position: relative;
 
 
 			&:before {
 
 				@include not-clickable;
-				@include text-rhythm($_LIST_COPY_DISC, 2, 0 0 0 0);
+				@include rhythm-text($_LIST_COPY_DISC, 1, 0 0 0 0);
 
 				// background-color: red;
 				content: "●";
@@ -34,20 +34,18 @@
 		> li {
 
 			// background-color: green;
-			padding: 0 0 0 (2em * $_BASE_SIZE);
+			padding: 0 0 0 ($_LIST_COPY_NUMBER * 1.5em);
 			position: relative;
 
 
 			&:before {
 
 				@include not-clickable;
-				@include rhythm($_LIST_COPY_NUMBER, $_BASE_SIZE 2, 0 0 0 0);
+				@include rhythm-text($_LIST_COPY_NUMBER, 1, 0 0 0 0);
 
 				// background-color: red;
 				left: 0;
-				line-height: 2.5em;
 				position: absolute;
-				text-align: center;
 				top: 0;
 				z-index: -1;
 

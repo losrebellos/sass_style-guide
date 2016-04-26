@@ -1,7 +1,7 @@
 
 p {
 
-	@include text-rhythm($_BODY_COPY, 1, 0 0 1 0);
+	@include rhythm-text($_BODY_COPY, 1, 0 0 1 0);
 
 	font-style: normal;
 	font-weight: normal;
@@ -34,7 +34,7 @@ p {
 
 span {
 
-	@include text-rhythm-reset;
+	@include rhythm-text-reset;
 
 
 	@include debug {
@@ -48,7 +48,7 @@ span {
 
 cite {
 
-	@include text-rhythm-reset;
+	@include rhythm-text-reset;
 
 	font-style: italic;
 
@@ -64,7 +64,7 @@ cite {
 
 q {
 
-	@include text-rhythm-reset;
+	@include rhythm-text-reset;
 
 	font-style: italic;
 	opacity: 0.75;
@@ -115,6 +115,13 @@ blockquote {
 	&:last-child {
 
 		margin-bottom: 0;
+
+	}
+
+
+	> * {
+
+		max-width: none;
 
 	}
 
