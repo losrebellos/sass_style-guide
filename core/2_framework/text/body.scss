@@ -141,7 +141,7 @@ blockquote {
 
 			display: block;
 			font-family: $georgia;
-			font-size: 5 * $_BASE_FONT_SIZE;
+			font-size: (3em * $_BODY_COPY);
 			line-height: 1em;
 			position: absolute;
 
@@ -152,16 +152,14 @@ blockquote {
 
 			content: open-quote;
 			left: -0.5em;
-			// top: -0.1em;
-			top: 0.075em;
+			top: 0.025em;
 
 		}
 
 
 		&:after {
 
-			// bottom: -0.6em;
-			bottom: -0.45em;
+			bottom: -0.425em;
 			content: close-quote;
 			right: -0.5em;
 
