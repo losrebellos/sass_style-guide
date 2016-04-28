@@ -17,6 +17,18 @@
 }
 
 
+@mixin hide-object {
+
+	@include not-clickable;
+
+	display: none;
+
+}
+
+
+
+/* INTERACTIVE */
+
 @mixin show-interactive-object($displayValue: null) {
 
 	@include show-object($displayValue);
@@ -33,13 +45,21 @@
 }
 
 
-@mixin hide-object {
+@mixin hide-interactive-object($displayValue: null) {
 
-	@include not-clickable;
+	@include hide-object($displayValue);
 
-	display: none;
+	cursor: default;
+
+
+	&:hover, &:focus {
+
+		cursor: default;
+
+	}
 
 }
+
 
 
 /* FADE */
