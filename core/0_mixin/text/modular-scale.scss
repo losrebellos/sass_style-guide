@@ -6,20 +6,11 @@
 }
 
 
-@function custom-modular-scale_line-height($fontSize, $coefficient: 1.25) {
+@function custom-modular-scale_line-height($fontSize) {
 
-	// @return ($step - 1.5) / 2;
+	$lineHeight: ceil($fontSize * 4) / 4;
 
-
-	@return ceil($fontSize);
-
-
-	// @if $fontSize > 2 {
-
-	// 	@return ceil(floor($fontSize / $coefficient) * $coefficient);
-
-	// }
-
-	// @return floor($fontSize) + ceil($coefficient / 2);
+	// @debug $fontSize, "=>", $lineHeight;
+	@return $lineHeight;
 
 }

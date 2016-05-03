@@ -1,72 +1,42 @@
 
 $_FONT_SIZE_10: custom-modular-scale(10);
-// $_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);
-// 4.25 => (10 - 1.5) / 2
-$_LINE_HEIGHT_10: 4.25;
+$_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);
 
 $_FONT_SIZE_9: custom-modular-scale(9);
-// $_LINE_HEIGHT_9: custom-modular-scale_line-height($_FONT_SIZE_9);
-// 3.75 => (9 - 1.5) / 2
-$_LINE_HEIGHT_9: 3.75;
+$_LINE_HEIGHT_9: custom-modular-scale_line-height($_FONT_SIZE_9);
 
 $_FONT_SIZE_8: custom-modular-scale(8);
-// $_LINE_HEIGHT_8: custom-modular-scale_line-height($_FONT_SIZE_8);
-// 3.25 => (8 - 1.5) / 2
-$_LINE_HEIGHT_8: 3.25;
+$_LINE_HEIGHT_8: custom-modular-scale_line-height($_FONT_SIZE_8);
 
 $_FONT_SIZE_7: custom-modular-scale(7);
-// $_LINE_HEIGHT_7: custom-modular-scale_line-height($_FONT_SIZE_7);
-// 2.75 => (7 - 1.5) / 2
-$_LINE_HEIGHT_7: 2.75;
+$_LINE_HEIGHT_7: custom-modular-scale_line-height($_FONT_SIZE_7);
 
 $_FONT_SIZE_6: custom-modular-scale(6);
-// $_LINE_HEIGHT_6: custom-modular-scale_line-height($_FONT_SIZE_6);
-// 2.25 => (6 - 1.5) / 2
-$_LINE_HEIGHT_6: 2.25;
-
-
+$_LINE_HEIGHT_6: custom-modular-scale_line-height($_FONT_SIZE_6);
 
 $_FONT_SIZE_5: custom-modular-scale(5);
-// $_LINE_HEIGHT_5: custom-modular-scale_line-height($_FONT_SIZE_5);
-// 2 => (5 - 1) / 2
-$_LINE_HEIGHT_5: 2;
+$_LINE_HEIGHT_5: custom-modular-scale_line-height($_FONT_SIZE_5);
 
 $_FONT_SIZE_4: custom-modular-scale(4);
-// $_LINE_HEIGHT_4: custom-modular-scale_line-height($_FONT_SIZE_4);
-// 1.75 => 4 +  * 0.75
-$_LINE_HEIGHT_4: 1.75;
-
-
+$_LINE_HEIGHT_4: custom-modular-scale_line-height($_FONT_SIZE_4);
 
 $_FONT_SIZE_3: custom-modular-scale(3);
-// $_LINE_HEIGHT_3: custom-modular-scale_line-height($_FONT_SIZE_3);
-// 1.5 => 2 + 3 * 0.25
-$_LINE_HEIGHT_3: 1.5;
+$_LINE_HEIGHT_3: custom-modular-scale_line-height($_FONT_SIZE_3);
 
 $_FONT_SIZE_2: custom-modular-scale(2);
-// $_LINE_HEIGHT_2: custom-modular-scale_line-height($_FONT_SIZE_2);
-// 1.25 => 2 + 2 * 0.25
-$_LINE_HEIGHT_2: 1.25;
+$_LINE_HEIGHT_2: custom-modular-scale_line-height($_FONT_SIZE_2);
 
 $_FONT_SIZE_1: custom-modular-scale(1);
-// $_LINE_HEIGHT_1: custom-modular-scale_line-height($_FONT_SIZE_1);
-// 1 => 0.75 + 1 * 0.25
-$_LINE_HEIGHT_1: 1;
+$_LINE_HEIGHT_1: custom-modular-scale_line-height($_FONT_SIZE_1);
 
 $_FONT_SIZE_0: custom-modular-scale(0);
-// $_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);
-// 0.75 => 0.75 + 0 * 0.25
-$_LINE_HEIGHT_0: 0.75;
-
-
+$_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);
 
 $_FONT_SIZE_-1: custom-modular-scale(-1);
 $_LINE_HEIGHT_-1: custom-modular-scale_line-height($_FONT_SIZE_-1);
-// ? => (? - 1) / 2
 
 $_FONT_SIZE_-2: custom-modular-scale(-2);
 $_LINE_HEIGHT_-2: custom-modular-scale_line-height($_FONT_SIZE_-2);
-// ? => (? - 1) / 2
 
 
 // can be overridden
