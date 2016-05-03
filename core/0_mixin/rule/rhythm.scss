@@ -89,7 +89,7 @@
 
 @mixin rhythm-margin($margin: null null null null, $fontSize: 1) {
 
-	$coeff: 1em * $_BASE_LINE_HEIGHT / ($fontSize * $_BASE_FONT_SIZE);
+	// $coeff: 1em * $_BASE_LINE_HEIGHT / ($fontSize * $_BASE_FONT_SIZE);
 
 	$margin: unpack($margin);
 	$marginTop: nth($margin, 1);
@@ -101,7 +101,7 @@
 
 		@if(type-of($marginTop) == number) {
 
-			margin-top: $marginTop * $coeff;
+			margin-top: rhythm-calc($fontSize, $marginTop);
 
 		}
 		@else {
@@ -116,7 +116,7 @@
 
 		@if(type-of($marginRight) == number) {
 
-			margin-right: $marginRight * $coeff;
+			margin-right: rhythm-calc($fontSize, $marginRight);
 
 		}
 		@else {
@@ -131,7 +131,7 @@
 
 		@if(type-of($marginBottom) == number) {
 
-			margin-bottom: $marginBottom * $coeff;
+			margin-bottom: rhythm-calc($fontSize, $marginBottom);
 
 		}
 		@else {
@@ -146,7 +146,7 @@
 
 		@if(type-of($marginLeft) == number) {
 
-			margin-left: $marginLeft * $coeff;
+			margin-left: rhythm-calc($fontSize, $marginLeft);
 
 		}
 		@else {
@@ -165,7 +165,7 @@
 
 @mixin rhythm-padding($padding: null null null null, $fontSize: 1) {
 
-	$coeff: 1em * $_BASE_LINE_HEIGHT / ($fontSize * $_BASE_FONT_SIZE);
+	// $coeff: 1em * $_BASE_LINE_HEIGHT / ($fontSize * $_BASE_FONT_SIZE);
 
 	$padding: unpack($padding);
 	$paddingTop: nth($padding, 1);
@@ -177,7 +177,7 @@
 
 		@if(type-of($paddingTop) == number) {
 
-			padding-top: $paddingTop * $coeff;
+			padding-top: rhythm-calc($fontSize, $paddingTop);
 
 		}
 		@else {
@@ -192,7 +192,7 @@
 
 		@if(type-of($paddingRight) == number) {
 
-			padding-right: $paddingRight * $coeff;
+			padding-right: rhythm-calc($fontSize, $paddingRight);
 
 		}
 		@else {
@@ -207,7 +207,7 @@
 
 		@if(type-of($paddingBottom) == number) {
 
-			padding-bottom: $paddingBottom * $coeff;
+			padding-bottom: rhythm-calc($fontSize, $paddingBottom);
 
 		}
 		@else {
@@ -222,7 +222,7 @@
 
 		@if(type-of($paddingLeft) == number) {
 
-			padding-left: $paddingLeft * $coeff;
+			padding-left: rhythm-calc($fontSize, $paddingLeft);
 
 		}
 		@else {
