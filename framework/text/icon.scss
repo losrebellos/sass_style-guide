@@ -21,9 +21,22 @@ label, button, .button, a {
 		@include text-rhythm-reset;
 
 		line-height: inherit;
-		// margin: 0 $_BASE_MARGIN / 2 0 0;
 		margin: 0;
 		vertical-align: middle;
+
+
+		&.with_left-margin {
+
+			margin-left: ($_BASE_MARGIN / 2);
+
+		}
+
+
+		&.with_right-margin {
+
+			margin-right: ($_BASE_MARGIN / 2);
+
+		}
 
 	}
 
