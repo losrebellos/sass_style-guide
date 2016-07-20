@@ -11,6 +11,37 @@
 }
 
 
+.select, .slct {
+
+	@extend .select-base;
+
+	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0, 0 1 0 1);
+
+	appearance: none;
+	border: none;
+	border-radius: 0;
+	color: $_TEXT_COLOR;
+	font-style: normal;
+	font-weight: normal;
+	line-height: inherit;
+    outline: none;
+	user-select: none;
+	z-index: 1;
+
+
+	&:not([disabled]) {
+
+		&:hover, &.selected {
+
+			color: $_TEXT_COLOR_HOVER;
+
+		}
+
+	}
+
+}
+
+
 .form_select, .f_slct, .form_drop-down, .f_d-dwn {
 
 	@extend .select-base;
@@ -28,35 +59,11 @@
 		}
 
 	}
-	
-}
 
 
-.select, .slct {
+	.select, .slct {
 
-	@extend .select-base;
-
-	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0, 0 1 0 1);
-
-	appearance: none;
-	border: none;
-	border-radius: 0;
-	color: $_TEXT_COLOR;
-	font-style: normal;
-	font-weight: normal;
-	line-height: inherit;
-    outline: none;
-	user-select: none;
-	z-index: 1;
-	
-	
-	&:not([disabled]) {
-
-		&:hover, &.selected {
-
-			color: $_TEXT_COLOR_HOVER;
-
-		}
+		margin: 0;
 
 	}
 

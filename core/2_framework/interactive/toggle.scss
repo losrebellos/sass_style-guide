@@ -4,39 +4,30 @@
 	@include disabled;
 
 
-	.label, .lbl {
+	.toggle_checked {
 
-		.toggle_checked, .tggl_chckd {
-
-			display: none;
-
-		}
+		display: none;
 
 	}
 
 
-	.input_radio, .i_rd {
+	.input_checkbox, .i_chckbx, .input_radio, .i_rd {
 
 		display: none;
 		opacity: 0;
 		visibility: hidden;
 
 
-		&:checked + .label,
-		&:checked + .lbl, {
+		&:checked ~ .toggle_unchecked {
 
-			.toggle_unchecked, .tggl_unchckd {
+			display: none;
 
-				display: none;
-
-			}
+		}
 
 
-			.toggle_checked, .tggl_chckd {
+		&:checked ~ .toggle_checked, {
 
-				display: inline-block;
-
-			}
+			display: inline-block;
 
 		}
 

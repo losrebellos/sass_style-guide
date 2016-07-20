@@ -79,6 +79,13 @@
 
 /* TEXT DECORATION */
 
+.none,
+.text-decoration_none, .t-d_n {
+
+	text-decoration: none;
+
+}
+
 .underline,
 .text-decoration_underline, .t-d_u {
 
@@ -91,5 +98,74 @@
 .text-decoration_line-through, .t-d_b {
 
 	text-decoration: line-through;
+
+}
+
+
+
+/* COLOUR */
+
+.red {
+
+	color: red;
+
+
+	&:link, &:visited, &:hover, &:focus, &.selected {
+
+		color: red;
+
+	}
+
+}
+
+.green {
+
+	color: green;
+
+
+	&:link, &:visited, &:hover, &:focus, &.selected {
+
+		color: green;
+
+	}
+
+}
+
+.blue {
+
+	color: blue;
+
+
+	&:link, &:visited, &:hover, &:focus, &.selected {
+
+		color: blue;
+
+	}
+
+}
+
+.black {
+
+	color: black;
+
+
+	&:link, &:visited, &:hover, &:focus, &.selected {
+
+		color: black;
+
+	}
+
+}
+
+.white {
+
+	color: white;
+
+
+	&:link, &:visited, &:hover, &:focus, &.selected {
+
+		color: white;
+
+	}
 
 }

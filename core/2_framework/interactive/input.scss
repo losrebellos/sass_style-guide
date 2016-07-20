@@ -11,6 +11,7 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
 
 	background-color: $_BACKGROUND_COLOR;
+	border: none;
 
 }
 
@@ -19,7 +20,6 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 
 	@extend .input-base;
 
-	border: 1px solid $_BORDER_COLOR;
 	color: $_TEXT_COLOR;
 	height: rhythm-calc($_INTERACTIVE_COPY, $_INPUT_DEFAULT_HEIGHT);
 	width: 100%;
@@ -95,7 +95,6 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 
 	@extend .input-base;
 
-	border: 1px solid $_BORDER_COLOR;
 	box-sizing: border-box;
 	color: $_TEXT_COLOR;
 	font-style: normal;
