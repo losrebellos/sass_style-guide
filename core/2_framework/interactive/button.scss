@@ -1,12 +1,12 @@
 
 button,
 .button, .btn {
-	
+
 	@include disabled;
 	@include remove-outline;
 	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
-	
+
 	background-color: $_BACKGROUND_COLOR;
 	border: $_BORDER_COLOR;
 	color: $_TEXT_COLOR;
@@ -15,7 +15,7 @@ button,
 	opacity: $_OPACITY;
 	padding: 0 $_BASE_PADDING;
 	user-select: none;
-	
+
 
 	&:not([disabled]) {
 
