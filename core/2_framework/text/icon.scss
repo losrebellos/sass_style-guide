@@ -1,7 +1,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
 
-	@include rhythm-text($_BODY_COPY, 2, 0 0 1 0);
+	@include rhythm-text($_BODY_COPY, 2, $_BODY_COPY_MARGIN_RAW 0 0 0);
 
 	display: inline-block;
 	position: relative;

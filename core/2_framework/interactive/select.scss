@@ -15,7 +15,7 @@
 
 	@extend .select-base;
 
-	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0, 0 1 0 1);
+	@include rhythm($_INTERACTIVE_COPY, null 2, $_BODY_COPY_MARGIN_RAW 0 0 0, 0 1 0 1);
 
 	appearance: none;
 	border: none;

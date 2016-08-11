@@ -100,8 +100,6 @@ h1, h2, h3, h4, h5, h6,
 
 .text_10 {
 
-	// @include rhythm-text($_FONT_SIZE_10, $_LINE_HEIGHT_10, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_10, $_LINE_HEIGHT_10, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_10, $_LINE_HEIGHT_10, 3 0 0 0);
 
 
@@ -116,8 +114,6 @@ h1, h2, h3, h4, h5, h6,
 
 .text_9 {
 
-	// @include rhythm-text($_FONT_SIZE_9, $_LINE_HEIGHT_9, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_9, $_LINE_HEIGHT_9, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_9, $_LINE_HEIGHT_9, 2.75 0 0 0);
 
 
@@ -132,8 +128,6 @@ h1, h2, h3, h4, h5, h6,
 
 .text_8 {
 
-	// @include rhythm-text($_FONT_SIZE_8, $_LINE_HEIGHT_8, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_8, $_LINE_HEIGHT_8, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_8, $_LINE_HEIGHT_8, 2.5 0 0 0);
 
 
@@ -148,8 +142,6 @@ h1, h2, h3, h4, h5, h6,
 
 .text_7 {
 
-	// @include rhythm-text($_FONT_SIZE_7, $_LINE_HEIGHT_7, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_7, $_LINE_HEIGHT_7, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_7, $_LINE_HEIGHT_7, 2.25 0 0 0);
 
 
@@ -165,8 +157,6 @@ h1, h2, h3, h4, h5, h6,
 h1,
 .text_6 {
 
-	// @include rhythm-text($_FONT_SIZE_6, $_LINE_HEIGHT_6, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_6, $_LINE_HEIGHT_6, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_6, $_LINE_HEIGHT_6, 2 0 0 0);
 
 
@@ -182,8 +172,6 @@ h1,
 h2,
 .text_5 {
 
-	// @include rhythm-text($_FONT_SIZE_5, $_LINE_HEIGHT_5, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_5, $_LINE_HEIGHT_5, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_5, $_LINE_HEIGHT_5, 1.75 0 0 0);
 
 
@@ -199,7 +187,6 @@ h2,
 h3,
 .text_4 {
 
-	// @include rhythm-text($_FONT_SIZE_4, $_LINE_HEIGHT_4, 1.5 0 1 0);
 	@include rhythm-text($_FONT_SIZE_4, $_LINE_HEIGHT_4, 1.5 0 0 0);
 
 
@@ -215,8 +202,6 @@ h3,
 h4,
 .text_3 {
 
-	// @include rhythm-text($_FONT_SIZE_3, $_LINE_HEIGHT_3, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_3, $_LINE_HEIGHT_3, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_3, $_LINE_HEIGHT_3, 1.25 0 0 0);
 
 
@@ -232,8 +217,6 @@ h4,
 h5,
 .text_2 {
 
-	// @include rhythm-text($_FONT_SIZE_2, $_LINE_HEIGHT_2, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_2, $_LINE_HEIGHT_2, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_2, $_LINE_HEIGHT_2, 1 0 0 0);
 
 
@@ -249,8 +232,6 @@ h5,
 h6,
 .text_1 {
 
-	// @include rhythm-text($_FONT_SIZE_1, $_LINE_HEIGHT_1, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_1, $_LINE_HEIGHT_1, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_1, $_LINE_HEIGHT_1, 0.75 0 0 0);
 
 
@@ -265,8 +246,6 @@ h6,
 
 .text_0 {
 
-	// @include rhythm-text($_FONT_SIZE_0, $_LINE_HEIGHT_0, 1.5 0 1 0);
-	// @include rhythm-text($_FONT_SIZE_0, $_LINE_HEIGHT_0, 1.5 0 0 0);
 	@include rhythm-text($_FONT_SIZE_0, $_LINE_HEIGHT_0, 0.5 0 0 0);
 
 

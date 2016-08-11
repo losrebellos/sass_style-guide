@@ -4,7 +4,7 @@ button,
 
 	@include disabled;
 	@include remove-outline;
-	@include rhythm($_INTERACTIVE_COPY, null 2, 0 0 1 0);
+	@include rhythm($_INTERACTIVE_COPY, null 2, $_BODY_COPY_MARGIN_RAW 0 0 0);
 	@include transition(background-color $_HOVER_DURATION, color $_HOVER_DURATION, opacity $_HOVER_DURATION);
 
 	background-color: $_BACKGROUND_COLOR;

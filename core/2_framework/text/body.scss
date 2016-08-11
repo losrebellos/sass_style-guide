@@ -2,8 +2,7 @@
 p,
 .text {
 
-	// @include rhythm-text($_BODY_COPY, 1, 0 0 1 0);
-	@include rhythm-text($_BODY_COPY, 1, 0.5 0 0 0);
+	@include rhythm-text($_BODY_COPY, 1, $_BODY_COPY_MARGIN_RAW 0 0 0);
 
 	font-style: normal;
 	font-weight: normal;
@@ -115,7 +114,7 @@ blockquote {
 	// margin-left: auto;
 	// margin-right: auto;
 	// margin-bottom: $_BASE_LINE_HEIGHT;
-	margin: $_BASE_LINE_HEIGHT auto 0 auto;
+	margin: ($_BASE_LINE_HEIGHT * $_BODY_COPY_MARGIN_RAW) auto 0 auto;
 	max-width: none;
 	position: relative;
 	text-align: justify;
