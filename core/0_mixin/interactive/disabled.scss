@@ -1,6 +1,6 @@
 
 @mixin disabled($opacity: 0.5) {
-		
+
 	@include disabled-simple {
 
 		opacity: $opacity;

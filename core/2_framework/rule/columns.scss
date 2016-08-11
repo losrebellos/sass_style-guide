@@ -9,11 +9,13 @@
 }
 
 
+
 .with-gutters {
 
 	padding: $_BASE_LINE_HEIGHT $_COLUMN_GUTTER;
 
 }
+
 
 
 .with-gutter-hor {
@@ -24,12 +26,42 @@
 }
 
 
+.with-gutter-left {
+
+	padding-left: $_COLUMN_GUTTER;
+
+}
+
+
+.with-gutter-right {
+
+	padding-right: $_COLUMN_GUTTER;
+
+}
+
+
+
 .with-gutter-ver {
 
 	padding-bottom: $_BASE_LINE_HEIGHT;
 	padding-top: $_BASE_LINE_HEIGHT;
 
 }
+
+
+.with-gutter-top {
+
+	padding-top: $_BASE_LINE_HEIGHT;
+
+}
+
+
+.with-gutter-bottom {
+
+	padding-bottom: $_BASE_LINE_HEIGHT;
+
+}
+
 
 
 .interactive {

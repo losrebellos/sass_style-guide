@@ -1,9 +1,20 @@
 
 /* DISPLAY */
 
-.display_inline-block {
+.display {
 
-	display: inline-block;
+	&_inline-block {
+
+		display: inline-block;
+
+	}
+
+
+	&_block {
+
+		display: block;
+
+	}
 
 }
 

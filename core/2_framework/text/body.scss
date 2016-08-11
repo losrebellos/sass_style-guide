@@ -1,7 +1,9 @@
 
-p {
+p,
+.text {
 
-	@include rhythm-text($_BODY_COPY, 1, 0 0 1 0);
+	// @include rhythm-text($_BODY_COPY, 1, 0 0 1 0);
+	@include rhythm-text($_BODY_COPY, 1, 0.5 0 0 0);
 
 	font-style: normal;
 	font-weight: normal;
@@ -9,11 +11,25 @@ p {
 	text-indent: $_BASE_LINE_HEIGHT;
 
 
-	&:last-child {
+	&:first-child {
 
-		margin-bottom: 0;
+		margin-top: 0;
 
 	}
+
+
+	// &:last-child {
+
+	// 	margin-bottom: 0;
+
+	// }
+
+
+	// &.double-margin-bottom {
+
+	// 	margin-bottom: rhythm-calc($_BODY_COPY, 2);
+
+	// }
 
 
 	&:only-child, &:only-of-type {
@@ -96,9 +112,10 @@ q {
 blockquote {
 
 	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: $_BASE_LINE_HEIGHT;
+	// margin-left: auto;
+	// margin-right: auto;
+	// margin-bottom: $_BASE_LINE_HEIGHT;
+	margin: $_BASE_LINE_HEIGHT auto 0 auto;
 	max-width: none;
 	position: relative;
 	text-align: justify;
@@ -110,13 +127,13 @@ blockquote {
 		margin-top: 0;
 
 	}
-	
 
-	&:last-child {
 
-		margin-bottom: 0;
+	// &:last-child {
 
-	}
+	// 	margin-bottom: 0;
+
+	// }
 
 
 	> * {
