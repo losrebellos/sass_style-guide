@@ -17,20 +17,6 @@ p,
 	}
 
 
-	// &:last-child {
-
-	// 	margin-bottom: 0;
-
-	// }
-
-
-	// &.double-margin-bottom {
-
-	// 	margin-bottom: rhythm-calc($_BODY_COPY, 2);
-
-	// }
-
-
 	&:only-child, &:only-of-type {
 
 		text-indent: 0;
@@ -111,9 +97,6 @@ q {
 blockquote {
 
 	justify-content: center;
-	// margin-left: auto;
-	// margin-right: auto;
-	// margin-bottom: $_BASE_LINE_HEIGHT;
 	margin: ($_BASE_LINE_HEIGHT * $_BODY_COPY_MARGIN_RAW) auto 0 auto;
 	max-width: none;
 	position: relative;
@@ -126,13 +109,6 @@ blockquote {
 		margin-top: 0;
 
 	}
-
-
-	// &:last-child {
-
-	// 	margin-bottom: 0;
-
-	// }
 
 
 	> * {
