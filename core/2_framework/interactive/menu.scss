@@ -1,14 +1,9 @@
 
 .menu {
 
-	z-index: $_INDEX_MENU;
-
-
 	&_submenu {
 
 		@include animation-fade-out;
-
-		z-index: $_INDEX_SUBMENU;
 
 	}
 
