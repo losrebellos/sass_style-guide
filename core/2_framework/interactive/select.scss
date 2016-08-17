@@ -53,7 +53,7 @@
 	@extend .select-base;
 
 	display: inline-block;
-	margin-bottom: $_BASE_LINE_HEIGHT;
+	margin-top: $_BODY_COPY_MARGIN;
 
 
 	&:not(.disabled) {

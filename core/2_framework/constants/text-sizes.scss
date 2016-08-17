@@ -14,6 +14,7 @@ $modular-scale-base: $_MODULAR_SCALE_BASE;
 
 $_BODY_COPY: 0.875 !default;                                // 14px
 $_BODY_COPY_MARGIN_RAW: 0.5 !default;
+$_BODY_COPY_MARGIN: ($_BODY_COPY_MARGIN_RAW * $_BASE_LINE_HEIGHT);
 
 $_INTERACTIVE_COPY: 0.875 !default;							// 14px
 

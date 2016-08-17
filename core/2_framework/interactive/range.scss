@@ -5,15 +5,24 @@ $_RANGE_TRACK_RADIUS: $_RANGE_TRACK_HEIGHT / 2;
 $_RANGE_THUMB_RADIUS: 50%;
 
 
-input[type="range"] {
+.range-base {
+
+	@include disabled;
+
+}
+
+
+.range, .rng {
+
+	@extend .range-base;
 
 	appearance: none;
     background-color: yellow;
     border: none;
     cursor: pointer;
 	font-size: $_BASE_FONT_SIZE;
-	height: $_BASE_FONT_SIZE / 2;
-	margin: $_BASE_PADDING / 2 0;
+	height: ($_BASE_FONT_SIZE / 2);
+	margin: ($_BODY_COPY_MARGIN + $_BASE_PADDING / 2) 0 ($_BASE_PADDING / 2) 0;
 	opacity: $_OPACITY;
 	padding: 0;
 	user-select: none;
@@ -32,7 +41,7 @@ input[type="range"] {
 		&::-ms-fill-upper {
 
 		    background: $_BACKGROUND_COLOR;
-		    
+
 		}
 
 		&::-ms-fill-lower {
@@ -46,7 +55,7 @@ input[type="range"] {
 	&:disabled {
 
 		@include not-clickable;
-		
+
 		opacity: $_OPACITY_DISABLED;
 
 	}
@@ -148,10 +157,10 @@ input[type="range"] {
 	/////////////////////////////////////////////////////////////////////////////////////
 
 	&::-ms-track {
-	    
+
 	    /* remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
 	    background: transparent;
-	    
+
 	    /* leave room for the larger thumb to overflow with a transparent border */
 	    border-color: transparent;
 	    border-width: 6px 0;
@@ -185,6 +194,23 @@ input[type="range"] {
 	    border-radius: $_RANGE_THUMB_RADIUS;
 	    height: $_RANGE_THUMB_SIZE;
 	    width: $_RANGE_THUMB_SIZE;
+
+	}
+
+}
+
+
+.form_range {
+
+	@extend .range-base;
+
+	display: inline-block;
+	margin-top: $_BODY_COPY_MARGIN;
+
+
+	.range, .rng {
+
+		margin: ($_BASE_PADDING / 2) 0;
 
 	}
 
