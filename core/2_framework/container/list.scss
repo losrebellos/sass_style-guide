@@ -1,6 +1,9 @@
 
 .list {
 
+	margin-top: $_BODY_COPY_MARGIN;
+
+
 	&_with-disc {
 
 		> li {
@@ -99,10 +102,10 @@
 	&_horizontal, &_hor {
 
 		@include clearfix;
-		
+
 		display: inline-block;
 
-		
+
 		> li {
 
 			display: inline-block;
