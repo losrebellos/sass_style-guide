@@ -4,6 +4,13 @@
 	margin-top: $_BODY_COPY_MARGIN;
 
 
+	&:first-child {
+
+		margin-top: 0;
+
+	}
+
+
 	&_with-disc {
 
 		> li {
