@@ -17,7 +17,9 @@ p,
 	}
 
 
-	&:only-child, &:only-of-type {
+	&:only-child,
+	&:only-of-type,
+	&.text-indent_none {
 
 		text-indent: 0;
 
