@@ -52,16 +52,7 @@ $_RANGE_THUMB_RADIUS: 50%;
 	}
 
 
-	&:disabled {
-
-		@include not-clickable;
-
-		opacity: $_OPACITY_DISABLED;
-
-	}
-
-
-	&:not([disabled]) {
+	// &:not([disabled]) {
 
 		&:hover {
 
@@ -85,7 +76,7 @@ $_RANGE_THUMB_RADIUS: 50%;
 
 		}
 
-	}
+	// }
 
 
 	/////////////////////////////////////////////////////////////////////////////////////

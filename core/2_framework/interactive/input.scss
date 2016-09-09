@@ -52,7 +52,7 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 	width: 1em;
 
 
-	&:not([disabled]) {
+	// &:not([disabled]) {
 
 		// do not use &:focus
 		// as it conflicts with the transitions
@@ -64,7 +64,7 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 
 		}
 
-	}
+	// }
 
 
 	&:checked {

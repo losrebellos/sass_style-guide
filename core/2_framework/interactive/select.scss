@@ -35,7 +35,7 @@
 	z-index: 1;
 
 
-	&:not([disabled]) {
+	// &:not([disabled]) {
 
 		&:hover, &.selected {
 
@@ -43,7 +43,7 @@
 
 		}
 
-	}
+	// }
 
 }
 

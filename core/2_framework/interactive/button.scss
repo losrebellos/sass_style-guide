@@ -17,9 +17,9 @@ button,
 	user-select: none;
 
 
-	&:not([disabled]) {
+	// &:not([disabled]) {
 
-		&:hover, &:focus, &.active {
+		&:hover, &:focus {
 
 			background-color: $_BACKGROUND_COLOR_HOVER;
 			color: $_TEXT_COLOR_HOVER;
@@ -27,7 +27,7 @@ button,
 
 		}
 
-	}
+	// }
 
 
 	@include debug {
