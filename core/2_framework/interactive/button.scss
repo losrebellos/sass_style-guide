@@ -1,5 +1,10 @@
 
-button,
+/*button,
+input[type="button"],
+input[type="file"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"],*/
 .button, .btn {
 
 	@include disabled;
