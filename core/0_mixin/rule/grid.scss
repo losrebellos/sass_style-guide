@@ -23,11 +23,11 @@
 
 	@for $i from 1 through $columnsNum {
 
-		$original: '.column-' + $i + '-' + $columnsNum;
+		$original: '.column_' + $i + '-' + $columnsNum;
 
 		@if $columnsNum == $_COLUMN_NUMBER {
 
-			$original: '.column-' + $i;
+			$original: '.column_' + $i;
 
 		}
 
@@ -37,11 +37,11 @@
 
 		@if $i == $columnsNum / 2 {
 
-			$special1: '.column-half-' + $columnsNum;
+			$special1: '.column_half-' + $columnsNum;
 
 			@if $columnsNum == $_COLUMN_NUMBER {
 
-				$special2: '.column-half';
+				$special2: '.column_half';
 
 			}
 
@@ -49,11 +49,11 @@
 
 		@if $i == $columnsNum / 3 {
 
-			$special1: '.column-third-' + $columnsNum;
+			$special1: '.column_third-' + $columnsNum;
 
 			@if $columnsNum == $_COLUMN_NUMBER {
 
-				$special2: '.column-third';
+				$special2: '.column_third';
 
 			}
 
@@ -61,11 +61,11 @@
 
 		@if $i == $columnsNum / 4 {
 
-			$special1: '.column-quarter-' + $columnsNum;
+			$special1: '.column_quarter-' + $columnsNum;
 
 			@if $columnsNum == $_COLUMN_NUMBER {
 
-				$special2: '.column-quarter';
+				$special2: '.column_quarter';
 
 			}
 
@@ -78,5 +78,5 @@
 		}
 
 	}
-	
+
 }
