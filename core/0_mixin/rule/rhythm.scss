@@ -38,7 +38,7 @@
 }
 
 
-@mixin rhythm-text($fontSize, $linesHeight, $margin: null null null null, $padding: null null null null) {
+@mixin rhythm-text($fontSize, $linesHeight, $margin: null null null null, $padding: null null null null, $widths: auto null) {
 
 	$fs: $fontSize * $_BASE_FONT_SIZE;
 	$k: 1em * $_BASE_LINE_HEIGHT / $fs;
@@ -58,7 +58,32 @@
 	$padding: unpack($padding);
 	@include rhythm-padding(nth($padding, 1) nth($padding, 2) nth($padding, 3) nth($padding, 4), $fontSize);
 
-	max-width: ($fs * $_BASE_MAX_WIDTH);
+	$widths: unpack($widths);
+	@if nth($widths, 1) == auto {
+
+		min-width: auto;
+
+	}
+	@else if(type-of(nth($widths, 1)) == number) {
+
+		min-width: nth($widths, 1) * $k;
+
+	}
+	@if nth($widths, 2) == auto {
+
+		min-width: auto;
+
+	}
+	@else if(type-of(nth($widths, 2)) == number) {
+
+		min-width: nth($widths, 2) * $k;
+
+	}
+	@else {
+
+		max-width: ($fs * $_BASE_MAX_WIDTH);
+
+	}
 
 }
 
@@ -76,8 +101,10 @@
 	// line-height: normal;
 	line-height: 1;
 	margin: 0;
-	max-width: none;
 	min-height: initial;
+	min-width: initial;
+	max-height: initial;
+	max-width: initial;
 	padding: 0;
 	text-indent: initial;
 
