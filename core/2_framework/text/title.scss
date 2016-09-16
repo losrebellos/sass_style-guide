@@ -1,33 +1,43 @@
 
 $_FONT_SIZE_10: custom-modular-scale(10);
 $_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);
+$_LINE_HEIGHT_10-2: custom-modular-scale_line-height-2($_FONT_SIZE_10, $_FONT_SIZE_10);
 
 $_FONT_SIZE_9: custom-modular-scale(9);
 $_LINE_HEIGHT_9: custom-modular-scale_line-height($_FONT_SIZE_9);
+$_LINE_HEIGHT_9-2: custom-modular-scale_line-height-2($_FONT_SIZE_9, $_FONT_SIZE_10);
 
 $_FONT_SIZE_8: custom-modular-scale(8);
 $_LINE_HEIGHT_8: custom-modular-scale_line-height($_FONT_SIZE_8);
+$_LINE_HEIGHT_8-2: custom-modular-scale_line-height-2($_FONT_SIZE_8, $_FONT_SIZE_10);
 
 $_FONT_SIZE_7: custom-modular-scale(7);
 $_LINE_HEIGHT_7: custom-modular-scale_line-height($_FONT_SIZE_7);
+$_LINE_HEIGHT_7-2: custom-modular-scale_line-height-2($_FONT_SIZE_7, $_FONT_SIZE_10);
 
 $_FONT_SIZE_6: custom-modular-scale(6);
 $_LINE_HEIGHT_6: custom-modular-scale_line-height($_FONT_SIZE_6);
+$_LINE_HEIGHT_6-2: custom-modular-scale_line-height-2($_FONT_SIZE_6, $_FONT_SIZE_10);
 
 $_FONT_SIZE_5: custom-modular-scale(5);
 $_LINE_HEIGHT_5: custom-modular-scale_line-height($_FONT_SIZE_5);
+$_LINE_HEIGHT_5-2: custom-modular-scale_line-height-2($_FONT_SIZE_5, $_FONT_SIZE_10);
 
 $_FONT_SIZE_4: custom-modular-scale(4);
 $_LINE_HEIGHT_4: custom-modular-scale_line-height($_FONT_SIZE_4);
+$_LINE_HEIGHT_4-2: custom-modular-scale_line-height-2($_FONT_SIZE_4, $_FONT_SIZE_10);
 
 $_FONT_SIZE_3: custom-modular-scale(3);
 $_LINE_HEIGHT_3: custom-modular-scale_line-height($_FONT_SIZE_3);
+$_LINE_HEIGHT_3-2: custom-modular-scale_line-height-2($_FONT_SIZE_3, $_FONT_SIZE_10);
 
 $_FONT_SIZE_2: custom-modular-scale(2);
 $_LINE_HEIGHT_2: custom-modular-scale_line-height($_FONT_SIZE_2);
+$_LINE_HEIGHT_2-2: custom-modular-scale_line-height-2($_FONT_SIZE_2, $_FONT_SIZE_10);
 
 $_FONT_SIZE_1: custom-modular-scale(1);
 $_LINE_HEIGHT_1: custom-modular-scale_line-height($_FONT_SIZE_1);
+$_LINE_HEIGHT_1-2: custom-modular-scale_line-height-2($_FONT_SIZE_1, $_FONT_SIZE_10);
 
 $_FONT_SIZE_0: custom-modular-scale(0);
 $_LINE_HEIGHT_0: custom-modular-scale_line-height($_FONT_SIZE_0);
@@ -37,6 +47,7 @@ $_LINE_HEIGHT_-1: custom-modular-scale_line-height($_FONT_SIZE_-1);
 
 $_FONT_SIZE_-2: custom-modular-scale(-2);
 $_LINE_HEIGHT_-2: custom-modular-scale_line-height($_FONT_SIZE_-2);
+
 
 
 // can be overridden
@@ -85,6 +96,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+
 .text_10 {
 
 	@include rhythm-text($_FONT_SIZE_10, $_LINE_HEIGHT_10, 3 0 0 0);
@@ -97,6 +109,21 @@ h1, h2, h3, h4, h5, h6,
 	}
 
 }
+
+
+.text_10-2 {
+
+	@include rhythm-text($_FONT_SIZE_10, $_LINE_HEIGHT_10-2, 3 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
 
 
 .text_9 {
@@ -113,6 +140,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+.text_9-2 {
+
+	@include rhythm-text($_FONT_SIZE_9, $_LINE_HEIGHT_9-2, 2.75 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+
 .text_8 {
 
 	@include rhythm-text($_FONT_SIZE_8, $_LINE_HEIGHT_8, 2.5 0 0 0);
@@ -127,6 +169,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+.text_8-2 {
+
+	@include rhythm-text($_FONT_SIZE_8, $_LINE_HEIGHT_8-2, 2.5 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+
 .text_7 {
 
 	@include rhythm-text($_FONT_SIZE_7, $_LINE_HEIGHT_7, 2.25 0 0 0);
@@ -139,6 +196,21 @@ h1, h2, h3, h4, h5, h6,
 	}
 
 }
+
+
+.text_7-2 {
+
+	@include rhythm-text($_FONT_SIZE_7, $_LINE_HEIGHT_7-2, 2.25 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
 
 
 h1,
@@ -156,6 +228,21 @@ h1,
 }
 
 
+.text_6-2 {
+
+	@include rhythm-text($_FONT_SIZE_6, $_LINE_HEIGHT_6-2, 2 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+
 h2,
 .text_5 {
 
@@ -169,6 +256,21 @@ h2,
 	}
 
 }
+
+
+.text_5-2 {
+
+	@include rhythm-text($_FONT_SIZE_5, $_LINE_HEIGHT_5-2, 1.75 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
 
 
 h3,
@@ -186,6 +288,21 @@ h3,
 }
 
 
+.text_4-2 {
+
+	@include rhythm-text($_FONT_SIZE_4, $_LINE_HEIGHT_4-2, 1.5 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+
 h4,
 .text_3 {
 
@@ -199,6 +316,21 @@ h4,
 	}
 
 }
+
+
+.text_3-2 {
+
+	@include rhythm-text($_FONT_SIZE_3, $_LINE_HEIGHT_3-2, 1.25 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
 
 
 h5,
@@ -216,6 +348,21 @@ h5,
 }
 
 
+.text_2-2 {
+
+	@include rhythm-text($_FONT_SIZE_2, $_LINE_HEIGHT_2-2, 1 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
+
+
 h6,
 .text_1 {
 
@@ -229,6 +376,21 @@ h6,
 	}
 
 }
+
+
+.text_1-2 {
+
+	@include rhythm-text($_FONT_SIZE_1, $_LINE_HEIGHT_1-2, 0.75 0 0 0);
+
+
+	@include debug {
+
+		background-color: getRandomColour();
+
+	}
+
+}
+
 
 
 .text_0 {
@@ -245,6 +407,7 @@ h6,
 }
 
 
+
 .text_-1 {
 
 	// @include rhythm-text($_FONT_SIZE_-1, $_LINE_HEIGHT_-1, 1.5 0 1 0);
@@ -259,6 +422,7 @@ h6,
 	}
 
 }
+
 
 
 .text_-2 {

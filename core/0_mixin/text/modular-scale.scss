@@ -8,9 +8,39 @@
 
 @function custom-modular-scale_line-height($fontSize) {
 
-	$lineHeight: ceil($fontSize * 4) / 4;
+    $lineHeight: ceil($fontSize * 4) / 4;
 
-	// @debug $fontSize, "=>", $lineHeight;
-	@return $lineHeight;
+    // @debug $fontSize, "=>", $lineHeight;
+    @return $lineHeight;
+
+}
+
+
+@function custom-modular-scale_line-height-2($fontSize, $fontSizeMax) {
+
+    $lineHeight: ceil(($fontSize * 3 / 5) * 4) / 4;
+
+    // @debug $fontSize, "=>", $lineHeight;
+    @return $lineHeight;
+
+
+    // // $lineHeight: ceil($fontSize * 13.5) / 20;
+    // // $lineHeight: ceil($lineHeight * 4) / 4;
+
+    // // $lineHeight: ceil($fontSize * $fontSize / 2) / 4;
+
+    // $_COEFF: 1.75;
+    // $lineHeight: ceil(($fontSize - ($_COEFF * $fontSize / 5)) * 4) / 4;
+
+    // @debug $fontSize, "=>", $lineHeight;
+
+    // @if $lineHeight <= $_COEFF {
+
+    //     @debug "    => skip";
+    //     @return custom-modular-scale_line-height($fontSize);
+
+    // }
+
+    // @return $lineHeight;
 
 }
