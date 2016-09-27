@@ -111,6 +111,13 @@
 }
 
 
+@mixin rhythm-reset {
+
+	@include rhythm-text-reset;
+
+}
+
+
 @mixin rhythm-margin($margin: null null null null, $fontSize: 1) {
 
 	$margin: unpack($margin);
