@@ -13,7 +13,7 @@
 
 .left,
 .float_left, .f_l {
-	
+
 	float: left;
 
 }
@@ -188,5 +188,20 @@
 .padding-left_0, .p-l_0  {
 
 	padding-left: 0;
+
+}
+
+
+
+
+/* POSITION */
+
+.position {
+
+	&_relative {
+
+		position: relative;
+
+	}
 
 }
