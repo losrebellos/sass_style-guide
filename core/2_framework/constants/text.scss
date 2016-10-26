@@ -34,5 +34,7 @@ $_BASE_LINE_HEIGHT: (1.5 * $_BASE_FONT_SIZE) !default;
 $_BASE_MAX_WIDTH: 45 !default;
 
 // margin & padding
-$_BASE_MARGIN: $_BASE_LINE_HEIGHT / $golden;
-$_BASE_PADDING: $_BASE_LINE_HEIGHT / $golden;
+// $_BASE_MARGIN: $_BASE_LINE_HEIGHT / $golden;
+$_BASE_MARGIN: ($_BASE_LINE_HEIGHT / 2) !default;
+// $_BASE_PADDING: $_BASE_LINE_HEIGHT / $golden;
+$_BASE_PADDING: ($_BASE_LINE_HEIGHT / 2) !default;
