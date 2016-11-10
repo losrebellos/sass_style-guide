@@ -6,7 +6,7 @@
 a {
 
 	@include remove-outline;
-	
+
 	background: none;
 	border: none;
 	color: grey;
@@ -32,7 +32,7 @@ a {
 	&:link {
 
 		color: grey;
-		
+
 	}
 
 
@@ -64,26 +64,18 @@ a {
 }
 
 
-
-/* INPUT */
-
 input,
 textarea {
 
+	line-height: inherit;
+
 	// webkit on iOS
 	// is adding rounded corners
-	appearance: none;
 	border-radius: 0;
-	//
-
 
 	// FIX for Firefox
 	box-shadow: none;
-	//
 
-
-	line-height: inherit;
-	
 
 	&::-moz-focus-inner {
 
@@ -95,6 +87,34 @@ textarea {
 
 
 input {
+
+	// all input types
+	// but radio and checkbox
+	&[type="button"],
+    &[type="color"],
+    &[type="date"],
+    &[type="datetime-local"],
+    &[type="email"],
+    &[type="file"],
+    &[type="hidden"],
+    &[type="image"],
+    &[type="month"],
+    &[type="number"],
+    &[type="password"],
+    &[type="range"],
+    &[type="reset"],
+    &[type="search"],
+    &[type="submit"],
+    &[type="tel"],
+    &[type="text"],
+    &[type="time"],
+    &[type="url"],
+    &[type="week"] {
+
+		appearance: none;
+
+    }
+
 
 	&[type="search"] {
 
@@ -136,7 +156,12 @@ input {
 }
 
 
-/* BUTTON */
+textarea {
+
+	appearance: none;
+
+}
+
 
 button {
 
@@ -145,7 +170,7 @@ button {
 	appearance: none;
 	border-radius: 0;
 	//
-	
+
 
 	line-height: inherit;
 
