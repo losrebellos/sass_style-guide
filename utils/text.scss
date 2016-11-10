@@ -53,7 +53,7 @@
 
 	text-align: justify;
     text-justify: inter-word;
-    
+
 }
 
 
@@ -98,6 +98,38 @@
 .text-decoration_line-through, .t-d_b {
 
 	text-decoration: line-through;
+
+}
+
+
+
+/* WIDTH */
+
+.full-width {
+
+	width: 100%;
+
+}
+
+
+.min-width {
+
+	&_auto {
+
+		min-width: auto;
+
+	}
+
+}
+
+
+.max-width {
+
+	&_none {
+
+		max-width: none;
+
+	}
 
 }
 
