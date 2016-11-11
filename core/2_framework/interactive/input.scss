@@ -13,6 +13,14 @@ $_INPUT_DEFAULT_PADDING_H: ($_INPUT_DEFAULT_PADDING_V * $golden);
 	background-color: $_BACKGROUND_COLOR;
 	border: none;
 
+
+	&.error {
+
+		border: 1px solid red;
+		color: red;
+
+	}
+
 }
 
 
