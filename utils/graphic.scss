@@ -49,42 +49,56 @@
 
 	&.top {
 
-		background-position: top center;
+		background-position: center top;
+
+	}
+
+
+	&.top_with-offset {
+
+		background-position: center 1%;
 
 	}
 
 
 	&.top-right {
 
-		background-position: top right;
+		background-position: right top;
 
 	}
 
 
 	&.top-left {
 
-		background-position: top left;
+		background-position: left top;
 
 	}
 
 
 	&.bottom {
 
-		background-position: bottom center;
+		background-position: center bottom;
+
+	}
+
+
+	&.bottom_with-offset {
+
+		background-position: center 99%;
 
 	}
 
 
 	&.bottom-right {
 
-		background-position: bottom right;
+		background-position: right bottom;
 
 	}
 
 
 	&.bottom-left {
 
-		background-position: bottom left;
+		background-position: left bottom;
 
 	}
 
