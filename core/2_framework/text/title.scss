@@ -1,4 +1,12 @@
 
+$_FONT_SIZE_12: custom-modular-scale(12);
+$_LINE_HEIGHT_12: custom-modular-scale_line-height($_FONT_SIZE_12);
+$_LINE_HEIGHT_12-2: custom-modular-scale_line-height-2($_FONT_SIZE_12, $_FONT_SIZE_12);
+
+$_FONT_SIZE_11: custom-modular-scale(11);
+$_LINE_HEIGHT_11: custom-modular-scale_line-height($_FONT_SIZE_11);
+$_LINE_HEIGHT_11-2: custom-modular-scale_line-height-2($_FONT_SIZE_11, $_FONT_SIZE_11);
+
 $_FONT_SIZE_10: custom-modular-scale(10);
 $_LINE_HEIGHT_10: custom-modular-scale_line-height($_FONT_SIZE_10);
 $_LINE_HEIGHT_10-2: custom-modular-scale_line-height-2($_FONT_SIZE_10, $_FONT_SIZE_10);
