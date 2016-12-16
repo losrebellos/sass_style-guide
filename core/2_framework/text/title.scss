@@ -58,6 +58,14 @@ $_LINE_HEIGHT_-2: custom-modular-scale_line-height($_FONT_SIZE_-2);
 
 
 
+$_FONT_SIZE_115: custom_mid-value($_FONT_SIZE_11, $_FONT_SIZE_12);
+$_LINE_HEIGHT_115: custom_mid-value($_LINE_HEIGHT_11, $_LINE_HEIGHT_12);
+$_LINE_HEIGHT_115-2: custom-modular-scale_line-height-2($_FONT_SIZE_115, $_FONT_SIZE_10);
+
+$_FONT_SIZE_105: custom_mid-value($_FONT_SIZE_10, $_FONT_SIZE_11);
+$_LINE_HEIGHT_105: custom_mid-value($_LINE_HEIGHT_10, $_LINE_HEIGHT_11);
+$_LINE_HEIGHT_105-2: custom-modular-scale_line-height-2($_FONT_SIZE_105, $_FONT_SIZE_10);
+
 $_FONT_SIZE_95: custom_mid-value($_FONT_SIZE_9, $_FONT_SIZE_10);
 $_LINE_HEIGHT_95: custom_mid-value($_LINE_HEIGHT_9, $_LINE_HEIGHT_10);
 $_LINE_HEIGHT_95-2: custom-modular-scale_line-height-2($_FONT_SIZE_95, $_FONT_SIZE_10);
