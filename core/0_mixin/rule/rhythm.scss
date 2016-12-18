@@ -71,12 +71,12 @@
 	}
 	@if nth($widths, 2) == auto {
 
-		min-width: auto;
+		max-width: auto;
 
 	}
 	@else if(type-of(nth($widths, 2)) == number) {
 
-		min-width: nth($widths, 2) * $k;
+		max-width: nth($widths, 2) * $k;
 
 	}
 	@else {
