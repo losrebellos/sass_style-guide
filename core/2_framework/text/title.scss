@@ -102,6 +102,10 @@ $_FONT_SIZE_15: custom_mid-value($_FONT_SIZE_1, $_FONT_SIZE_2);
 $_LINE_HEIGHT_15: custom_mid-value($_LINE_HEIGHT_1, $_LINE_HEIGHT_2);
 $_LINE_HEIGHT_15-2: custom-modular-scale_line-height-2($_FONT_SIZE_15, $_FONT_SIZE_10);
 
+$_FONT_SIZE_05: custom_mid-value($_FONT_SIZE_0, $_FONT_SIZE_1);
+$_LINE_HEIGHT_05: custom_mid-value($_LINE_HEIGHT_0, $_LINE_HEIGHT_1);
+$_LINE_HEIGHT_05-2: custom-modular-scale_line-height-2($_FONT_SIZE_05, $_FONT_SIZE_10);
+
 
 
 // can be overridden
