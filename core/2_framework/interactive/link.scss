@@ -1,4 +1,12 @@
 
+a.selected {
+
+	color: black;
+
+}
+
+
+
 .link {
 
 	@include rhythm-text($_BODY_COPY, 2, 1.5 0 1 0);
@@ -31,7 +39,7 @@
 	text-decoration: none;
 	width: 100%;
 
-	
+
 	&:link, &:visited, &:hover, &:focus, &.selected {
 
 		// background-color: initial;
