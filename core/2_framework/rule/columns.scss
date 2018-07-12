@@ -85,7 +85,7 @@
 }
 
 
-@for $i from 2 through ($_COLUMN_NUMBER + 1) {
+@for $i from 2 through 20 {
 
 	@include generate-columns($i);
 
